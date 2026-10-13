@@ -1,0 +1,374 @@
+\documentclass[12pt,a4paper,oneside]{book}
+\usepackage[utf8]{vietnam}
+\usepackage{lmodern}
+\usepackage{amsmath, amsfonts, amssymb, graphicx, mathrsfs}
+\usepackage{enumerate, boxedminipage, multicol, etoolbox}
+\usepackage{tkz-euclide}
+\usepackage{tikz-3dplot}
+\usepackage{tikz,tkz-tab}
+\usetikzlibrary{tikzmark}
+\usetikzlibrary{shapes.geometric,arrows,calc,intersections,angles,patterns,decorations.pathmorphing}
+\usetikzlibrary{shadows}
+%\usetkzobj{all}
+%\usepackage{pgfplots}
+%\usepgfplotslibrary{fillbetween}
+%\pgfplotsset{compat=1.9}
+%\usepackage[top=2cm, bottom=2.5cm, left=1.5cm, right=1.5cm] {geometry}
+\usepackage[hidelinks,unicode]{hyperref}
+\usepackage{currfile}
+%Gói căn lề giấy.
+\usepackage[top=2cm, bottom=2cm, left=1.5cm, right=1.5cm]{geometry}
+
+%Xoá thụt đầu dòng.
+\setlength\parindent{0pt}
+\renewcommand{\baselinestretch}{1.2}
+
+
+%Gói màu sắc.
+%\usepackage[dvipsnames]{xcolor}
+
+%Định nghĩa màu.
+\definecolor{mauChuDao}{HTML}{1B3D9F}
+\definecolor{cqcqcq}{rgb}{0.75,0.75,0.75}
+\definecolor{ocre}{RGB}{24,190,250}
+\definecolor{ffqqqq}{rgb}{1.,0.,0.}
+\definecolor{qqqqff}{rgb}{0.,0.,1.}
+\definecolor{ffffff}{rgb}{1.,1.,1.}
+%Gói Tikz.
+\usepackage{tikz, tkz-tab, tkz-euclide}
+\usetikzlibrary{calc, patterns, shadings, angles, intersections, shapes, quotes, trees}
+
+%Gói ex_test.
+%\usepackage[dethi]{ex_test}
+% \usepackage[loigiai]{ex_test}
+\usepackage[book]{ex_test}
+\renewcommand{\loigiaiEX}{{\color{mauChuDao}\faKey~Đáp án}}
+
+%Tạo các môi trường mới.
+\usepackage[skins,breakable]{tcolorbox}
+\usepackage[explicit,calcwidth]{titlesec}
+\usepackage{titletoc}
+\usepackage{varwidth}
+\tcbuselibrary{raster}
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{1}
+
+%========= Công thức toán =========%
+\everymath{\displaystyle}
+% \everymath{\color{blue}}
+%Dấu hệ hoặc.
+\newcommand{\hoac}[1]
+{
+	\left[\begin{aligned}#1\end{aligned}\right.
+}
+%Dấu hệ và.
+\newcommand{\heva}[1]
+{
+	\left\{\begin{aligned}#1\end{aligned}\right.
+}
+%==================================%
+
+%=======Tùy biến môi trường =======%
+\makeatletter
+%Tùy chỉnh Mục lục
+\usepackage{ifoddpage}
+\titleformat{name=\chapter,numberless}[display]
+{\normalfont\huge\bfseries}
+{}
+{-1cm}
+{%
+	\begin{tikzpicture}[remember picture, overlay]%
+		\draw[fill=mauChuDao, rounded corners=15pt] (12.5,-.75) rectangle (20,1.3);%
+		\draw (13.5,0.2) node [right]{\color{white}\fontsize{25pt}{1pt}\fontfamily{qag}\selectfont\bfseries\MakeUppercase{#1}};%
+	\end{tikzpicture}
+}
+[
+\vspace{1cm}
+]
+
+\renewcommand*\l@part[2]{%
+	\ifnum \c@tocdepth >-2\relax
+	\addpenalty{-\@highpenalty}%
+	\addvspace{2.25em \@plus\p@}%
+	\setlength\@tempdima{3em}%
+	\begingroup
+	\parindent \z@ \rightskip \@pnumwidth
+	\parfillskip -\@pnumwidth
+	{\leavevmode
+		\large \bfseries PHẦN #1\dotfill
+		\hb@xt@\@pnumwidth{\hss #2%
+			\kern-\p@\kern\p@}}\par
+	\nobreak
+	\global\@nobreaktrue
+	\everypar{\global\@nobreakfalse\everypar{}}%
+	\endgroup
+	\fi}
+%Title chapter
+\renewcommand*\l@chapter[2]{%
+	\ifnum \c@tocdepth >\m@ne
+	\addpenalty{-\@highpenalty}%
+	\vskip 1.0em \@plus\p@
+	\setlength\@tempdima{1.5em}%
+	\begingroup
+	\parindent \z@ \rightskip \@pnumwidth
+	\parfillskip -\@pnumwidth
+	\leavevmode \bfseries
+	\advance\leftskip\@tempdima
+	\hskip -\leftskip
+	\hspace*{0.5cm}CHƯƠNG #1\nobreak\dotfill
+	\nobreak\hb@xt@\@pnumwidth{\hss #2%
+		\kern-\p@\kern\p@}\par
+	\penalty\@highpenalty
+	\endgroup
+	\fi}
+%Title section
+\renewcommand*\l@section[2]{%
+	\ifnum \c@tocdepth >\m@ne
+	\addpenalty{-\@highpenalty}%
+	\vskip 0.5em \@plus\p@
+	\setlength\@tempdima{1.5em}%
+	\begingroup
+	\parindent \z@ \rightskip \@pnumwidth
+	\parfillskip -\@pnumwidth
+	\leavevmode \bfseries
+	\advance\leftskip\@tempdima
+	\hskip -\leftskip
+	\hspace*{1cm}#1\nobreak\dotfill
+	\nobreak\hb@xt@\@pnumwidth{\hss #2%
+		\kern-\p@\kern\p@}\par
+	\penalty\@highpenalty
+	\endgroup
+	\fi}
+
+%----------------------------------%
+%Môi trường Phần
+\renewcommand{\thepart}{\arabic{part}}
+\titleformat{\part}
+{
+	\thispagestyle{fancy}\filcenter\color{mauChuDao}\bfseries
+}
+{		
+	\definecolor{mauPhan}{HTML}{FF0066}
+	\begin{tikzpicture}
+		\node at (0,0){\fontsize{28pt}{1pt}\selectfont\MakeUppercase\partname};
+		\node[shape = star, fill =mauChuDao, inner sep = 5pt] at (0,0)[shift = {(0,-4)}] {\textcolor{white}{\fontsize{70pt}{1pt}\selectfont \thepart}};
+	\end{tikzpicture}
+}
+{0 cm}
+{
+	\vskip 5pt\titlerule[2.5pt]\vskip 1.5pt\titlerule[1pt]\vskip 5pt 
+	\fontsize{25pt}{10pt}\selectfont\MakeUppercase{#1}
+}
+%----------------------------------%
+%Môi trường Chương
+\renewcommand{\chapter}
+{
+	\if@openright\cleardoublepage\else\clearpage\fi
+	\global\@topnum\z@
+	\@afterindentfalse
+	\secdef\@chapter\@schapter
+}
+\titleformat{\chapter}
+{}
+{}
+{0em}
+{
+	\begin{tikzpicture}
+		\node (base){\color{mauChuDao}\bfseries\fontsize{18}{0}\selectfont \faGripfire CHƯƠNG\faGripfire};
+		\node[draw=mauChuDao,circle,line width=2pt] (num) at ([yshift=-0.9cm]base.-90){\color{mauChuDao}\fontsize{30}{0}\selectfont\thechapter};
+		\node at ([yshift=-0.3cm]num.-90){\color{mauChuDao}\faGg\faGg\faGg};
+		\draw[double, double distance=0.1cm, line width=2pt, mauChuDao] ([shift={(1.8,-0.5)}]num.south east)--++(\textwidth-5cm,0);
+		\node[text width={\textwidth - 5cm}, right] (content) at ([shift={(1.3,0)}]num.0){\color{mauChuDao}\bfseries\fontsize{15pt}{0pt}\selectfont\MakeUppercase{#1}};
+	\end{tikzpicture}
+}
+[   
+\setcounter{dn}{0}
+\setcounter{dl}{0}
+\setcounter{hq}{0}
+]
+\titlespacing{\chapter}{0cm}{0cm}{0.5cm}[0cm]
+%----------------------------------%
+%Môi trường Bài
+\renewcommand*{\thesection}{\arabic{section}}
+\titleformat{\section}
+{\centering}
+{}
+{0pt}
+{
+	\begin{tikzpicture}
+		\node[text width={\textwidth-2cm},text centered] (A){
+			\color{mauChuDao}\bfseries\fontsize{15}{0}\selectfont\S\thesection. \MakeUppercase{#1}
+		};
+	\end{tikzpicture}
+}
+\titlespacing{\section}{0cm}{1cm}{0cm}[0cm]
+
+%----------------------------------%
+%Môi trường Mục
+\renewcommand*{\thesubsection}{\Alph{subsection}}
+\titleformat{\subsection}
+{
+	\bfseries
+}
+{
+	\begin{tikzpicture}
+		\node[mauChuDao, shape=star, draw, line width = 1pt, inner sep=2pt] (char){\fontsize{15}{0}\selectfont\color{mauChuDao}\bfseries\thesubsection};
+		\node[right, text width=\textwidth-2cm] (content) at ([xshift=0.5cm]char.0){\fontsize{13}{0}\selectfont\color{mauChuDao}\bfseries\MakeUppercase{#1}};
+	\end{tikzpicture}
+}
+{0pt}
+{}
+[
+]
+\titlespacing{\subsection}{-0.4cm}{0cm}{0cm}[0cm]
+%----------------------------------%
+%Môi trường mục con.
+\renewcommand*{\thesubsubsection}{\arabic{subsubsection}}
+\titleformat{\subsubsection}
+{
+	\bfseries
+}
+{
+	\begin{tikzpicture}
+		\node[mauChuDao, shape=circle, draw, fill=mauChuDao, line width = 1pt, inner sep=2pt] (char){\fontsize{12}{0}\selectfont\color{white}\bfseries\thesubsubsection};
+		\node[right=0.5cm, text width=\textwidth-2cm] (content) at (char.0){\fontsize{12}{0}\selectfont\color{mauChuDao}\bfseries\MakeUppercase{#1}};
+	\end{tikzpicture}
+}
+{0pt}
+{}
+[
+]
+\titlespacing{\subsubsection}{-0.15cm}{0cm}{0cm}[0cm]
+
+
+%Môi trường Bài tập
+\newtheorem{bt}{\bfseries Bài}
+%Môi trường Chứng minh.
+\theoremstyle{nonumberplain} 
+\theoremheaderfont{\bfseries\slshape} 
+\theorembodyfont{\normalfont}
+\theoremsymbol{\ensuremath{_\blacksquare}} 
+\newtheorem{proof}{Chứng minh}
+\newcommand{\chm}[1]{\begin{proof}#1\end{proof}}
+%----------------------------------%
+\makeatother
+%==================================%
+
+
+%==================================%
+\newcommand{\tikzHeaderFooter}{
+	\begin{tikzpicture}[scale=1, font=\footnotesize, line join=round, line cap=round,>=stealth, overlay, remember picture]
+		\def\h{1} %Chiều cao của box
+		\coordinate (D) at (current page.east);
+		\coordinate (T) at (current page.west);
+		\coordinate (B) at (current page.north);
+		\coordinate (N) at (current page.south);
+		\coordinate (TN) at (current page.south west);
+		\coordinate (DN) at (current page.south east);
+		\coordinate (TB) at (current page.north west);
+		\coordinate (DB) at (current page.north east);
+		\coordinate (CT) at (current page.center);
+		\fill[mauChuDao] (TB)++(\paperwidth*0.42,-0.5)--++(180:\paperwidth*0.42)--++(-90:\h)--++(0:\paperwidth*0.37)arc(-90:-45:10pt)
+		(DB)++(-\paperwidth*0.1,-\h-0.5)--++(0:\paperwidth*0.1)--++(90:\h)--++(180:\paperwidth*0.05) arc (90:135:10pt)
+		(TN)++(\paperwidth*0.7,0.5)--++(180:\paperwidth*0.7)--++(90:\h)--++(0:\paperwidth*0.65) arc (90:45:10pt)
+		
+		;
+		\draw[mauChuDao, line width=4pt] (DN)++(0,0.5)--++(180:\paperwidth);
+		\draw[mauChuDao, -o, line width=2pt](DB)++(0,-\h-0.5)--++(180:\paperwidth*0.55)
+		;
+		%		\fill[mauChuDao] (TB)--++(-90:\paperheight/12)..controls +(45:2)..($(DB)+(-90:\paperheight/24)$)--(DB) (DN)--++(90:\paperheight/12)..controls +(225:2)..($(TN)+(90:\paperheight/24)$)--(TN);node[mauChuDao, right]{\bfseries STAR EDUCATION}
+		\draw ($(TB)+(-90:1)+(0:0.5)$) node[right]{\facebook};
+		\draw ($(DB)+(-90:1)+(180:2)$) node[left]{\hotline};
+		\draw ($(DN)+(90:0.95)+(180:1.5)$) node[left]{\sotrang};
+		\draw ($(TN)+(90:0.95)+(0:1)$) node[right]{\diachi};
+		\path (CT) node[opacity=0.9]{
+			\includegraphics[scale=1]{logo/Logo.png}
+		};
+	\end{tikzpicture}
+}
+
+%Tạo liên kết facebook.
+\newcommand{\facebook}{
+	\definecolor{mauFabeook}{HTML}{61C1F2}
+	\href{https://www.facebook.com/hocthemstar}{
+		\tikz{
+			\node (A){\fontsize{30}{0}\selectfont};
+			\draw(A.10)node[right=0.2em]{\fontsize{15}{0}\selectfont~\textsf{\color{white} \textbf{\textit{STAR EDUCATION}}}};
+		}
+	}
+}
+
+%Tạo số điện thoại.
+\newcommand{\hotline}{
+	\definecolor{mauHotLine}{HTML}{DE0000}
+	\fontsize{15}{0}\selectfont{\bfseries\color{mauChuDao}\faIcon{mobile-alt}}~\hspace{0.2cm}\color{mauChuDao}\textbf{089 66 888 30 - 089 66 888 40}}
+
+%Tạo đếm số trang.
+\newcommand{\sotrang}{\fontsize{15}{0}\selectfont\color{mauChuDao}\textbf{Trang \thepage/\pageref{LastPage}}}
+
+%Tạo câu châm ngôn.
+\newcommand{\chamngon}{\fontsize{15}{0}\selectfont\color{white}\textbf{\textit{Sẽ Không Làm Được Nếu Không Làm}}}
+
+%Tạo địa chỉ
+\newcommand{\diachi}{\fontsize{13}{0}\selectfont{\color{white} \faIcon{map-marker-alt}}\color{white}\textbf{ 16/2 Trần Thiện Chánh, P.12, Q.10, TP.HCM}}
+\usepackage{fancyhdr}
+\setlength{\headheight}{14.5pt} % chiều cao phần đầu trang
+%\usepackage[unicode,bookmarksopen=true,psdextra,plainpages=false,pdfpagelabels=true, hidelinks]{hyperref}
+\usepackage{bookmark}
+\usepackage{lastpage, fontawesome5}
+\pagestyle{fancy}
+\rhead{}
+\chead{\tikzHeaderFooter}
+\lhead{}
+\rfoot{}
+\cfoot{}
+\lfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+
+%Gói khác
+\usepackage{diagbox, longtable}
+%Điều chỉnh tabular
+\renewcommand{\arraystretch}{1.2}
+\renewcommand{\arrayrulewidth}{1pt}
+%Chỉnh lại khoãng cách dòng trong Ex_test
+\renewcommand{\dotlineEX}[1]{
+	\def\numlinedot{#1}
+	\par
+	\foreach \dotline in{1,...,\numlinedot}
+	{	
+		\noindent\dotfill\\[0.3cm]
+		\par
+	}
+}
+
+\newcommand{\dotlineansVD}[1]{
+	\renewcommand{\FalseEX}{\stepcounter{dapan}{\textbf{\Alph{dapan}}}.}
+	\renewcommand{\TrueEX}{\stepcounter{dapan}{\textbf{\Alph{dapan}}}.}
+	\def\True{\setcounter{numTrue}{\thedapan}\setcounter{numTrueSol}{\thedapan}} 
+	\AtBeginEnvironment{vd}{%
+		\renewcommand{\loigiai}[1]{%
+			\endboxVD
+			\par\noindent\textbf{\loigiaiEX }
+			\dotlineEX{#1}
+			\def\endboxVD{}
+		}
+	}
+}
+\newcommand{\soso}{\mathbin{/\mkern-6mu/}}
+
+
+\usepackage{enumitem}
+\setlist[enumerate,1]{label={\alph*)}}
+\makeatletter
+\newenvironment{vdcases}[1][l]{%
+	\let\@ifnextchar\new@ifnextchar
+	\left\lbrace
+	\def\arraystretch{1.2}%
+	\array{@{}#1@{\quad}l@{}}
+}{%
+	\endarray\right.
+}
+\makeatother
+

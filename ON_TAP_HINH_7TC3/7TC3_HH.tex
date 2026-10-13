@@ -1,0 +1,35 @@
+\documentclass[12pt,a4paper,oneside]{book}
+\input{khaibao}
+\begin{document}
+	\thispagestyle{empty}
+	\begin{tikzpicture}[remember picture,overlay]
+		\node[align=center,font= \bfseries] at (current page.center) {
+			\textsf{\large STAR EDUCATION}\\\\			
+			\textsf{\huge ÔN TẬP HÌNH HỌC}\\
+			\textsf{\Huge LỚP 7TC3} \\ \\
+			\Large Năm học: 2026 -- 2027		
+		};
+		\node[
+			align=center,
+			font=\large
+		] at ([yshift=2.5cm]current page.south) {
+			Biên soạn:\\[4pt]
+			\textbf{HOÀNG YẾN TRANG}
+		};
+	\end{tikzpicture}
+
+	\setcounter{page}{1}
+
+	\newpage
+    \dang{GÓC Ở VỊ TRÍ ĐẶC BIỆT - TIA PHÂN GIÁC CỦA MỘT GÓC - HAI ĐƯỜNG THẲNG VUÔNG GÓC}
+	\input{data/GocVaTiaPhanGiac.tex}  
+
+	\dang{HAI ĐƯỜNG THẲNG SONG SONG}
+	\input{data/Haiduongthangsongsong.tex}
+
+	\dang{TỪ VUÔNG GÓC ĐẾN SONG SONG – TIÊN ĐỀ Ơ-CLÍT}
+	\input{data/TiendeOclit.tex}
+
+
+
+\end{document}

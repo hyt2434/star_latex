@@ -1,0 +1,15 @@
+\begin{Solbook}{1}
+ \par \noindent  a) $10$ \hspace {2cm} b) $A=-2$  \hfill \qedEX 
+\end{Solbook}
+\begin{Solbook}{2}
+ \par \noindent  a) i) Q$=\dfrac {3}{\sqrt {x}+2}$, ii) $x=1$ \hfill b) $x=0$ \hfill  \hfill \qedEX 
+\end{Solbook}
+\begin{Solbook}{3}
+ \par \noindent Vận tốc dự định $40 \text { km/h}$ ; quãng đường AB dài $120 \text { km}$. \hfill \qedEX 
+\end{Solbook}
+\begin{Solbook}{4}
+ \par \noindent \immini { \begin {listEX} \item $BC=R\sqrt {3}$. \item Chứng minh $\triangle MCK \backsim \triangle MDC$ từ đó suy ra $MC^2=MK. MD$. \par Mặt khác $MC^2=MO\cdot MH$. Từ đó suy ra điều phải chứng minh. \item Chứng minh $\widehat {OHD}=\widehat {ODM}=\widehat {KHM}$ thông qua các tam giác đồng dạng. \end {listEX}} { \begin {tikzpicture}[line width=0.8pt] \def \R {2} \def \A {6} \path (0,0) coordinate (O) (\A ,0) coordinate (M) ($(O)!0.5!(M)$) coordinate (I) ; \path [name path=ciro] (O) circle (\R ); \path [name path=cirom] (I) let \p 1=($(I)-(O)$) in circle ({veclen(\x 1,\y 1)}); \path [name intersections={of=ciro and cirom, by={B,C}}]; \coordinate (H) at (intersection of O--M and B--C); \coordinate (D) at ($(B)!2!(O)$); \path [name path=md] (D)--(M); \path [name intersections={of=ciro and md,by={D,K}}]; \draw (B)--(C) (M)--(D); \draw (O) circle (\R ) (B)--(O)--(C) (O)--(M) (B)--(M) (M)--(C) (O)--(D)--(C)--(K)--(H)--(D) ; \foreach \x /\g in{O/-180,M/0,B/60,C/-60,H/45,D/-90,K/90} \draw [fill=white] (\x ) circle (1.5pt) +(\g :.35) node{$\x $}; \end {tikzpicture} }  \hfill \qedEX 
+\end{Solbook}
+\begin{Solbook}{5}
+ \par \noindent  Gọi $x$ (km/h) và $y$ (h) lần lượt là vận tốc và thời gian dự định ($x > 10 ; y > 1$). \par Từ giá thiết ta có hệ phương trình: $\begin {cases} (x+20)(y-1)=xy \\ (x-10)(y+1)=xy \end {cases} $ \item Giải hệ PT: $x=40$ (nhận) ; $y=3$ (nhận). \hfill \qedEX 
+\end{Solbook}

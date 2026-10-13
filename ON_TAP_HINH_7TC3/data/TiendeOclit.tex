@@ -1,0 +1,588 @@
+\subsection{Dạng 1. Tính số đo góc (bằng cách vẽ thêm hình)}
+
+\begin{bt}
+	Cho hình vẽ, biết $MN\parallel KJ$,
+	$\widehat{NML}=46^\circ$ và $\widehat{JKL}=127^\circ$.
+	Hãy tính số đo góc $\widehat{MLK}$.
+
+	\begin{center}
+		\begin{tikzpicture}[
+			scale=1.1,
+			line cap=round,
+			line join=round,
+			font=\small,
+			every node/.style={inner sep=1.3pt}
+		]
+			\coordinate (M) at (0,1.5);
+			\coordinate (N) at (3.05,1.5);
+			\coordinate (L) at ($(M)+(-46:2.05)$);
+			\coordinate (K) at ($(L)+(233:1.25)$);
+			\coordinate (J) at ($(K)+(-2.35,0)$);
+
+			% Hai đường thẳng song song và đường gấp MLK
+			\draw[mauChuDao,line width=0.9pt] (M)--(N);
+			\draw[mauChuDao,line width=0.9pt] (J)--(K);
+			\draw[mauChuDao,line width=0.9pt] (M)--(L)--(K);
+
+			% Hai góc đã biết
+			\pic[draw=mauChuDao,"$46^\circ$",angle radius=5mm,
+				angle eccentricity=1.55] {angle=L--M--N};
+			\pic[draw=mauChuDao,"$127^\circ$",angle radius=5mm,
+				angle eccentricity=1.45] {angle=L--K--J};
+
+			% Các điểm và nhãn
+			\foreach \Pnt in {M,N,L,K,J}{
+				\fill[red!75!black] (\Pnt) circle (1.45pt);
+			}
+			\node[above left=2pt] at (M) {$M$};
+			\node[above right=2pt] at (N) {$N$};
+			\node[right=3pt] at (L) {$L$};
+			\node[below right=1pt] at (K) {$K$};
+			\node[below left=1pt] at (J) {$J$};
+		\end{tikzpicture}
+	\end{center}
+\end{bt}
+
+\begin{bt}
+	Cho hình vẽ, biết $AB\parallel ED$,
+	$\widehat{BAC}=118^\circ$ và $\widehat{CDE}=50^\circ$.
+	Hãy tính số đo góc $\widehat{ACD}$.
+
+	\begin{center}
+		\begin{tikzpicture}[
+			scale=1.1,
+			line cap=round,
+			line join=round,
+			font=\small,
+			every node/.style={inner sep=1.3pt}
+		]
+			\coordinate (A) at (0,1.55);
+			\coordinate (B) at (2.8,1.55);
+			\coordinate (C) at ($(A)+(242:1.45)$);
+			\coordinate (D) at ($(C)+(310:1.55)$);
+			\coordinate (E) at ($(D)+(-2.85,0)$);
+
+			% Hai đường thẳng song song và đường gấp ACD
+			\draw[mauChuDao,line width=0.9pt] (A)--(B);
+			\draw[mauChuDao,line width=0.9pt] (E)--(D);
+			\draw[mauChuDao,line width=0.9pt] (A)--(C)--(D);
+
+			% Hai góc đã biết
+			\pic[draw=mauChuDao,"$118^\circ$",angle radius=4.8mm,
+				angle eccentricity=1.45] {angle=C--A--B};
+			\pic[draw=mauChuDao,"$50^\circ$",angle radius=4.8mm,
+				angle eccentricity=1.5] {angle=C--D--E};
+
+			% Các điểm và nhãn
+			\foreach \Pnt in {A,B,C,D,E}{
+				\fill[red!75!black] (\Pnt) circle (1.45pt);
+			}
+			\node[above left=2pt] at (A) {$A$};
+			\node[above right=2pt] at (B) {$B$};
+			\node[left=3pt] at (C) {$C$};
+			\node[below right=1pt] at (D) {$D$};
+			\node[below left=1pt] at (E) {$E$};
+		\end{tikzpicture}
+	\end{center}
+\end{bt}
+
+\begin{bt}
+	Cho hình vẽ, biết ba điểm $C,B,E$ thẳng hàng, $AB\parallel FG$,
+	$\widehat{ABC}=49^\circ$ và $\widehat{EFG}=120^\circ$.
+	Hãy tính số đo góc $\widehat{CEF}$.
+
+	\begin{center}
+		\begin{tikzpicture}[
+			scale=1.1,
+			line cap=round,
+			line join=round,
+			font=\small,
+			every node/.style={inner sep=1.3pt}
+		]
+			\coordinate (B) at (0,0.9);
+			\coordinate (A) at (2.8,0.9);
+			\coordinate (C) at ($(B)+(49:1.5)$);
+			\coordinate (E) at ($(B)+(229:0.85)$);
+			\coordinate (F) at ($(E)+(300:1.3)$);
+			\coordinate (G) at ($(F)+(2.8,0)$);
+
+			% Hai đường thẳng song song và đường gấp CEF
+			\draw[mauChuDao,line width=0.9pt] (B)--(A);
+			\draw[mauChuDao,line width=0.9pt] (F)--(G);
+			\draw[mauChuDao,line width=0.9pt] (C)--(B)--(E)--(F);
+
+			% Hai góc đã biết
+			\pic[draw=mauChuDao,"$49^\circ$",angle radius=4.7mm,
+				angle eccentricity=1.7] {angle=A--B--C};
+			\pic[draw=mauChuDao,"$120^\circ$",angle radius=3.8mm,
+				angle eccentricity=1.7] {angle=G--F--E};
+
+			% Các điểm và nhãn
+			\foreach \Pnt in {A,B,C,E,F,G}{
+				\fill[red!75!black] (\Pnt) circle (1.45pt);
+			}
+			\node[above right=2pt] at (A) {$A$};
+			\node[above left=1pt] at (B) {$B$};
+			\node[above right=1pt] at (C) {$C$};
+			\node[above left=1pt] at (E) {$E$};
+			\node[below left=1pt] at (F) {$F$};
+			\node[below right=1pt] at (G) {$G$};
+		\end{tikzpicture}
+	\end{center}
+\end{bt}
+
+\subsection{Dạng 2. Chứng minh hai đường thẳng song song}
+
+\begin{bt}
+	Theo hình vẽ, cho
+	$\widehat{xAB}+\widehat{ABC}+\widehat{BCy}=360^\circ$.
+	Hãy chứng minh $Ax\parallel Cy$.
+
+	\begin{center}
+		\begin{tikzpicture}[
+			scale=1.1,
+			line cap=round,
+			line join=round,
+			font=\small,
+			every node/.style={inner sep=1.3pt}
+		]
+			\coordinate (A) at (1.3,1.35);
+			\coordinate (B) at (2.75,0);
+			\coordinate (C) at (1.3,-1.25);
+			\coordinate (X) at (-2.7,1.35);
+			\coordinate (Y) at (-3.35,-1.25);
+
+			% Hai tia Ax, Cy và đường gấp ABC
+			\draw[mauChuDao,line width=0.9pt] (X)--(A)--(B)--(C)--(Y);
+
+			% Các đỉnh của đường gấp
+			\foreach \Pnt in {A,B,C}{
+				\fill[red!75!black] (\Pnt) circle (1.45pt);
+			}
+
+			% Nhãn các điểm và tên tia
+			\node[above right=2pt] at (A) {$A$};
+			\node[right=4pt] at (B) {$B$};
+			\node[below right=2pt] at (C) {$C$};
+			\node[above right=1pt] at (X) {$x$};
+			\node[above right=1pt] at (Y) {$y$};
+		\end{tikzpicture}
+	\end{center}
+\end{bt}
+
+\begin{bt}
+	Cho hình vẽ bên. Biết $My\parallel Pt$,
+	$\widehat{xMy}=60^\circ$ và $\widehat{MNz}=60^\circ$.
+	\begin{enumerate}[label=\alph*)]
+		\item Chứng minh $My\parallel Nz$;
+		\item Chứng minh $Nz\parallel Pt$;
+		\item Biết $\widehat{xNP}=85^\circ$, tính số đo góc $\widehat{NPt}$.
+	\end{enumerate}
+
+	\begin{center}
+		\begin{tikzpicture}[
+			scale=1.1,
+			line cap=round,
+			line join=round,
+			font=\small,
+			every node/.style={inner sep=1.3pt}
+		]
+			\coordinate (N) at (0,0);
+			\coordinate (M) at ($(N)+(60:1.15)$);
+			\coordinate (X) at ($(M)+(60:1.2)$);
+			\coordinate (Y) at ($(M)+(2.45,0)$);
+			\coordinate (Z) at ($(N)+(2.55,0)$);
+			\coordinate (P) at ($(N)+(-25:1.65)$);
+			\coordinate (T) at ($(P)+(-2.35,0)$);
+
+			% Các tia và đoạn thẳng trong hình
+			\draw[mauChuDao,line width=0.9pt] (N)--(M)--(X);
+			\draw[mauChuDao,line width=0.9pt] (M)--(Y);
+			\draw[mauChuDao,line width=0.9pt] (N)--(Z);
+			\draw[mauChuDao,line width=0.9pt] (N)--(P)--(T);
+
+			% Hai góc 60 độ
+			\pic[draw=mauChuDao,"$60^\circ$",angle radius=3.5mm,
+				angle eccentricity=1.65] {angle=Y--M--X};
+			\pic[draw=mauChuDao,"$60^\circ$",angle radius=3.5mm,
+				angle eccentricity=1.65] {angle=Z--N--M};
+
+			% Các điểm
+			\foreach \Pnt in {M,N,P}{
+				\fill[red!75!black] (\Pnt) circle (1.45pt);
+			}
+
+			% Nhãn các điểm và tên tia
+			\node[left=3pt] at (M) {$M$};
+			\node[left=3pt] at (N) {$N$};
+			\node[below right=1pt] at (P) {$P$};
+			\node[above left=1pt] at (X) {$x$};
+			\node[below right=1pt] at (Y) {$y$};
+			\node[below right=1pt] at (Z) {$z$};
+			\node[below left=1pt] at (T) {$t$};
+		\end{tikzpicture}
+	\end{center}
+\end{bt}
+
+\begin{bt}
+	Cho hình vẽ sau, biết $HD\parallel GE$ và $GE\parallel IF$.
+	\begin{enumerate}[label=\alph*)]
+		\item Chứng minh $HD\parallel IF$.
+		\item Cho biết $\widehat{HAB}=65^\circ$. Tìm số đo $x$ của góc
+		$\widehat{ABE}$ và số đo $y$ của góc $\widehat{BCI}$.
+	\end{enumerate}
+
+	\begin{center}
+		\begin{tikzpicture}[
+			scale=1.05,
+			line cap=round,
+			line join=round,
+			font=\small,
+			every node/.style={inner sep=1.3pt}
+		]
+			\coordinate (A) at (0,1.9);
+			\coordinate (B) at ($(A)+(245:1.15)$);
+			\coordinate (C) at ($(B)+(245:1.15)$);
+			\coordinate (T) at ($(A)+(65:0.7)$);
+			\coordinate (K) at ($(C)+(245:0.65)$);
+
+			\coordinate (H) at (-2.25,1.9);
+			\coordinate (D) at (1.75,1.9);
+			\coordinate (G) at (-2.25,{1.9-1.15*sin(65)});
+			\coordinate (E) at (1.75,{1.9-1.15*sin(65)});
+			\coordinate (I) at (-2.25,{1.9-2.3*sin(65)});
+			\coordinate (F) at (1.75,{1.9-2.3*sin(65)});
+
+			% Ba đường thẳng song song và cát tuyến
+			\draw[mauChuDao,line width=0.9pt] (H)--(D);
+			\draw[mauChuDao,line width=0.9pt] (G)--(E);
+			\draw[mauChuDao,line width=0.9pt] (I)--(F);
+			\draw[mauChuDao,line width=0.9pt] (K)--(T);
+
+			% Góc HAB và hai góc cần tìm x, y
+			\pic[draw=mauChuDao,"$65^\circ$",angle radius=3.5mm,
+				angle eccentricity=1.5] {angle=H--A--B};
+			\pic[draw=mauChuDao,"$x$",angle radius=3.2mm,
+				angle eccentricity=1.55] {angle=E--B--A};
+			\pic[draw=mauChuDao,"$y$",angle radius=4.5mm,
+				angle eccentricity=1.5] {angle=B--C--I};
+
+			% Các giao điểm
+			\foreach \Pnt in {A,B,C}{
+				\fill[red!75!black] (\Pnt) circle (1.45pt);
+			}
+
+			% Nhãn các điểm
+			\node[left=3pt] at (H) {$H$};
+			\node[right=3pt] at (D) {$D$};
+			\node[left=3pt] at (G) {$G$};
+			\node[right=3pt] at (E) {$E$};
+			\node[left=3pt] at (I) {$I$};
+			\node[right=3pt] at (F) {$F$};
+			\node[above left=1pt] at (A) {$A$};
+			\node[above left=8pt] at (B) {$B$};
+			\node[below right=1pt] at (C) {$C$};
+			\node[above right=1pt] at (T) {$T$};
+			\node[below left=1pt] at (K) {$K$};
+		\end{tikzpicture}
+	\end{center}
+\end{bt}
+\begin{bt}
+	Cho hình vẽ, biết $\widehat{A_2}=\widehat{M_1}$ và
+	$\widehat{A_1}=\widehat{N_2}$.
+	\begin{enumerate}[label=\alph*)]
+		\item Cho biết $\widehat{A_2}$ và $\widehat{M_1}$ là hai góc ở vị trí
+		như thế nào.
+		\item Hai góc $\widehat{A_1}$ và $\widehat{N_2}$ là hai góc gì?
+		\item Chứng minh $MD\parallel AH$.
+		\item Chứng minh $NE\parallel MD$.
+	\end{enumerate}
+
+	\begin{center}
+		\begin{tikzpicture}[
+			scale=1.05,
+			line cap=round,
+			line join=round,
+			font=\small,
+			every node/.style={inner sep=1.2pt}
+		]
+			\coordinate (A) at (0,3.0);
+			\coordinate (H) at (0,0);
+			\coordinate (B) at (-2.9,0);
+			\coordinate (C) at (1.55,0);
+			\coordinate (N) at (2.2475,-1.35);
+			\coordinate (E) at (2.2475,0);
+			\coordinate (M) at ($(B)!0.52!(A)$);
+			\coordinate (D) at ($(M |- H)$);
+
+			% Đường đáy và các đường trong hình
+			\draw[mauChuDao,line width=0.9pt] (B)--(E);
+			\draw[mauChuDao,line width=0.9pt] (B)--(A)--(C)--(N);
+			\draw[mauChuDao,line width=0.9pt] (A)--(H);
+			\draw[mauChuDao,line width=0.9pt] (M)--(D);
+			\draw[mauChuDao,line width=0.9pt] (N)--(E);
+
+			% Ký hiệu các góc A_1, A_2, M_1 và N_2
+			\node[font=\scriptsize] at ($(A)+(-76:0.30)$) {$1$};
+			\node[font=\scriptsize] at ($(A)+(-112:0.30)$) {$2$};
+			\node[font=\scriptsize] at ($(M)+(-112:0.28)$) {$1$};
+			\node[font=\scriptsize] at ($(N)+(103:0.30)$) {$2$};
+
+			\foreach \Pnt in {A,B,C,D,E,H,M,N}{
+				\fill[red!75!black] (\Pnt) circle (1.35pt);
+			}
+			\node[above=3pt] at (A) {$A$};
+			\node[below left=1pt] at (B) {$B$};
+			\node[above left=1pt] at (C) {$C$};
+			\node[below=3pt] at (D) {$D$};
+			\node[above right=1pt] at (E) {$E$};
+			\node[below=3pt] at (H) {$H$};
+			\node[left=3pt] at (M) {$M$};
+			\node[below right=1pt] at (N) {$N$};
+		\end{tikzpicture}
+	\end{center}
+\end{bt}
+
+\subsection{Dạng 3. Chứng minh song song do cùng vuông góc}
+
+\begin{bt}
+	Cho góc nhọn $\widehat{AOB}$. Từ $M$ trên tia $OA$ vẽ
+	$MN\perp OB$ $(N\in OB)$; từ $N$ vẽ $NP\perp OA$ $(P\in OA)$;
+	từ $P$ vẽ $PQ\perp OB$ $(Q\in OB)$; từ $Q$ vẽ
+	$QR\perp OA$ $(R\in OA)$.
+	\begin{enumerate}[label=\alph*)]
+		\item Chứng minh $MN\parallel PQ$ và $NP\parallel QR$.
+		\item Trong hình vẽ, xác định tất cả các góc có số đo bằng
+		$\widehat{PMN}$ và tất cả các góc có số đo bằng $\widehat{MNP}$.
+	\end{enumerate}
+
+	\begin{center}
+		\begin{tikzpicture}[
+			scale=1.05,
+			line cap=round,
+			line join=round,
+			font=\small,
+			every node/.style={inner sep=1.3pt}
+		]
+			\coordinate (O) at (0,0);
+			\coordinate (B) at (5.0,0);
+			\coordinate (A) at (4.05,3.16);
+			\coordinate (M) at (3.395,2.648);
+			\coordinate (N) at (3.395,0);
+			\coordinate (P) at (2.108,1.647);
+			\coordinate (Q) at (2.108,0);
+			\coordinate (R) at (1.309,1.023);
+
+			% Hai tia của góc AOB
+			\draw[mauChuDao,line width=0.9pt] (O)--(A);
+			\draw[mauChuDao,line width=0.9pt] (O)--(B);
+
+			% Các đoạn vuông góc liên tiếp
+			\draw[mauChuDao,line width=0.9pt] (M)--(N)--(P)--(Q)--(R);
+
+			% Dấu vuông góc tại N, P, Q và R
+			\pic[draw=mauChuDao,angle radius=2.5mm]
+				{right angle=M--N--O};
+			\pic[draw=mauChuDao,angle radius=2.5mm]
+				{right angle=M--P--N};
+			\pic[draw=mauChuDao,angle radius=2.5mm]
+				{right angle=P--Q--O};
+			\pic[draw=mauChuDao,angle radius=2.5mm]
+				{right angle=P--R--Q};
+
+			% Các điểm
+			\foreach \Pnt in {O,M,N,P,Q,R}{
+				\fill[red!75!black] (\Pnt) circle (1.4pt);
+			}
+
+			% Nhãn các điểm
+			\node[below left=1pt] at (O) {$O$};
+			\node[above left=1pt] at (A) {$A$};
+			\node[below right=1pt] at (B) {$B$};
+			\node[above left=1pt] at (M) {$M$};
+			\node[below right=1pt] at (N) {$N$};
+			\node[above left=1pt] at (P) {$P$};
+			\node[below=3pt] at (Q) {$Q$};
+			\node[above left=1pt] at (R) {$R$};
+		\end{tikzpicture}
+	\end{center}
+\end{bt}
+
+\subsection{Dạng 4. Chứng minh vuông góc từ song song}
+
+\begin{bt}
+	Cho hình vẽ. Biết $a\parallel b$, $b\perp c$ và tia $Ad$ là tia
+	phân giác của góc $\widehat{cAx}$, trong đó tia $Ax$ nằm trên đường
+	thẳng $a$.
+	\begin{enumerate}[label=\alph*)]
+		\item Chứng minh $a\perp c$.
+		\item Tính số đo góc $\widehat{cAd}$.
+	\end{enumerate}
+
+	\begin{center}
+		\begin{tikzpicture}[
+			scale=1.05,
+			line cap=round,
+			line join=round,
+			font=\small,
+			every node/.style={inner sep=1.3pt}
+		]
+			\coordinate (A) at (0,1.05);
+			\coordinate (B) at (0,-1.0);
+			\coordinate (X) at (2.45,1.05);
+			\coordinate (D) at ($(A)+(45:1.55)$);
+			\coordinate (BR) at (1,-1.0);
+			\coordinate (CT) at (0,2.05);
+
+			% Hai đường thẳng song song a, b và đường thẳng c
+			\draw[mauChuDao,line width=0.9pt]
+				(-1.35,1.05)--(2.6,1.05) node[right] {$a$};
+			\draw[mauChuDao,line width=0.9pt]
+				(-1.35,-1.0)--(2.6,-1.0) node[right] {$b$};
+			\draw[mauChuDao,line width=0.9pt]
+				(0,-1.45)--(0,2.35) node[above] {$c$};
+			\draw[mauChuDao,line width=0.9pt] (A)--(D)
+				node[above right] {$d$};
+
+			% Dấu vuông tại B và hai cung bằng nhau tại A
+			\pic[draw=mauChuDao,angle radius=2.7mm]
+				{right angle=A--B--BR};
+			\pic[draw=mauChuDao,angle radius=4.5mm]
+				{angle=D--A--CT};
+			\pic[draw=mauChuDao,angle radius=5.2mm]
+				{angle=X--A--D};
+
+			\fill[red!75!black] (A) circle (1.45pt);
+			\fill[red!75!black] (B) circle (1.45pt);
+			\node[below left=1pt] at (A) {$A$};
+			\node[below left=1pt] at (B) {$B$};
+			\node[above right=1pt] at (X) {$x$};
+		\end{tikzpicture}
+	\end{center}
+\end{bt}
+
+\begin{bt}
+	Cho hình vẽ. Đường thẳng $c$ cắt $m$ tại $C$ và cắt $n$ tại $D$.
+	Biết $\widehat{C_1}=\widehat{D_1}$ và $AB\perp m$.
+	\begin{enumerate}[label=\alph*)]
+		\item Chứng minh $m\parallel n$.
+		\item Chứng minh $AB\perp n$.
+	\end{enumerate}
+
+	\begin{center}
+		\begin{tikzpicture}[
+			scale=1.05,
+			line cap=round,
+			line join=round,
+			font=\small,
+			every node/.style={inner sep=1.3pt}
+		]
+			\coordinate (A) at (-1.45,1.0);
+			\coordinate (B) at (-1.45,-1.0);
+			\coordinate (C) at (0.35,1.0);
+			\coordinate (D) at (1.05,-1.0);
+			\coordinate (AR) at (-0.45,1.0);
+			\coordinate (CL) at (-0.65,1.0);
+			\coordinate (DR) at (2.05,-1.0);
+
+			% Hai đường m, n; đường AB và cát tuyến c
+			\draw[mauChuDao,line width=0.9pt]
+				(-2.25,1.0)--(2.6,1.0) node[right] {$m$};
+			\draw[mauChuDao,line width=0.9pt]
+				(-2.25,-1.0)--(2.6,-1.0) node[right] {$n$};
+			\draw[mauChuDao,line width=0.9pt] (-1.45,-1.4)--(-1.45,1.4);
+			\draw[mauChuDao,line width=0.9pt]
+				($(C)!-0.3!(D)$)--($(C)!1.3!(D)$) node[below right] {$c$};
+
+			% Dấu vuông tại A
+			\pic[draw=mauChuDao,angle radius=2.7mm]
+				{right angle=B--A--AR};
+
+			% Hai góc so le trong bằng nhau
+			\pic[draw=mauChuDao,"$1$",angle radius=4.5mm,
+				angle eccentricity=1.45]
+				{angle=CL--C--D};
+			\pic[draw=mauChuDao,"$1$",angle radius=4.5mm,
+				angle eccentricity=1.45]
+				{angle=DR--D--C};
+
+			% Các giao điểm và nhãn
+			\foreach \Pnt in {A,B,C,D}{
+				\fill[red!75!black] (\Pnt) circle (1.45pt);
+			}
+			\node[above left=1pt] at (A) {$A$};
+			\node[below left=1pt] at (B) {$B$};
+			\node[above right=1pt] at (C) {$C$};
+			\node[below left=1pt] at (D) {$D$};
+		\end{tikzpicture}
+	\end{center}
+\end{bt}
+
+\subsection{Dạng 5. Chứng minh thẳng hàng}
+
+\begin{bt}
+	Cho hình vẽ bên, biết $Ax\parallel Dy$,
+	$\widehat{BCD}=135^\circ$, $AE\perp Ax$ và $CD\perp Dy$.
+	\begin{enumerate}[label=\arabic*)]
+		\item Đường thẳng $AE$ có vuông góc với $Dy$ không? Vì sao?
+		\item Chứng minh $DC\parallel AE$.
+		\item Vẽ tia phân giác $Dt$ của góc $\widehat{CDy}$; tia $Dt$ cắt
+		đường thẳng $AE$ tại $F$. Tính $\widehat{EDF}$ và $\widehat{DFB}$.
+		\item Trên nửa mặt phẳng có bờ là đường thẳng $AB$ không chứa điểm
+		$C$, vẽ tia $Bz$ sao cho $\widehat{ABz}=45^\circ$. Tia $Bz$ cắt
+		tia $Ax$ tại $M$. Chứng minh ba điểm $B,C,M$ thẳng hàng.
+	\end{enumerate}
+
+	\begin{center}
+		\begin{tikzpicture}[
+			scale=1.0,
+			line cap=round,
+			line join=round,
+			font=\small,
+			every node/.style={inner sep=1.3pt}
+		]
+			\coordinate (D) at (0,0);
+			\coordinate (C) at (0,1.5);
+			\coordinate (E) at (1.5,0);
+			\coordinate (B) at (1.5,3.0);
+			\coordinate (A) at (1.5,3.75);
+			\coordinate (X) at (4.25,3.75);
+			\coordinate (Y) at (4.25,0);
+			\coordinate (ER) at (2.5,0);
+			\coordinate (AD) at (1.5,2.75);
+
+			% Hai tia song song Ax, Dy và các đoạn AE, CD, CB
+			\draw[mauChuDao,line width=0.9pt] (A)--(X);
+			\draw[mauChuDao,line width=0.9pt] (D)--(Y);
+			\draw[mauChuDao,line width=0.9pt] (A)--(E);
+			\draw[mauChuDao,line width=0.9pt] (D)--(C)--(B);
+
+			% Hai dấu vuông góc tại A và D
+			\pic[draw=mauChuDao,angle radius=3mm]
+				{right angle=AD--A--X};
+			\pic[draw=mauChuDao,angle radius=3mm]
+				{right angle=C--D--ER};
+
+			% Góc BCD bằng 135 độ
+			\pic[draw=mauChuDao,"$135^\circ$",angle radius=2.5mm,
+				angle eccentricity=2.5] {angle=D--C--B};
+
+			% Các điểm
+			\foreach \Pnt in {A,B,C,D,E}{
+				\fill[red!75!black] (\Pnt) circle (1.5pt);
+			}
+
+			% Nhãn các điểm và tên tia
+			\node[above left=1pt] at (A) {$A$};
+			\node[left=3pt] at (B) {$B$};
+			\node[left=3pt] at (C) {$C$};
+			\node[below left=1pt] at (D) {$D$};
+			\node[below right=1pt] at (E) {$E$};
+			\node[below left=1pt] at (X) {$x$};
+			\node[below left=1pt] at (Y) {$y$};
+		\end{tikzpicture}
+	\end{center}
+\end{bt}
+
+
+

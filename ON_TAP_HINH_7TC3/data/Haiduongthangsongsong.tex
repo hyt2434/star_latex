@@ -1,0 +1,482 @@
+\noindent
+\subsection{Dạng 1. Xác định cặp góc so le trong, cặp góc đồng vị. Tính số đo góc}
+
+\begin{bt}
+	Cho hình vẽ dưới đây, trong đó hai đường thẳng $m$ và $n$ bị cắt bởi
+	đường thẳng $p$ lần lượt tại $S$ và $R$.
+	
+	\begin{enumerate}[label=\alph*)]
+		\item Kể tên các cặp góc so le trong, các cặp góc đồng vị và các cặp
+		góc trong cùng phía.
+		
+		\item Tính số đo các góc còn lại, biết
+		$\widehat{R_4}=\widehat{S_2}=120^\circ$.
+	\end{enumerate}
+
+    \begin{center}
+        \begin{tikzpicture}[
+            scale=1.15,
+            line cap=round,
+            line join=round,
+            font=\small,
+            every node/.style={inner sep=1.2pt}
+        ]
+            %--------------------------------
+            % Hai giao điểm
+            %--------------------------------
+            \coordinate (S) at (0,1.1);
+            \coordinate (R) at (1.27,-1.1);
+
+            %--------------------------------
+            % Hai đường thẳng song song m, n
+            %--------------------------------
+            \draw[mauChuDao,line width=0.9pt]
+                (-2.3,1.1)--(2.3,1.1)
+                node[right] {$m$};
+
+            \draw[mauChuDao,line width=0.9pt]
+                (-0.8,-1.1)--(3.8,-1.1)
+                node[right] {$n$};
+
+            % Ký hiệu m // n nếu muốn
+            % \node at (-1.6,0.85) {$\parallel$};
+
+            %--------------------------------
+            % Đường cắt p
+            %--------------------------------
+            \draw[mauChuDao,line width=0.9pt]
+                ($(S)+(120:1.25)$)
+                --
+                ($(R)+(-60:1.25)$);
+
+            \node[above left] at ($(S)+(120:1.20)$) {$p$};
+
+            %--------------------------------
+            % Hai giao điểm
+            %--------------------------------
+            \fill[red!75!black] (S) circle (1.5pt);
+            \fill[red!75!black] (R) circle (1.5pt);
+
+            \node[font=\bfseries]
+                at ($(S)+(90:0.72)$) {$S$};
+
+            \node[font=\bfseries]
+                at ($(R)+(270:0.72)$) {$R$};
+
+            %--------------------------------
+            % Bốn góc tại S
+            %--------------------------------
+            \node at ($(S)+(150:0.50)$) {$1$};
+            \node at ($(S)+(60:0.50)$)  {$2$};
+            \node at ($(S)+(330:0.50)$) {$3$};
+            \node at ($(S)+(240:0.50)$) {$4$};
+
+            %--------------------------------
+            % Bốn góc tại R
+            %--------------------------------
+            \node at ($(R)+(150:0.50)$) {$1$};
+            \node at ($(R)+(60:0.50)$)  {$2$};
+            \node at ($(R)+(330:0.50)$) {$3$};
+            \node at ($(R)+(240:0.50)$) {$4$};
+
+            %--------------------------------
+            % Đánh dấu hai góc bằng nhau
+            % Ví dụ: góc S_2 và R_4
+            %--------------------------------
+            \draw[mauChuDao,line width=1pt]
+                ($(S)+(0:0.31)$)
+                arc[start angle=0,end angle=120,radius=0.31];
+
+            \draw[mauChuDao,line width=1pt]
+                ($(R)+(180:0.31)$)
+                arc[start angle=180,end angle=300,radius=0.31];
+
+        \end{tikzpicture}
+    \end{center}
+\end{bt}
+
+\begin{bt}
+	Cho hình vẽ dưới đây, biết $a\parallel b$ và
+	$\widehat{M_1}-\widehat{N_2}=50^\circ$. Tính $\widehat{M_2}$ và
+	$\widehat{N_2}$.
+
+	\begin{center}
+		\begin{tikzpicture}[
+			scale=1.15,
+			line cap=round,
+			line join=round,
+			font=\small,
+			every node/.style={inner sep=1.2pt}
+		]
+			\coordinate (M) at (0,-1);
+			\coordinate (N) at (1.03,1.2);
+
+			% Hai đường thẳng song song và cát tuyến c
+			\draw[mauChuDao,line width=0.9pt]
+				(-1.5,1.2) node[left] {$a$}--(3.3,1.2);
+			\draw[mauChuDao,line width=0.9pt]
+				(-1.5,-1) node[left] {$b$}--(3.3,-1);
+			\draw[mauChuDao,line width=0.9pt]
+				($(M)+(245:0.65)$)--($(N)+(65:0.65)$)
+				node[above] {$c$};
+
+			% Hai giao điểm
+			\fill[red!75!black] (M) circle (1.5pt);
+			\fill[red!75!black] (N) circle (1.5pt);
+			\node[below right] at (M) {$M$};
+			\node[above left] at (N) {$N$};
+
+			% Các góc M_1, M_2, N_1, N_2
+			\node at ($(M)+(145:0.43)$) {$1$};
+			\node at ($(M)+(35:0.43)$) {$2$};
+			\node at ($(N)+(215:0.43)$) {$2$};
+			\node at ($(N)+(325:0.43)$) {$1$};
+		\end{tikzpicture}
+	\end{center}
+\end{bt}
+
+\begin{bt}
+	Cho hình vẽ dưới đây, biết $a\parallel b$. Tính số đo $x$ và $y$.
+
+	\begin{center}
+		\begin{tikzpicture}[
+			scale=1.15,
+			line cap=round,
+			line join=round,
+			font=\small,
+			every node/.style={inner sep=1.3pt}
+		]
+			\coordinate (A) at (0,1.2);
+			\coordinate (B) at (2.0,1.2);
+			\coordinate (C) at (-0.39,-1.0);
+			\coordinate (D) at (3.27,-1.0);
+
+			% Hai đường thẳng song song a và b
+			\draw[mauChuDao,line width=0.9pt]
+				(-1.1,1.2) node[left] {$a$}--(4.15,1.2);
+			\draw[mauChuDao,line width=0.9pt]
+				(-1.1,-1.0) node[left] {$b$}--(4.15,-1.0);
+
+			% Hai cát tuyến c và d
+			\draw[mauChuDao,line width=0.9pt]
+				($(C)+(260:0.55)$)--($(A)+(80:0.65)$);
+			\draw[mauChuDao,line width=0.9pt]
+				($(B)+(120:0.65)$)--($(D)+(300:0.55)$);
+
+			% Các giao điểm
+			\foreach \P in {A,B,C,D}{
+				\fill[red!75!black] (\P) circle (1.5pt);
+			}
+
+			% Tên điểm và tên hai cát tuyến
+			\node[above left] at (A) {$A$};
+			\node[above right] at (B) {$B$};
+			\node[below right] at (C) {$C$};
+			\node[below left] at (D) {$D$};
+			\node[above] at ($(A)+(80:0.65)$) {$c$};
+			\node[above] at ($(B)+(120:0.65)$) {$d$};
+
+			% Số đo góc và các góc cần tìm
+			\node[below right=4pt] at (A) {$100^\circ$};
+			\node[below left=5pt] at (B) {$120^\circ$};
+			\node[above right=4pt] at (C) {$x$};
+			\node[below right=4pt] at (D) {$y$};
+		\end{tikzpicture}
+	\end{center}
+\end{bt}
+
+\subsection{Dạng 2. Chứng minh song song và tính góc}
+\begin{bt}
+	Cho hình vẽ dưới đây. Hai đường thẳng $PQ$ và $NO$ có song song với nhau
+	không? Tại sao?
+
+
+    \begin{center}
+        \begin{tikzpicture}[
+            scale=1.05,
+            line cap=round,
+            line join=round,
+            font=\small,
+            every node/.style={inner sep=1.3pt}
+        ]
+            % Các tọa độ
+            \coordinate (O) at (0,0);
+            \coordinate (N) at (-2.5,0);
+            \coordinate (X) at (2.6,0);
+            \coordinate (P) at ($(O)+(60:1.65)$);
+            \coordinate (Q) at ($(P)+(3.1,0)$);
+
+            % Sửa hướng OM thành 310 độ
+            \coordinate (M) at ($(O)+(310:1.85)$);
+
+            % Hai vùng tô xám
+            \fill[gray!45,opacity=0.55] (P) circle (0.34);
+            \fill[gray!45,opacity=0.55] (O) circle (0.42);
+
+            % Các đường và tia
+            \draw[mauChuDao,line width=0.9pt] (P)--(Q);
+            \draw[mauChuDao,line width=0.9pt] (N)--(X);
+            \draw[mauChuDao,line width=0.9pt] (P)--(O)--(M);
+
+            % Góc OPQ = 120 độ
+            \pic[
+                draw=mauChuDao,
+                "$120^\circ$",
+                angle radius=5.5mm,
+                angle eccentricity=1.45
+            ] {angle=O--P--Q};
+
+            % Góc POM = 110 độ
+            \draw[mauChuDao]
+                ($(O)+(60:0.31)$)
+                arc[start angle=60,end angle=-50,radius=0.31];
+
+            \node[fill=white,inner sep=1pt]
+                at ($(O)+(12:0.85)$) {$110^\circ$};
+
+            % Góc NOM = 130 độ
+            \draw[mauChuDao]
+                ($(O)+(180:0.38)$)
+                arc[start angle=180,end angle=310,radius=0.38];
+
+            \draw[mauChuDao]
+                ($(O)+(180:0.47)$)
+                arc[start angle=180,end angle=310,radius=0.47];
+
+            \node at ($(O)+(242:0.82)$) {$130^\circ$};
+
+            % Các điểm và nhãn
+            \foreach \Pnt in {N,P,O,Q,M}{
+                \fill[red!75!black] (\Pnt) circle (1.35pt);
+            }
+
+            \node[above left=1pt] at (P) {$P$};
+            \node[above left=1pt] at (O) {$O$};
+            \node[left=2pt] at (N) {$N$};
+            \node[right=3pt] at (Q) {$Q$};
+            \node[right=2pt] at (X) {$x$};
+            \node[below right=1pt] at (M) {$M$};
+
+        \end{tikzpicture}
+    \end{center}
+
+\end{bt}
+\begin{bt}
+	Cho đoạn thẳng $AB$. Trên cùng một nửa mặt phẳng có bờ là đường thẳng
+	$AB$, vẽ các tia $Ax$, $By$ sao cho
+	$\widehat{ABy}=\alpha$ và $\widehat{xAB}=\dfrac{7}{2}\alpha$.
+	Tính $\alpha$ để $Ax\parallel By$.
+\end{bt}
+
+\begin{bt}
+	Theo hình vẽ, cho $\widehat{xOy}=70^\circ$ 
+	$(\widehat{O_1}=70^\circ)$, $\widehat{A_1}=110^\circ$ và
+	$\widehat{B_2}=110^\circ$. Hãy chứng minh:
+	\begin{enumerate}[label=\alph*)]
+		\item $a\parallel Ox$;
+		\item $b\parallel Oy$.
+	\end{enumerate}
+
+    \begin{center}
+        \begin{tikzpicture}[
+            scale=1.05,
+            line cap=round,
+            line join=round,
+            font=\small,
+            every node/.style={inner sep=1.3pt}
+        ]
+            \coordinate (O) at (0,0);
+            \coordinate (X) at (3.1,0);
+            \coordinate (A) at ($(O)+(70:2.25)$);
+            \coordinate (B) at ($(A)+(-2.35,0)$);
+
+            % Tạo điểm Y trên tia Oy (kéo dài hơn A)
+            \coordinate (Y) at ($(O)!1.48!(A)$);
+
+            % Hai điểm phụ để vẽ đường thẳng b song song tuyệt đối với Oy
+% Hai điểm gốc theo phương Oy
+            \coordinate (Bleft)  at ($(B)+(O)-(Y)$);
+            \coordinate (Bright) at ($(B)+(Y)-(O)$);
+
+            % Lấy gần B hơn để đường b ngắn lại
+            \coordinate (B1) at ($(B)!0.58!(Bleft)$);
+            \coordinate (B2) at ($(B)!0.58!(Bright)$);
+
+            % Đường thẳng a và tia Ox
+            \draw[mauChuDao,line width=0.9pt]
+                ($(B)+(-1.1,0)$)--($(A)+(1.35,0)$)
+                node[above left=1pt] {$a$};
+
+            \draw[mauChuDao,line width=0.9pt] (O)--(X)
+                node[below left=1pt] {$x$};
+
+            % Tia Oy đi qua A
+            \draw[mauChuDao,line width=0.9pt] (O)--(Y);
+            \node[above right] at (Y) {$y$};
+
+            % Đường thẳng b đi qua B và song song với Oy
+            \draw[mauChuDao,line width=0.9pt] (B1)--(B2);
+            \node[above right] at ($(B)!0.98!(B2)$) {$b$};
+
+            % Các giao điểm
+            \foreach \Pnt in {O,A,B}{
+                \fill[red!75!black] (\Pnt) circle (1.45pt);
+            }
+
+            \node[below left=1pt] at (O) {$O$};
+            \node[above left=1pt] at (A) {$A$};
+            \node[above right=2pt] at (B) {$B$};
+
+            % Ký hiệu các góc O_1, A_1 và B_2
+            \node at ($(O)+(35:0.28)$) {$1$};
+            \node at ($(A)+(-55:0.28)$) {$1$};
+            \node at ($(B)+(130:0.28)$) {$2$};
+        \end{tikzpicture}
+    \end{center}
+
+\end{bt}
+\subsection{Dạng 3. Tổng hợp tính góc và chứng minh song song}
+\begin{bt}
+	Cho hình vẽ. Tìm trên hình các đường thẳng song song với $OC$.
+	Vì sao?
+
+	\begin{center}
+		\begin{tikzpicture}[
+			scale=1.05,
+			line cap=round,
+			line join=round,
+			font=\small,
+			every node/.style={inner sep=1.3pt}
+		]
+			\coordinate (O) at (0,0);
+			\coordinate (C) at (-2.05,0);
+			\coordinate (D) at (0,-1.55);
+			\coordinate (E) at (2.35,-1.55);
+			\coordinate (A) at ($(O)+(50:1.35)$);
+			\coordinate (B) at ($(A)+(2.35,0)$);
+
+			% Vùng tô xám quanh hai đỉnh có góc đã cho
+			\fill[gray!45,opacity=0.55] (O) circle (0.36);
+			\fill[gray!45,opacity=0.55] (A) circle (0.36);
+
+			% Các đường và đoạn thẳng
+			\draw[mauChuDao,line width=0.9pt] (C)--(O)--(A)--(B);
+			\draw[mauChuDao,line width=0.9pt] (O)--(D)--(E);
+
+			% Góc 140 độ tại O
+			\draw[mauChuDao] ($(O)+(50:0.28)$)
+				arc[start angle=50,end angle=-90,radius=0.28];
+			\node[right=3pt] at ($(O)+(-23:0.48)$) {$140^\circ$};
+
+			% Góc 130 độ tại A với các cung đồng tâm
+			\draw[mauChuDao] ($(A)+(230:0.27)$)
+				arc[start angle=230,end angle=360,radius=0.27];
+			\draw[mauChuDao] ($(A)+(230:0.34)$)
+				arc[start angle=230,end angle=360,radius=0.34];
+			\draw[mauChuDao] ($(A)+(230:0.41)$)
+				arc[start angle=230,end angle=360,radius=0.41];
+			\node[below right=5pt] at (A) {$130^\circ$};
+
+			% Dấu vuông: OD vuông góc OC và OD vuông góc DE
+			\draw[mauChuDao,line width=0.8pt]
+				($(O)+(-0.18,0)$)--($(O)+(-0.18,-0.18)$)--($(O)+(0,-0.18)$);
+			\draw[mauChuDao,line width=0.8pt]
+				($(D)+(0,0.18)$)--($(D)+(0.18,0.18)$)--($(D)+(0.18,0)$);
+
+			% Các điểm và nhãn
+			\foreach \Pnt in {C,O,A,B,D,E}{
+				\fill[red!75!black] (\Pnt) circle (1.35pt);
+			}
+			\node[left=3pt] at (C) {$C$};
+			\node[above left=1pt] at (O) {$O$};
+			\node[above left=1pt] at (A) {$A$};
+			\node[right=3pt] at (B) {$B$};
+			\node[below left=1pt] at (D) {$D$};
+			\node[right=3pt] at (E) {$E$};
+		\end{tikzpicture}
+	\end{center}
+\end{bt}
+
+\begin{bt}
+	Cho hình vẽ sau. Biết
+	$\widehat{AMN}=2\widehat{BMN}$ và
+	$\widehat{MND}-\widehat{MNC}=60^\circ$.
+	Chứng minh rằng $AB\parallel CD$.
+
+	\begin{center}
+		\begin{tikzpicture}[
+			scale=1.1,
+			line cap=round,
+			line join=round,
+			font=\small,
+			every node/.style={inner sep=1.3pt}
+		]
+			\coordinate (M) at (0,1.25);
+			\coordinate (N) at (1.65,-0.65);
+			\coordinate (A) at (-1.45,1.25);
+			\coordinate (B) at (3.0,1.25);
+			\coordinate (C) at (-1.65,-0.65);
+			\coordinate (D) at (3.15,-0.65);
+
+			% Hai đường thẳng AB, CD và cát tuyến MN
+			\draw[mauChuDao,line width=0.9pt] (A)--(B);
+			\draw[mauChuDao,line width=0.9pt] (C)--(D);
+			\draw[mauChuDao,line width=0.9pt] (M)--(N);
+
+			% Hai giao điểm
+			\fill[red!75!black] (M) circle (1.5pt);
+			\fill[red!75!black] (N) circle (1.5pt);
+
+			% Nhãn các điểm
+			\node[above left=1pt] at (A) {$A$};
+			\node[above=3pt] at (M) {$M$};
+			\node[above left=1pt] at (B) {$B$};
+			\node[above left=1pt] at (C) {$C$};
+			\node[above right=1pt] at (N) {$N$};
+			\node[above left=1pt] at (D) {$D$};
+		\end{tikzpicture}
+	\end{center}
+\end{bt}
+
+\begin{bt}
+	Cho hình vẽ sau. Chứng minh rằng $AB\parallel CD$.
+
+	\begin{center}
+		\begin{tikzpicture}[
+			scale=1.1,
+			line cap=round,
+			line join=round,
+			font=\small,
+			every node/.style={inner sep=1.3pt}
+		]
+			\coordinate (A) at (0,0);
+			\coordinate (B) at (3.1,0);
+			\coordinate (P) at ($(A)+(120:1.65)$);
+			\coordinate (C) at ($(A)+(260:1.55)$);
+			\coordinate (D) at ($(C)+(3.35,0)$);
+
+			% Các đoạn thẳng trong hình
+			\draw[mauChuDao,line width=0.9pt] (P)--(A)--(B);
+			\draw[mauChuDao,line width=0.9pt] (A)--(C)--(D);
+
+			% Các góc đã cho tại A và C
+			\pic[draw=mauChuDao,"$120^\circ$",angle radius=2.5mm,
+				angle eccentricity=2.5] {angle=B--A--P};
+			\pic[draw=mauChuDao,"$140^\circ$",angle radius=3.5mm,
+				angle eccentricity=2] {angle=P--A--C};
+			\pic[draw=mauChuDao,"$80^\circ$",angle radius=4.5mm,
+				angle eccentricity=1.7] {angle=D--C--A};
+
+			% Các điểm
+			\foreach \Pnt in {P,A,B,C,D}{
+				\fill[red!75!black] (\Pnt) circle (1.5pt);
+			}
+
+			% Nhãn các điểm
+			\node[below right=2pt] at (A) {$A$};
+			\node[above left=1pt] at (B) {$B$};
+			\node[below left=1pt] at (C) {$C$};
+			\node[below left=1pt] at (D) {$D$};
+		\end{tikzpicture}
+	\end{center}
+\end{bt}

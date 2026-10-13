@@ -1,0 +1,72 @@
+# LaTeX build directories
+**/build/
+**/out/
+**/_minted-*/
+
+# Main LaTeX output
+*.pdf
+*.dvi
+*.xdv
+*.ps
+*.synctex
+*.synctex.gz
+
+# Auxiliary files
+*.aux
+*.auxlock
+*.bbl
+*.bcf
+*.blg
+*.brf
+*.fdb_latexmk
+*.fls
+*.fmt
+*.fot
+*.lof
+*.log
+*.lol
+*.lot
+*.nav
+*.out
+*.run.xml
+*.snm
+*.toc
+*.vrb
+*.xdv
+
+# Index, glossary, and bibliography intermediates
+*.acn
+*.acr
+*.alg
+*.glg
+*.glo
+*.gls
+*.glsdefs
+*.idx
+*.ilg
+*.ind
+*.ist
+*.loa
+*.xdy
+
+# Package-generated files
+*.bak
+*.listing
+*.pyg
+*.sav
+*.upa
+*.upb
+*.sta
+*.cut
+*.mw
+*.thm
+*.spl
+*.ent
+
+# Editor and OS temporary files
+*~
+*.swp
+*.swo
+*.tmp
+.DS_Store
+Thumbs.db
