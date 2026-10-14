@@ -193,11 +193,40 @@ Rút gọn các biểu thức sau:
 \cdot\dfrac{x-4}{8}$, với $x\ge 0,\ x\ne 4$.
 \end{listEX}
 \loigiai{
-\noindent
-a) $A=3\sqrt{x}-4$
+\begin{enumerate}
+\setlength{\itemsep}{1em}
 
-\par\noindent
-b) $B=\sqrt{x}$
+\item Ta có
+\begin{align*}
+x+6\sqrt{x}+9&=\left(\sqrt{x}+3\right)^2,\\
+x-4\sqrt{x}+4&=\left(\sqrt{x}-2\right)^2,\\
+x-10\sqrt{x}+25&=\left(\sqrt{x}-5\right)^2.
+\end{align*}
+Vì $4\le x\le25$ nên $2\le\sqrt{x}\le5$. Do đó
+\begin{align*}
+A
+&=\left|\sqrt{x}+3\right|
++\left|\sqrt{x}-2\right|
+-\left|\sqrt{x}-5\right|\\
+&=\sqrt{x}+3+\sqrt{x}-2-\left(5-\sqrt{x}\right)\\
+&=3\sqrt{x}-4.
+\end{align*}
+Vậy $A=3\sqrt{x}-4$.
+
+\item Với $x\ge0$ và $x\ne4$, ta có
+\begin{align*}
+B
+&=\left(\dfrac{\sqrt{x}+2}{\sqrt{x}-2}
+-\dfrac{\sqrt{x}-2}{\sqrt{x}+2}\right)
+\cdot\dfrac{x-4}{8}\\
+&=\dfrac{\left(\sqrt{x}+2\right)^2
+-\left(\sqrt{x}-2\right)^2}{x-4}
+\cdot\dfrac{x-4}{8}\\
+&=\dfrac{8\sqrt{x}}{x-4}\cdot\dfrac{x-4}{8}\\
+&=\sqrt{x}.
+\end{align*}
+Vậy $B=\sqrt{x}$.
+\end{enumerate}
 }
 \end{bt}
 

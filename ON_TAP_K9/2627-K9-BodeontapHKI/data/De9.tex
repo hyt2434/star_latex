@@ -206,11 +206,40 @@ Rút gọn các biểu thức sau:
 +\dfrac{2}{\sqrt{x}-2}-\dfrac{2}{\sqrt{x}+2}$, với $x\ge 0,\ x\ne 4$.
 \end{listEX}
 \loigiai{
-\noindent
-a) $A=4-2\sqrt{x-1}$
+\begin{enumerate}
+\setlength{\itemsep}{1em}
 
-\par\noindent
-b) $B=\dfrac{3x-4}{x-4}$
+\item Ta có
+\begin{align*}
+x+3+4\sqrt{x-1}&=\left(\sqrt{x-1}+2\right)^2,\\
+x+3-4\sqrt{x-1}&=\left(\sqrt{x-1}-2\right)^2,\\
+4x-4&=\left(2\sqrt{x-1}\right)^2.
+\end{align*}
+Vì $1\le x\le5$ nên $0\le\sqrt{x-1}\le2$. Do đó
+\begin{align*}
+A
+&=\left|\sqrt{x-1}+2\right|
++\left|\sqrt{x-1}-2\right|
+-\left|2\sqrt{x-1}\right|\\
+&=\sqrt{x-1}+2+2-\sqrt{x-1}-2\sqrt{x-1}\\
+&=4-2\sqrt{x-1}.
+\end{align*}
+Vậy $A=4-2\sqrt{x-1}$.
+
+\item Với $x\ge0$ và $x\ne4$, ta có
+\begin{align*}
+B
+&=\dfrac{(\sqrt{x}-2)(\sqrt{x}+2)}{\sqrt{x}-2}
+-\dfrac{(\sqrt{x}-1)(\sqrt{x}+1)}{\sqrt{x}+1}
++\dfrac{2}{\sqrt{x}-2}-\dfrac{2}{\sqrt{x}+2}\\
+&=\sqrt{x}+2-\left(\sqrt{x}-1\right)
++\dfrac{2(\sqrt{x}+2)-2(\sqrt{x}-2)}{x-4}\\
+&=3+\dfrac{8}{x-4}\\
+&=\dfrac{3(x-4)+8}{x-4}\\
+&=\dfrac{3x-4}{x-4}.
+\end{align*}
+Vậy $B=\dfrac{3x-4}{x-4}$.
+\end{enumerate}
 }
 \end{bt}
 
