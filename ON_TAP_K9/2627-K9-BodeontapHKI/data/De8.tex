@@ -232,118 +232,166 @@ Vậy $B=\sqrt{x}$.
 
 
 %Bài 3
-\begin{bt}[0,5 điểm]
-\immini
-{Một gia đình làm cầu thang có độ dốc là $36^\circ$ so với phương ngang. Chiều cao từ sàn nhà tới trần nhà là $3{,}6$ m. Tính chiều dài $AB$ của mặt cầu thang (làm tròn đến hàng đơn vị).}
-{
-\begin{tikzpicture}[scale=0.9, font=\small, >=stealth]
-  \pgfmathsetmacro{\h}{3.6} % chiều cao
-  \pgfmathsetmacro{\goc}{36} % góc nghiêng (độ)
-  \pgfmathsetmacro{\day}{\h/tan(\goc)} % độ dài chân cầu thang
-  \pgfmathsetmacro{\bac}{6} % số bậc
-  \pgfmathsetmacro{\dx}{\day/\bac} % độ dài mỗi bậc
-  \pgfmathsetmacro{\dy}{\h/\bac} % chiều cao mỗi bậc
-
-  \coordinate (A) at (0,0);
-  \coordinate (H) at (\day,0);
-  \coordinate (B) at (\day,\h);
-
-  \draw[thick] (A)--(B);
-  \draw[dashed] (A)--(H) (B)--(H);
-
-  % --- bậc thang: lưu ý có ; ở cuối \draw ---
-  \foreach \i in {0,1,...,5}{
-    \pgfmathsetmacro{\x}{\i*\dx}
-    \pgfmathsetmacro{\y}{\i*\dy}
-    \draw[thick] (\x,\y) -- ++(0,\dy) -- ++(\dx,0);
-  }
-
-  % góc ở A
-  \pic[draw, angle radius=1cm, angle eccentricity=1.3] {angle = H--A--B};
-  % nếu muốn nhãn rõ hơn, có thể dùng node riêng:
-  % \node at ($(A)+(0.35,0.18)$) {$36^\circ$};
-
-  % ký hiệu vuông góc tại H
-  \draw ($(H)+(-0.3,0)$) -- ++(0,0.3) -- ++(0.3,0);
-
-  % --- mũi tên chiều cao: phải vẽ thẳng đứng ---
-  \draw[<->] ($(H)+(0.4,0)$) -- ++(0,\h) node[midway,right]{$3{,}6\ \mathrm{m}$};
-
-  \foreach \p/\pos in {A/below,B/above right,H/below}{
-    \filldraw[fill=black] (\p) circle(0.5pt) node[\pos] {$\p$};
-  }
-\end{tikzpicture}
-
-}
+\begin{bt}[1,0 điểm]
+Một rạp chiếu phim bán vé người lớn và vé trẻ em. Buổi sáng, rạp bán $3$ vé người lớn và $2$ vé trẻ em, thu được $400\,000$ đồng. Buổi chiều, giá vé người lớn giảm $25\%$ và giá vé trẻ em giảm $10\%$ so với buổi sáng; rạp bán $4$ vé người lớn và $2$ vé trẻ em, thu được $390\,000$ đồng. Biết trong mỗi buổi, các vé cùng loại có cùng giá. Tính giá một vé người lớn và một vé trẻ em ở buổi sáng.
 \loigiai{
-Chiều dài $AB$ của mặt cầu thang khoảng $6$ m.
+Gọi $x$ (nghìn đồng) là giá một vé người lớn buổi sáng và $y$ (nghìn đồng) là giá một vé trẻ em buổi sáng, với $x>0$, $y>0$.
+
+Buổi sáng cho ta
+\[
+3x+2y=400. \tag{1}
+\]
+Buổi chiều, vé người lớn có giá $\dfrac{3}{4}x$ và vé trẻ em có giá $\dfrac{9}{10}y$, nên
+\[
+4\cdot\dfrac{3}{4}x+2\cdot\dfrac{9}{10}y=390,
+\]
+tức là
+\[
+3x+\dfrac{9}{5}y=390.
+\]
+Nhân hai vế với $5$:
+\[
+15x+9y=1950.
+\]
+Chia hai vế cho $3$:
+\[
+5x+3y=650. \tag{2}
+\]
+Nhân $(2)$ với $2$ và nhân $(1)$ với $3$:
+\begin{align*}
+10x+6y&=1300, \tag{3}\\
+9x+6y&=1200. \tag{4}
+\end{align*}
+Lấy $(3)$ trừ $(4)$:
+\[
+x=100.
+\]
+Thay vào $(1)$:
+\[
+3\cdot 100+2y=400 \Rightarrow 2y=100 \Rightarrow y=50.
+\]
+Cặp $(x;y)=(100;50)$ thỏa $x>0$, $y>0$.
+
+\emph{Kiểm tra.} Buổi chiều, vé người lớn giá $75$ nghìn đồng và vé trẻ em giá $45$ nghìn đồng.
+\[
+4\cdot 75+2\cdot 45=300+90=390,
+\]
+đúng với giả thiết.
+
+Vậy buổi sáng, một vé người lớn giá $100\,000$ đồng và một vé trẻ em giá $50\,000$ đồng.
 }
 \end{bt}
 
 %Bài 4
-\begin{bt}[1,5 điểm]
-Rút gọn các biểu thức sau:
-\begin{listEX}[2]
-\item $A = 3\sqrt{3} + 2\sqrt{48} - \sqrt{75}$
-\item $B = \dfrac{2}{\sqrt{3}-1}+\sqrt{(\sqrt{3}-4)^2}$
-\item! $C = \left(\dfrac{\sqrt{x}}{3-\sqrt{x}} + \dfrac{x+9}{x-9}\right) : \dfrac{1}{3\sqrt{x}+x}$ \quad (với $x>0$, $x\ne9$)
-\end{listEX}
+\begin{bt}[1,0 điểm]
+\immini[thm]
+{Một biển hiệu hình chữ nhật có chiều dài $(x+5)$ cm và chiều rộng $(x+1)$ cm, với $x>0$. Ở giữa biển hiệu có một hình tròn bán kính $2$ cm nằm trọn trong hình chữ nhật (hình vẽ). Phần tô đậm là phần hình chữ nhật nằm ngoài hình tròn.
+\begin{enumerate}
+\item Viết biểu thức diện tích hình chữ nhật, diện tích hình tròn và diện tích phần tô đậm theo $x$.
+\item Biết diện tích phần tô đậm là $32-4\pi$ (cm$^2$). Tìm $x$.
+\end{enumerate}
+}
+{
+\begin{tikzpicture}[scale=0.72, font=\scriptsize, line join=round]
+	\fill[gray!30] (0,0) rectangle (5,3.2);
+	\fill[white] (2.5,1.6) circle (0.72);
+	\draw (0,0) rectangle (5,3.2);
+	\draw (2.5,1.6) circle (0.72);
+	\draw (2.5,1.6)--(3.22,1.6);
+	\node[above] at (2.86,1.6) {$2$ cm};
+	\node[below] at (2.5,0) {$(x+5)$ cm};
+	\node[left] at (0,1.6) {$(x+1)$ cm};
+	\fill (2.5,1.6) circle (0.6pt);
+\end{tikzpicture}
+}
 \loigiai{
-a) $A=6\sqrt{3}$ \hspace{2cm} b) $B=5$ \hspace{2cm} c) $C=-3\sqrt{x}$
+\begin{enumerate}
+\item Diện tích hình chữ nhật là
+\[
+S_{\text{cn}}=(x+5)(x+1)=x^2+6x+5\ \text{(cm}^2\text{)}.
+\]
+Diện tích hình tròn bán kính $2$ cm là
+\[
+S_{\text{tròn}}=\pi\cdot 2^2=4\pi\ \text{(cm}^2\text{)}.
+\]
+Diện tích phần tô đậm là
+\[
+S=S_{\text{cn}}-S_{\text{tròn}}=x^2+6x+5-4\pi\ \text{(cm}^2\text{)}.
+\]
+
+\item Ta có
+\begin{align*}
+x^2+6x+5-4\pi&=32-4\pi\\
+x^2+6x+5&=32\\
+x^2+6x-27&=0\\
+(x+9)(x-3)&=0.
+\end{align*}
+Suy ra $x=-9$ hoặc $x=3$.
+
+Vì $x>0$ nên $x=-9$ bị loại. Với $x=3$, hình chữ nhật có chiều dài $8$ cm và chiều rộng $4$ cm. Đường kính hình tròn bằng $4$ cm nên hình tròn tiếp xúc hai cạnh chiều rộng và nằm trọn trong hình chữ nhật.
+
+Vậy $x=3$ cm.
+\end{enumerate}
 }
 \end{bt}
 
 %Bài 5
-\begin{bt} [3 điểm] Cho đường tròn $(O;R)$. Từ một điểm $M$ nằm ngoài đường tròn thỏa mãn $OM=2R$, vẽ các tiếp tuyến $MA$, $MB$ với đường tròn ($A,B$ là các tiếp điểm). Gọi $K$ là giao điểm của đoạn thẳng $OM$ và đường tròn $(O)$. 
+\begin{bt}[1,0 điểm]
+\immini[thm]
+{Một đường chạy bộ là hình vành khuyên tâm $O$. Bán kính mép trong là $5$ m và diện tích mặt đường chạy là $75\pi$ (m$^2$). Hai bán kính $OA$, $OB$ của mép ngoài tạo góc $\widehat{AOB}=60^\circ$ (hình vẽ).
 \begin{enumerate}
-    \item Tính số đo $\widehat{AOB}$ và $\widehat{AKB}$.
-    \item Chứng minh rằng $AK$ là phân giác của $\widehat{MAB}$.
-    \item Gọi $H$ là giao điểm của $AB$ và $OM$, $AK$ cắt $BM$ tại $I$. Chứng minh rằng $A,H,I,M$ cùng thuộc một đường tròn.
+\item Tính bán kính mép ngoài của đường chạy.
+\item Tính độ dài cung nhỏ $AB$ và diện tích phần đường chạy nằm trong góc $\widehat{AOB}$.
 \end{enumerate}
- 	\loigiai{
- 		\immini{
- 		\begin{enumerate}
- 			\item $\widehat{AOB}=120^\circ,\widehat{AKB}=120^\circ$.
- 			\item Chứng minh tam giác $MAB$ đều và $K$ là tâm đường tròn ngoại tiếp tam giác $MAB$.
- 			\item Tam giác $MAB$ đều nên $AK$ vuông góc với $BM$. Hơn nữa $OM$ vuông góc với $AB$.
- 		\end{enumerate}
- 		}{
-	\begin{tikzpicture}[line width=0.8pt, scale=1]
-	\def\R{2.5}
-	\def\A{5}
-	\path 
-	(0,0) coordinate (O)
-	(\A,0) coordinate (M)
-	($(O)!0.5!(M)$) coordinate (K);
-	
-	% Đường tròn tâm O và tâm K
-	\path[name path=ciro] (O) circle (\R);
-	\path[name path=cirom] (K) circle (\A/2); % bán kính KO = 2.5
-	
-	% Giao điểm của hai đường tròn
-	\path[name intersections={of=ciro and cirom, by={A,B}}];
-	
-	% Vẽ hình
-	\draw (O) circle (\R)
-	      (A)--(O)--(B)
-	      (O)--(M)
-	      (M)--(B)--(A)--cycle;
-	
-	% Giao điểm, điểm phụ
-	\path[name path=om] (O)--(M);
-	\coordinate (H) at (intersection of A--B and O--M);
-	\coordinate (At) at ($(A)!2!(K)$);
-	\coordinate (I) at (intersection of A--At and B--M);
-	\coordinate (Y) at ($(A)!0.5!(M)$);
-	\draw (Y) let \p2=($(Y)-(A)$) in circle ({veclen(\x2,\y2)});
-	\draw (A)--(K)--(B) (K)--(I)--(H);
-	% Nhãn điểm
-	\foreach \x/\g in {O/180,M/-40,A/90,B/-60,K/45,I/-90,H/-135}
-	  \draw[fill=white] (\x) circle (1.5pt) +(\g:.3) node{$\x$};
+}
+{
+\begin{tikzpicture}[scale=0.2, font=\scriptsize, line join=round]
+	\fill[gray!22] (0,0) circle (10);
+	\fill[white] (0,0) circle (5);
+	\fill[gray!48] (5,0) arc (0:60:5) -- (60:10) arc (60:0:10) -- cycle;
+	\draw (0,0) circle (5);
+	\draw (0,0) circle (10);
+	\draw (0,0)--(10,0);
+	\draw (0,0)--(60:10);
+	\draw (2.1,0) arc (0:60:2.1);
+	\node at (30:3.3) {$60^\circ$};
+	\node[below] at (2.6,0) {$5$ m};
+	\fill (0,0) circle (1.4pt) node[below left] {$O$};
+	\fill (10,0) circle (1.4pt) node[right] {$A$};
+	\fill (60:10) circle (1.4pt) node[above] {$B$};
 \end{tikzpicture}
-	}
-  }
- \end{bt}
+}
+\loigiai{
+\begin{enumerate}
+\item Gọi $R$ (m) là bán kính mép ngoài, $R>5$. Diện tích hình vành khuyên là
+\begin{align*}
+\pi R^2-\pi\cdot 5^2&=75\pi\\
+R^2-25&=75\\
+R^2&=100.
+\end{align*}
+Vì $R>0$ nên $R=10$.
+
+Vậy bán kính mép ngoài là $10$ m.
+
+\item Cung nhỏ $AB$ thuộc đường tròn bán kính $10$ m và chắn góc ở tâm $60^\circ$, nên
+\[
+\ell_{\overset{\frown}{AB}}
+=\dfrac{\pi Rn}{180}
+=\dfrac{\pi\cdot 10\cdot 60}{180}
+=\dfrac{10\pi}{3}\ \text{(m)}.
+\]
+Phần đường chạy trong góc $\widehat{AOB}$ là hình quạt vành khuyên, bằng hiệu hai hình quạt cùng góc $60^\circ$:
+\begin{align*}
+S
+&=\dfrac{60}{360}\pi\cdot 10^2-\dfrac{60}{360}\pi\cdot 5^2\\
+&=\dfrac{1}{6}\pi(100-25)\\
+&=\dfrac{75\pi}{6}
+=\dfrac{25\pi}{2}\ \text{(m}^2\text{)}.
+\end{align*}
+Vậy cung nhỏ $AB$ dài $\dfrac{10\pi}{3}$ m và phần đường chạy trong góc $\widehat{AOB}$ có diện tích $\dfrac{25\pi}{2}$ m$^2$.
+\end{enumerate}
+}
+\end{bt}
 
 %Câu 6
 \begin{bt}[0,5 điểm] Tính giá trị biểu thức $M=a^2+b^2$ biết $a,b$ thỏa mãn 
