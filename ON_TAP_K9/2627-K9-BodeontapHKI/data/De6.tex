@@ -131,6 +131,7 @@ Giải các phương trình, bất phương trình và hệ phương trình sau:
 \dfrac{x+2y}{3}+\dfrac{x-y}{2}=3
 \end{cases}$
 \end{listEX}
+
 \loigiai{
 \begin{enumerate}
 \item Điều kiện xác định: $x\ne 2$, $x\ne -2$.
@@ -149,20 +150,36 @@ Giá trị $x=1$ thỏa mãn điều kiện xác định. Vậy phương trình 
 -3x&\ge 17\\
 x&\le -\dfrac{17}{3}.
 \end{align*}
-Vậy tập nghiệm là $S=\left(-\infty;-\dfrac{17}{3}\right]$.
+Vậy bất phương trình có nghiệm $x\le -\dfrac{17}{3}$.
 
-\item Hệ phương trình tương đương với
-\[
-\begin{cases}
+\item Dùng phương pháp thế, ta có
+\begin{align*}
+&\begin{cases}
+2(x-1)-3(y+2)=-11,\\
+\dfrac{x+2y}{3}+\dfrac{x-y}{2}=3
+\end{cases}\\[0.7em]
+\Leftrightarrow\quad
+&\begin{cases}
 2x-3y=-3,\\
-5x+y=18.
+5x+y=18
+\end{cases}\\[0.7em]
+\Leftrightarrow\quad
+&\begin{cases}
+2x-3(18-5x)=-3,\\
+y=18-5x
+\end{cases}\\[0.7em]
+\Leftrightarrow\quad
+&\begin{cases}
+17x=51,\\
+y=18-5x
+\end{cases}\\[0.7em]
+\Leftrightarrow\quad
+&\begin{cases}
+x=3,\\
+y=3.
 \end{cases}
-\]
-Từ phương trình thứ hai suy ra $y=18-5x$. Thay vào phương trình thứ nhất:
-\[
-2x-3(18-5x)=-3\Leftrightarrow 17x=51\Leftrightarrow x=3.
-\]
-Suy ra $y=18-5\cdot3=3$. Vậy hệ có nghiệm $(x;y)=(3;3)$.
+\end{align*}
+Vậy hệ phương trình có nghiệm $(x;y)=(3;3)$.
 \end{enumerate}
 }
 \end{bt}
@@ -173,11 +190,46 @@ Suy ra $y=18-5\cdot3=3$. Vậy hệ có nghiệm $(x;y)=(3;3)$.
 \begin{bt}[1 điểm]
 Rút gọn các biểu thức sau:
 \begin{listEX}[2]
-\item $\sqrt{11-6\sqrt{2}}+\sqrt{11+6\sqrt{2}}$
-\item $\dfrac{26}{4-\sqrt{3}}+\dfrac{3-\sqrt{6}}{\sqrt{3}-\sqrt{2}}$
+\item $\sqrt{14+6\sqrt{5}}-\sqrt{17-12\sqrt{2}}$
+\item $\dfrac{\sqrt{45}+\sqrt{5}}{\sqrt{5}-\sqrt{3}}
+-\dfrac{4\sqrt{3}}{\sqrt{5}+\sqrt{3}}$
 \end{listEX}
 \loigiai{
-a) 6 \hspace{2cm} b) $8+3\sqrt{3}$
+\begin{enumerate}
+\setlength{\itemsep}{1em}
+
+\item Ta có
+\begin{align*}
+14+6\sqrt{5}
+&=9+2\cdot3\sqrt{5}+5\\
+&=\left(3+\sqrt{5}\right)^2,\\
+17-12\sqrt{2}
+&=9-2\cdot3\cdot2\sqrt{2}+8\\
+&=\left(3-2\sqrt{2}\right)^2.
+\end{align*}
+Vì $3-2\sqrt{2}>0$ nên
+\begin{align*}
+\sqrt{14+6\sqrt{5}}-\sqrt{17-12\sqrt{2}}
+&=\sqrt{\left(3+\sqrt{5}\right)^2}
+-\sqrt{\left(3-2\sqrt{2}\right)^2}\\
+&=3+\sqrt{5}-\left(3-2\sqrt{2}\right)\\
+&=\sqrt{5}+2\sqrt{2}.
+\end{align*}
+Vậy biểu thức đã cho rút gọn thành $\sqrt{5}+2\sqrt{2}$.
+
+\item Ta có $\sqrt{45}=3\sqrt{5}$, do đó
+\begin{align*}
+\dfrac{\sqrt{45}+\sqrt{5}}{\sqrt{5}-\sqrt{3}}
+-\dfrac{4\sqrt{3}}{\sqrt{5}+\sqrt{3}}\\
+&=\dfrac{4\sqrt{5}}{\sqrt{5}-\sqrt{3}}
+-\dfrac{4\sqrt{3}}{\sqrt{5}+\sqrt{3}}\\
+&=\dfrac{4\sqrt{5}\left(\sqrt{5}+\sqrt{3}\right)}{5-3}
+-\dfrac{4\sqrt{3}\left(\sqrt{5}-\sqrt{3}\right)}{5-3}\\
+&=10+2\sqrt{15}-\left(2\sqrt{15}-6\right)\\
+&=16.
+\end{align*}
+Vậy biểu thức đã cho rút gọn thành $16$.
+\end{enumerate}
 }
 \end{bt}
 
