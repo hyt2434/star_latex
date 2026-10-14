@@ -240,101 +240,134 @@ Vậy $B=\dfrac{5-\sqrt{x}}{\sqrt{x}+5}$.
 
 %%Bài 3:
 \begin{bt}[1,0 điểm]
-Như thường ngày, mẹ đưa 115\,000 đồng để nhờ An mua 2 ổ bánh mì và 3 cái bánh bao ở cửa hàng M cho cả nhà ăn sáng là vừa đủ. Hôm nay, cửa hàng M giảm giá $10 \%$ cho tất cả các mặt hàng và An đổi ý muốn ăn bánh bao nên bạn mua 1 ổ bánh mì và 4 cái bánh bao. An tính toán với số tiền mang theo bạn còn dư 7\,000 đồng. Hỏi giá của mỗi ổ bánh mì, mỗi cái bánh bao khi cửa hàng M chưa giảm giá là bao nhiêu?
+Một hộ gia đình dùng điện theo cách tính: $50$ kWh đầu tiên giá $1\,800$ đồng/kWh, mỗi kWh tiếp theo giá $2\,500$ đồng/kWh. Hộ này dùng nhiều hơn $50$ kWh và muốn tiền điện không vượt quá $350\,000$ đồng. Hỏi hộ dùng được nhiều nhất bao nhiêu kWh? Biết số điện sử dụng là số nguyên.
 \loigiai{
-Một cái bánh mỳ có giá 20\,000 đồng, một cái bánh bao có giá 25\,000 đồng.
+Gọi $x$ (kWh) là số điện hộ gia đình sử dụng. Theo giả thiết, $x$ nguyên và $x>50$.
+
+Tiền điện là
+\[
+1\,800\cdot 50+2\,500(x-50)=90\,000+2\,500x-125\,000=2\,500x-35\,000
+\]
+(đồng).
+
+Vì tiền điện không vượt quá $350\,000$ đồng nên
+\begin{align*}
+2\,500x-35\,000&\le 350\,000\\
+2\,500x&\le 385\,000\\
+x&\le\dfrac{385\,000}{2\,500}\\
+x&\le 154.
+\end{align*}
+Kết hợp $x>50$ và $x$ nguyên, ta được $51\le x\le 154$. Giá trị lớn nhất là $x=154$.
+
+\emph{Kiểm tra.} Với $154$ kWh, số điện vượt $50$ kWh đầu là $104$ kWh. Tiền điện là
+\[
+1\,800\cdot 50+2\,500\cdot 104=90\,000+260\,000=350\,000
+\]
+(đồng), đúng bằng mức cho phép. Với $155$ kWh, tiền điện là $352\,500$ đồng, vượt $350\,000$ đồng.
+
+Vậy hộ dùng được nhiều nhất $154$ kWh.
 }
 \end{bt}
 
 %%Bài 4:
-\begin{bt}
-[1,0 điểm] \immini{Hải đăng ngày nay là một ngọn tháp (nhà hoặc khung) được thiết kế để chiếu sáng từ một hệ thống đèn và thấu kính với mục đích hỗ trợ cho các hoa tiêu trên biển định hướng và tìm đường.
-
-Một ngọn hải đăng cao $100$ mét được đặt sát bờ biển. Giả sử mặt biển là một cung tròn của đường tròn có tâm là tâm Trái Đất và đỉnh ngọn hải đăng, chân ngọn hải đăng và tâm Trái Đất là ba điểm thẳng hàng. Hỏi khoảng cách giữa vị trí xa nhất các tàu thuyền có thể thấy được ánh sáng từ ngọn hải đăng và chân ngọn hải đăng là bao nhiêu kilomet? Biết rằng bán kính Trái Đất khoảng $6371$ km và góc nâng của đèn tối đa là $90^\circ$. (Làm tròn kết quả đến hàng phần mười)
-}{\begin{tikzpicture}
-	\path 
-	(0:0) coordinate (C)
-	(0,1.125) coordinate (A)
-	(0,-2.5) coordinate (O)
-	($(A)!0.5!(O)$) coordinate (I);
-	\path[name path=tron1] (O) circle (2.5);
-	\path[name path=tron2] (I) let\p1=($(I)-(O)$) in circle ({veclen(\x1,\y1)});
-	\path[name intersections={of=tron1 and tron2,by={B,D}}];
-	\draw (A)--(B);
-	\draw (O) circle (2.5);
-	\begin{scope}[scale=.0625]
-		\draw [fill=gray!60!black,smooth,line join=round,gray!60!black] (-6.14475,0)..controls +(60:.5) and +(120:.5)..(-5.727,0.3825)..controls +(60:.5) and +(120:.5)..(-4.1775,0.9825)..controls +(60:.5) and +(120:.5)..(-3.0275,2)..controls +(60:.5) and +(120:.5)..(-2.,2.)--(-1.8575,4.5325)--(-1.6275,3.1825)..controls +(70:1) and +(-110:1)..(1.8,5.5825)--(2.,2.)..controls +(60:.5) and +(120:.5)..(2.9225,1.9325)..controls +(60:.5) and +(120:.5)..(4.2225,1.0825)..controls +(60:.5) and +(120:.5)..(5.9225,0.4325)..controls +(60:.5) and +(120:.5)..(6.7725,0)--cycle;
-		\draw [fill=gray!60!black,smooth,gray!60!black] (-1.77,5.8825)--(-1.62,8.7325)..controls +(70:1) and +(-110:1)..(1.48,10.8325)--(1.612,8.0825)..controls +(-110:1) and +(70:1)..(-1.77,5.8825);
-		\draw [fill=gray!60!black,gray!60!black] (-1.45,11.4325)--(-1.22,15) arc (180:0:{1.22} and {.5})--(1.22,15)--(1.34,13.3325)..controls +(-110:1) and +(70:1)..(-1.45,11.4325);
-		\draw [line width=.1cm,gray!60!black] (-1.18,15)--(-1.22,15.6) arc (180:0:{1.22} and {.5})--(1.22,15.6)--(1.18,15);
-		\draw[fill=gray!60!black,gray!60!black] (0,14) ellipse ({2} and {.5});
-		\draw[fill=gray!60!black,gray!60!black] (0,17.5) ellipse ({.2} and {.8});
-		\draw [fill=gray!60!black,gray!60!black] (0,16.4) circle (.35);
-		\draw[fill=gray!60!black,gray!60!black] (-.9,17) arc (180:0:{.9 and .9});
-		\draw [line width=.08cm,gray!60!black] (0.87,15)--(0.87,16);
-		\draw [line width=.08cm,gray!60!black] (-0.87,15)--(-0.87,16);
-		\draw [line width=.08cm,gray!60!black] (0.33,15)--(0.33,16.1);
-		\draw [line width=.08cm,gray!60!black] (-0.33,15)--(-0.33,16.1);
-		\draw [line width=.06cm,gray!60!black] (0.81,16)--(0.81,17.2);
-		\draw [line width=.06cm,gray!60!black] (-0.81,16)--(-0.81,17.2);
-	\end{scope}
-	\draw[line width=0.2mm, red] (0,0) arc[start angle=90, end angle=43.8, radius=2.5] --cycle;
-	\draw[line width=0.2mm, black] (C)--(B);
-	\draw (A)--(O)--(B)--(C);
-	\foreach \x/\g in{A/90,B/45,O/-90,C/-135}
-	\draw[fill=white] (\x) circle (.05) +(\g:.3) node{$\x$};
+\begin{bt}[1,0 điểm]
+Một tấm bìa hình chữ nhật kích thước $20$ cm $\times$ $16$ cm. Người ta cắt bỏ bốn hình vuông bằng nhau, cạnh $x$ cm, ở bốn góc rồi gấp thành một hộp không nắp ($0<x<8$). Phần còn lại ở giữa là mặt đáy của hộp (hình vẽ).
+\begin{center}
+\begin{tikzpicture}[x=0.23cm, y=0.23cm, font=\small, line join=round, line cap=round, >=stealth]
+	\fill[gray!32] (0,0) rectangle (3.2,3.2);
+	\fill[gray!32] (16.8,0) rectangle (20,3.2);
+	\fill[gray!32] (0,12.8) rectangle (3.2,16);
+	\fill[gray!32] (16.8,12.8) rectangle (20,16);
+	\draw[thick] (0,0) rectangle (20,16);
+	\draw (3.2,0)--(3.2,16) (16.8,0)--(16.8,16);
+	\draw (0,3.2)--(20,3.2) (0,12.8)--(20,12.8);
+	\draw[<->] (0,-1.5)--(20,-1.5) node[midway,below] {$20$ cm};
+	\draw[<->] (-1.6,0)--(-1.6,16) node[midway,left] {$16$ cm};
+	\draw[<->] (0,16.7)--(3.2,16.7) node[midway,above] {$x$};
+	\draw (0,16)--(0,16.7) (3.2,16)--(3.2,16.7);
 \end{tikzpicture}
+\end{center}
+\begin{enumerate}
+\item Viết biểu thức diện tích bốn hình vuông bị cắt và diện tích mặt đáy hộp theo $x$.
+\item Biết diện tích mặt đáy hộp là $192$ cm$^2$. Tìm $x$.
+\end{enumerate}
+\loigiai{
+\begin{enumerate}
+\item Bốn hình vuông bị cắt có tổng diện tích
+\[
+S_{\text{cắt}}=4x^2\ \text{(cm}^2\text{)}.
+\]
+Sau khi cắt, mặt đáy có chiều dài $20-2x$ (cm) và chiều rộng $16-2x$ (cm). Diện tích mặt đáy là
+\begin{align*}
+S_{\text{đáy}}
+&=(20-2x)(16-2x)\\
+&=4(10-x)(8-x)\\
+&=4\bigl(80-18x+x^2\bigr)\\
+&=4x^2-72x+320\ \text{(cm}^2\text{)}.
+\end{align*}
+
+\item Ta có
+\begin{align*}
+(20-2x)(16-2x)&=192\\
+4(10-x)(8-x)&=192\\
+(10-x)(8-x)&=48\\
+80-18x+x^2&=48\\
+x^2-18x+32&=0\\
+(x-16)(x-2)&=0.
+\end{align*}
+Suy ra $x=16$ hoặc $x=2$.
+
+Vì $0<x<8$ nên $x=16$ bị loại. Với $x=2$, mặt đáy có kích thước $16$ cm và $12$ cm.
+
+\emph{Kiểm tra.} Diện tích mặt đáy là $16\cdot 12=192$ (cm$^2$).
+
+Vậy $x=2$ cm.
+\end{enumerate}
 }
- \loigiai{Khoảng $35{,}7$ km.}
- \end{bt}
+\end{bt}
 
 %%Bài 5:
-\begin{bt}[2,5 điểm]
-Cho đường tròn $(O;R)$. Từ điểm S nằm ngoài đường tròn $(O)$, vẽ hai tiếp tuyến $SM$ và $SN$ với đường tròn $(O)$ ($M, N$ là hai tiếp điểm). Gọi $H$ là giao điểm của $SO$ và $MN$ . Kẻ đường kính $NE$ của đường tròn $(O)$, $SE$ cắt đường tròn $(O)$ tại điểm $F$ ($E$ khác $F$).
+\begin{bt}[1,0 điểm]
+Một vòi phun nước tưới một vùng đất hình quạt tròn tâm $O$, góc ở tâm $\widehat{AOB}=120^\circ$. Độ dài cung $AB$ là $8\pi$ m (hình vẽ).
+\begin{center}
+\begin{tikzpicture}[scale=1.15, font=\small, line join=round, line cap=round]
+	\coordinate (O) at (0,0);
+	\coordinate (A) at (0:3);
+	\coordinate (B) at (120:3);
+	\fill[blue!8] (O)--(A) arc (0:120:3) -- cycle;
+	\draw[thick] (O)--(A) arc (0:120:3) -- cycle;
+	\pic[draw, angle radius=0.85cm, angle eccentricity=1.45] {angle = A--O--B};
+	\node at (60:1.45) {$120^\circ$};
+	\node at (60:3.45) {$8\pi$ m};
+	\fill (O) circle (1.1pt) node[below] {$O$};
+	\fill (A) circle (1.1pt) node[right] {$A$};
+	\fill (B) circle (1.1pt) node[above left] {$B$};
+\end{tikzpicture}
+\end{center}
 \begin{enumerate}
-    \item Chứng minh: $SO \perp MN$ tại $H$.
-    \item Chứng minh: $SM^2=SF\cdot SE$ và $SF\cdot SE=SH\cdot SO$
-    \item Gọi $K$ là trung điểm của $EF$ và $I$ là giao điểm của $MN$ với $EF$.
-    
-    Chứng minh: $SF\cdot SE=SK\cdot SI$ từ đó suy ra $\dfrac{1}{SE}+\dfrac{1}{SF}=\dfrac{2}{SI}$.
+\item Tính bán kính của vùng đất được tưới.
+\item Tính diện tích vùng đất được tưới.
 \end{enumerate}
-\loigiai{\immini
-{\begin{enumerate}
-		\item $MN$ là đường trung trực của $SO$
-		\item $\triangle SNF \backsim \triangle SEN$ suy ra $SN^2=SF\cdot SE$
-		
-		$\triangle SNH \backsim \triangle SON$ suy ra $SN^2=SH\cdot SO$
-		\item $\triangle SHI \backsim \triangle SKO$ suy ra $SK\cdot SI=SH\cdot SO$
-		
-		Chứng minh $SF+SE=2SK$ 
-		
-		Suy ra $SI(SF+SE)=2SI\cdot SK=2SE\cdot SF$
-\end{enumerate}}
-   {\begin{tikzpicture}[scale=1, font=\footnotesize]
-    \coordinate (O) at (0,0);
-    \def\R{2}
-    \draw (O) circle(\R);
-    \coordinate (S) at (-5,0);
-    \path[name path=circleO] (O) circle(\R);
-    \path[name path=circleS] (-2.5,0) circle(2.5);
-    \path[name intersections={of=circleS and circleO, by={M,N}}];
-    \coordinate (E) at ($-1*(N)$);
-    \path[name path=os] (O)--(S);
-    \path[name path=mn] (M)--(N);
-    \path[name intersections={of=os and mn, by=H}];
-    \path[name path=se] (S)--(E);
-    \path[name intersections={of=circleO and se, by={F1,F2}}]; 
-    \coordinate (F) at (F2);
-    \path[name intersections={of=se and mn, by=I}];
-    \draw (S)--(M)--(O)--cycle;
-    \draw (M)--(N)--(E)--(S);
-    \draw (S)--(O);
-    \coordinate (K) at ($(F)!0.5!(E)$);
-    \draw (O)--(K);
-    \foreach \p/\pos in {S/left,M/above,N/below,O/below right,F/below,E/above,K/above,I/below left,H/below left}
-      {\draw[fill=white] (\p) circle(1.5pt) node[\pos] {$\p$};
-      }
-\end{tikzpicture}}
+\loigiai{
+\begin{enumerate}
+\item Gọi $R$ (m) là bán kính vùng đất, $R>0$. Độ dài cung $AB$ chắn góc ở tâm $120^\circ$ là
+\begin{align*}
+\dfrac{\pi R\cdot 120}{180}&=8\pi\\
+\dfrac{2R}{3}&=8\\
+R&=12.
+\end{align*}
+Vậy bán kính vùng đất được tưới là $12$ m.
+
+\item Diện tích hình quạt bán kính $12$ m, góc ở tâm $120^\circ$, là
+\begin{align*}
+S
+&=\dfrac{\pi R^2 n}{360}\\
+&=\dfrac{\pi\cdot 12^2\cdot 120}{360}\\
+&=\dfrac{\pi\cdot 144}{3}\\
+&=48\pi\ \text{(m}^2\text{)}.
+\end{align*}
+Vậy diện tích vùng đất được tưới là $48\pi$ m$^2$.
+\end{enumerate}
 }
 \end{bt}
 
