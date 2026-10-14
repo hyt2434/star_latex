@@ -235,40 +235,160 @@ Vậy biểu thức đã cho rút gọn thành $16$.
 
 %%Bài 3:
 \begin{bt}[1 điểm]
-Điện áp $V$ (tính theo Volt) yêu cầu cho một mạch điện được cho bởi công thức $V=\sqrt{PR}$, trong đó $P$ là công suất (tính theo Watt) và $R$ là điện trở (tính theo Ohm).  
+Một công ty du lịch thông báo giá thuê xe cho chuyến đi một chiều như sau:
+\begin{itemize}
+\item Hãng A: giá mở cửa $200$ nghìn đồng và thêm $4$ nghìn đồng cho mỗi kilômét.
+\item Hãng B: giá mở cửa $80$ nghìn đồng và thêm $6$ nghìn đồng cho mỗi kilômét.
+\end{itemize}
+Gọi $x$ (km), với $x>0$, là quãng đường chuyến đi. Gọi $f(x)$ và $g(x)$ (nghìn đồng) lần lượt là số tiền phải trả cho hãng A và hãng B.
 \begin{enumerate}
-\item Cần điện áp bao nhiêu Volt để thắp sáng một bóng đèn A có công suất $100$ Watt và điện trở $110$ Ohm? \textit{(kết quả làm tròn đến hàng đơn vị)}
-\item Bóng đèn B có điện áp bằng $110$ Volt, điện trở trong là $88$ Ohm có công suất lớn hơn bóng đèn A không? Vì sao?
+\item Viết công thức của $f(x)$ và $g(x)$.
+\item Tìm quãng đường để số tiền thuê hai hãng bằng nhau. Nếu quãng đường dài hơn mức vừa tìm thì nên chọn hãng nào để tiết kiệm chi phí? Vì sao?
 \end{enumerate}
 \loigiai{
-a) $V\approx 105$ (volt) \hspace{2cm} b) $P=\dfrac{275}{2}>100$
+\begin{enumerate}
+\item Vì hãng A thu $200$ nghìn đồng tiền mở cửa và $4$ nghìn đồng cho mỗi kilômét nên
+\[
+f(x)=4x+200.
+\]
+Vì hãng B thu $80$ nghìn đồng tiền mở cửa và $6$ nghìn đồng cho mỗi kilômét nên
+\[
+g(x)=6x+80.
+\]
+
+\item Hai hãng có số tiền thuê bằng nhau khi $f(x)=g(x)$. Ta có
+\begin{align*}
+4x+200&=6x+80\\
+200-80&=6x-4x\\
+120&=2x\\
+x&=60.
+\end{align*}
+Vậy hai hãng thu cùng số tiền khi quãng đường dài $60$ km.
+
+Xét hiệu
+\begin{align*}
+f(x)-g(x)
+&=(4x+200)-(6x+80)\\
+&=120-2x\\
+&=2(60-x).
+\end{align*}
+Với $x>60$ thì $60-x<0$, nên $f(x)-g(x)<0$, tức là $f(x)<g(x)$.
+
+Do đó, nếu quãng đường dài hơn $60$ km thì nên chọn hãng A để tiết kiệm chi phí.
+\end{enumerate}
 }
 \end{bt}
 
 %%Bài 4:
 \begin{bt}[1 điểm]
-Trường THCS Âu Lạc tổ chức cho học sinh khối 8 và khối 9 đi tham quan tại khu di tích lịch sử Rạch Gầm - Xoài Mút cho 363 người gồm học sinh và giáo viên phụ trách, nhà trường đã thuê 10 chiếc xe du lịch gồm 2 loại: Loại 45 chỗ ngồi và loại 16 chỗ ngồi (không kể tài xế). Hỏi nhà trường cần thuê bao nhiêu chiếc xe mỗi loại? Biết rằng không có xe nào còn chỗ trống.
+Mẹ Hoa nhờ bạn mua một nồi cơm điện và một bàn là. Giá niêm yết của hai món cộng lại là $750\,000$ đồng. Hôm nay nồi cơm điện được giảm $20\%$, bàn là được giảm $10\%$ so với giá niêm yết, nên số tiền phải trả ít hơn tổng giá niêm yết $120\,000$ đồng.
+\begin{enumerate}
+\item Tìm giá niêm yết của mỗi món.
+\item Tính số tiền thực tế phải trả cho mỗi món sau khi giảm giá.
+\end{enumerate}
 \loigiai{
-Nhà trường thuê 7 xe 45 chỗ và 3 xe 16 chỗ.
+\begin{enumerate}
+\item Gọi $x$ (nghìn đồng) là giá niêm yết của nồi cơm điện và $y$ (nghìn đồng) là giá niêm yết của bàn là, với $x>0$, $y>0$.
+
+Tổng giá niêm yết là $750$ nghìn đồng, nên
+\[
+x+y=750. \tag{1}
+\]
+Số tiền được giảm là $20\%$ giá nồi cộng với $10\%$ giá bàn là và bằng $120$ nghìn đồng, nên
+\[
+\dfrac{20}{100}x+\dfrac{10}{100}y=120,
+\]
+tức là
+\[
+0{,}2x+0{,}1y=120.
+\]
+Nhân hai vế với $10$, ta được
+\[
+2x+y=1200. \tag{2}
+\]
+Lấy $(2)$ trừ $(1)$:
+\begin{align*}
+(2x+y)-(x+y)&=1200-750\\
+x&=450.
+\end{align*}
+Thay $x=450$ vào $(1)$:
+\[
+450+y=750 \Rightarrow y=300.
+\]
+Cặp $(x;y)=(450;300)$ thỏa điều kiện $x>0$, $y>0$.
+
+Vậy giá niêm yết của nồi cơm điện là $450\,000$ đồng và giá niêm yết của bàn là là $300\,000$ đồng.
+
+\item Sau khi giảm giá, số tiền thực tế là
+\begin{align*}
+\text{nồi cơm điện: }&450\,000\cdot(100\%-20\%)=450\,000\cdot 0{,}8=360\,000 \text{ (đồng)},\\
+\text{bàn là: }&300\,000\cdot(100\%-10\%)=300\,000\cdot 0{,}9=270\,000 \text{ (đồng)}.
+\end{align*}
+Vậy phải trả $360\,000$ đồng cho nồi cơm điện và $270\,000$ đồng cho bàn là.
+
+\emph{Kiểm tra.} Số tiền giảm là $90\,000+30\,000=120\,000$ (đồng), đúng với giả thiết.
+\end{enumerate}
 }
 \end{bt}
 
 %%Bài 5:
 \begin{bt}[1 điểm]
 \immini[thm]
-{Bánh xe (khi bơm căng) của một chiếc xe đạp có đường kính $650\,\text{mm}$.  
-Biết rằng khi giò đĩa quay một vòng thì bánh xe đạp quay được 3 vòng. (hình vẽ)
+{Một người đứng trên mặt đất, cách gốc một cột đèn $12$ m. Mắt người cách mặt đất $1{,}5$ m. Tia nhìn từ mắt đến đỉnh cột đèn tạo với phương nằm ngang một góc $30^\circ$ (hình vẽ).
 \begin{enumerate}
-\item Tính chu vi của bánh xe đạp (khi bơm căng).
-\item Hỏi chiếc xe đạp di chuyển được quãng đường dài bao nhiêu mét khi giò đĩa quay 10 vòng liên tục?\\
-\textit{Câu a, b kết quả làm tròn đến hàng đơn vị}
+\item Tính chiều cao của cột đèn (làm tròn kết quả đến hàng phần mười mét).
+\item Một học sinh có mắt cách mặt đất $1{,}5$ m muốn nhìn đỉnh cột đèn dưới góc nâng đúng $45^\circ$. Hỏi học sinh đó phải đứng cách gốc cột đèn bao nhiêu mét? \textit{(tính chính xác, không dùng kết quả đã làm tròn ở câu a)}
 \end{enumerate}
 }
 {
-\includegraphics[height=4cm]{hinh/De6-1.png}
+\begin{tikzpicture}[scale=0.34, font=\footnotesize, >=stealth, line join=round]
+	\pgfmathsetmacro{\hB}{1.5+8*sin(60)}
+	\coordinate (N) at (0,0);
+	\coordinate (M) at (0,1.5);
+	\coordinate (A) at (12,0);
+	\coordinate (H) at (12,1.5);
+	\coordinate (B) at (12,\hB);
+	\draw[thick] (N)--(A)--(B);
+	\draw[dashed] (M)--(N) (M)--(H);
+	\draw[thick] (M)--(B);
+	\draw (2.2,1.5) arc[start angle=0, end angle=30, radius=2.2];
+	\node at (3.15,2.15) {$30^\circ$};
+	\node[below] at ($(N)!0.5!(A)$) {$12$ m};
+	\node[left] at ($(N)!0.5!(M)$) {$1{,}5$ m};
+	\draw ($(H)+(-0.45,0)$)--++(0,0.45)--++(0.45,0);
+	\foreach \p/\pos in {M/left,A/below right,B/above,H/right}
+		\fill (\p) circle (1.6pt) node[\pos] {$\p$};
+\end{tikzpicture}
 }
 \loigiai{
-a) $C\approx 2024$ (mm) \hspace{2cm} b) $10\cdot 3\cdot 650\pi=19500\pi\,(\text{mm})\approx61\,(\text{m})$
+\begin{enumerate}
+\item Gọi $M$ là vị trí mắt, $A$ là gốc cột đèn, $B$ là đỉnh cột đèn. Kẻ $MH$ vuông góc với $AB$ tại $H$. Khi đó $MH$ song song với mặt đất, $MH=12$ m và $AH=1{,}5$ m.
+
+Tam giác $MHB$ vuông tại $H$, $\widehat{HMB}=30^\circ$, cạnh đối của góc này là $HB$ và cạnh kề là $MH$. Do đó
+\[
+\tan 30^\circ=\dfrac{HB}{MH}
+\Rightarrow HB=MH\cdot\tan 30^\circ=12\cdot\dfrac{\sqrt{3}}{3}=4\sqrt{3}\ \text{(m)}.
+\]
+Chiều cao cột đèn là
+\[
+AB=AH+HB=1{,}5+4\sqrt{3}\ \text{(m)}.
+\]
+Vì $\sqrt{3}\approx 1{,}732$ nên $4\sqrt{3}\approx 6{,}928$ và
+\[
+AB\approx 1{,}5+6{,}928=8{,}428\approx 8{,}4\ \text{(m)}.
+\]
+Vậy chiều cao cột đèn khoảng $8{,}4$ m.
+
+\item Phần cột đèn nằm phía trên tầm mắt vẫn là $HB=4\sqrt{3}$ m.
+
+Gọi $d$ (m) là khoảng cách từ học sinh đến gốc cột đèn, $d>0$. Tia nhìn tạo với phương nằm ngang góc $45^\circ$ nên
+\[
+\tan 45^\circ=\dfrac{4\sqrt{3}}{d}.
+\]
+Vì $\tan 45^\circ=1$ nên $d=4\sqrt{3}$.
+
+Vậy học sinh phải đứng cách gốc cột đèn $4\sqrt{3}$ m.
+\end{enumerate}
 }
 \end{bt}
 

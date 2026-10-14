@@ -236,66 +236,148 @@ Vậy biểu thức đã cho rút gọn thành $3+3\sqrt{15}$.
 
 %Bài 3
 \begin{bt}[1,0 điểm]
- Một chiếc ô tô dự định di chuyển từ địa điểm A đến địa điểm B để du lịch. Theo tính toán ban đầu, xe định đến B lúc 10h sáng và nếu mỗi giờ xe chạy chậm hơn dự kiến 10 km thì sẽ đến nơi lúc 3h chiều. Tuy nhiên, do gặp vấn đề về sự cố nên xe đã xuất phát trễ hơn dự kiến 3h, do đó để kịp đến nơi như dự định thì vận tốc của xe cần tăng thêm 10 km/h. Hỏi quãng đường từ A đến B là bao nhiêu kilomet và xe đã xuất phát lúc mấy giờ?
+Cô Hà mua dụng cụ học tập tại một cửa hàng. Lần thứ nhất, cô mua $5$ cây bút và $3$ quyển vở hết $70\,000$ đồng. Lần thứ hai, cô mua $2$ cây bút và $4$ quyển vở hết $56\,000$ đồng. Biết các cây bút cùng giá và các quyển vở cùng giá. Tính giá tiền của một cây bút và một quyển vở.
 \loigiai{
-Gọi $x$ (km/h) và $y$ (h) lần lượt là vận tốc dự định và thời gian dự định.
+Gọi $x$ (nghìn đồng) là giá một cây bút và $y$ (nghìn đồng) là giá một quyển vở, với $x>0$, $y>0$.
 
-Quãng đường AB là 600 km, xe xuất phát lúc 7 giờ tối hôm trước.
+Lần mua thứ nhất cho ta
+\[
+5x+3y=70. \tag{1}
+\]
+Lần mua thứ hai cho ta
+\[
+2x+4y=56. \tag{2}
+\]
+Chia hai vế của $(2)$ cho $2$:
+\[
+x+2y=28 \Rightarrow x=28-2y. \tag{3}
+\]
+Thế $(3)$ vào $(1)$:
+\begin{align*}
+5(28-2y)+3y&=70\\
+140-10y+3y&=70\\
+140-7y&=70\\
+-7y&=-70\\
+y&=10.
+\end{align*}
+Thay $y=10$ vào $(3)$:
+\[
+x=28-2\cdot 10=8.
+\]
+Cặp $(x;y)=(8;10)$ thỏa $x>0$, $y>0$.
+
+\emph{Kiểm tra.}
+\(5\cdot 8+3\cdot 10=70\) và \(2\cdot 8+4\cdot 10=56\), đúng với giả thiết.
+
+Vậy một cây bút giá $8\,000$ đồng và một quyển vở giá $10\,000$ đồng.
 }
 \end{bt}
+
 %Bài 4
-\begin{bt}[3,0 điểm]
-Cho đường tròn $(O)$ đường kính $AB$. Lấy $M$ thuộc $(O)$ sao cho $MA<MB$. Vẽ dây $MN$ vuông góc với $AB$ tại $H$. Đường thẳng $AN$ cắt $BM$ tại $C$. Đường thẳng qua $C$ vuông góc với $AB$ tại $K$ và cắt $BN$ tại $D$.
+\begin{bt}[1,0 điểm]
+\immini[thm]
+{Một khung ảnh hình chữ nhật có chiều dài $18$ cm và chiều rộng $12$ cm. Phần viền xung quanh có bề rộng đều là $x$ cm ($0<x<6$), như hình vẽ.
 \begin{enumerate}
-\item Chứng minh $A, M, C, K$ cùng thuộc một đường tròn.
-\item Chứng minh $BK$ là tia phân giác của $\widehat{MBN}$.
-\item Chứng minh tam giác $KMC$ cân và $KM$ là tiếp tuyến của đường tròn $(O)$.
+\item Viết biểu thức diện tích hình chữ nhật lớn, diện tích phần đặt ảnh và diện tích phần viền theo $x$.
+\item Biết diện tích phần viền là $104$ cm$^2$. Tìm $x$.
 \end{enumerate}
+}
+{
+\begin{tikzpicture}[scale=0.22, font=\footnotesize, line join=round]
+	\draw[fill=gray!30] (0,0) rectangle (18,12);
+	\draw[fill=white] (2.4,2.4) rectangle (15.6,9.6);
+	\draw[<->] (0,-1.6)--(18,-1.6);
+	\node[below] at (9,-1.6) {$18$ cm};
+	\draw[<->] (-1.8,0)--(-1.8,12);
+	\node[left] at (-1.8,6) {$12$ cm};
+	\draw[<->] (15.6,6)--(18,6);
+	\node[above] at (16.8,6) {$x$};
+\end{tikzpicture}
+}
 \loigiai{
-\immini
-{\begin{enumerate}
-    \item $A,M,C,K$ thuộc đường tròn tâm $I$ bán kính $IM$.
-    \item $\triangle MHB=\triangle NHB$, suy ra $\widehat{MBH}=\widehat{NBH}$.
-    \item $\triangle KMH=\triangle KNH$, suy ra $KM=NK$
+\begin{enumerate}
+\item Diện tích hình chữ nhật lớn là
+\[
+S_{\text{lớn}}=18\cdot 12=216\ \text{(cm}^2\text{)}.
+\]
+Mỗi chiều của phần đặt ảnh ngắn hơn khung ngoài $2x$ cm, nên phần đặt ảnh có chiều dài $18-2x$ (cm) và chiều rộng $12-2x$ (cm). Diện tích phần đặt ảnh là
+\begin{align*}
+S_{\text{ảnh}}
+&=(18-2x)(12-2x)\\
+&=216-36x-24x+4x^2\\
+&=4x^2-60x+216\ \text{(cm}^2\text{)}.
+\end{align*}
+Diện tích phần viền là
+\begin{align*}
+S_{\text{viền}}
+&=S_{\text{lớn}}-S_{\text{ảnh}}\\
+&=216-(4x^2-60x+216)\\
+&=60x-4x^2\\
+&=4x(15-x)\ \text{(cm}^2\text{)}.
+\end{align*}
 
-    $\widehat{KMO}=180^\circ-\widehat{KMC}-\widehat{OMB}=180-\widehat{KCM}-\widehat{OBM}=\widehat{CKB}=90^\circ$
-\end{enumerate}}
-{\begin{tikzpicture}[line cap=round,line join=round,font=\footnotesize]
-		\def\r{2}
-		\path
-		(-\r,0) coordinate (A)
-		(\r,0) coordinate (B)
-		(0,0) coordinate (O)
-		($(O)!1!-50:(A)$) coordinate (M)
-		($(A)!(M)!(B)$) coordinate (H)
-		($(M)!2!(H)$) coordinate (N)
-		($(B)!2!(M)$) coordinate (Bt)
-		($(N)!2.5!(A)$) coordinate (Nt)
-		(intersection of N--Nt and B--Bt) coordinate (C)
-		($(A)!(C)!(B)$) coordinate (K)
-		($(C)!2!(K)$) coordinate (Ct)
-		($(B)!1.5!(N)$) coordinate (Nt)
-		(intersection of C--Ct and B--Nt) coordinate (D)
-		($(C)!0.5!(A)$) coordinate (I)
-		;
-		\draw 
-		(O) circle (\r)
-		(M)--(N) (K)--(A)--(B)--(C)--(D)--(B) (C)--(N) (M)--(A)--(B)--cycle (M)--(I)--(K) (M)--(O)--(N)--(K)--(M)
-		;
-		\foreach \x/\g in{A/-135,B/-45,O/-90,M/90,H/-45,N/-90,C/90,K/180,D/-90,I/70}
-		\draw[fill=white] (\x) circle (1.5pt) +(\g:.35) node{$\x$};
-	\end{tikzpicture}}
+\item Ta có $4x(15-x)=104$. Vì $x\neq 0$ và $4\neq 0$, chia hai vế cho $4$:
+\begin{align*}
+x(15-x)&=26\\
+15x-x^2&=26\\
+x^2-15x+26&=0\\
+(x-2)(x-13)&=0.
+\end{align*}
+Suy ra $x=2$ hoặc $x=13$.
+
+Do $0<x<6$ nên $x=13$ bị loại. Vậy $x=2$ cm.
+
+\emph{Kiểm tra.} Phần đặt ảnh có kích thước $14$ cm và $8$ cm, diện tích $112$ cm$^2$. Phần viền có diện tích $216-112=104$ cm$^2$, đúng với giả thiết.
+\end{enumerate}
 }
 \end{bt}
+
 %Câu 5
 \begin{bt}[1,0 điểm]
-Một người gửi tiền vào ngân hàng với lãi suất $0{,}5\%$/tháng. Biết rằng, nếu không rút tiền ra khỏi ngân hàng thì cứ sau mỗi tháng, số tiền lãi sẽ được nhập vào vốn ban đầu. Người đó phải gửi số tiền ban đầu ít nhất là bao nhiêu triệu đồng để số tiền lãi sau tháng thứ hai không ít hơn $500\,000$ đồng (tính kết quả theo đơn vị triệu đồng và làm tròn kết quả đến hàng đơn vị)?
+\immini[thm]
+{Một tấm gỗ hình tròn bán kính $16$ cm được gắn chính giữa một gương tròn bán kính $10$ cm. Phần gỗ còn nhìn thấy là một hình vành khuyên (hình vẽ). Lấy $\pi=3{,}14$.
+\begin{enumerate}
+\item Tính diện tích phần gỗ còn nhìn thấy (làm tròn kết quả đến hàng phần mười centimét vuông).
+\item Người ta dán một đường kim tuyến quanh mép ngoài của tấm gỗ. Tính độ dài đường kim tuyến đó (làm tròn kết quả đến hàng phần mười centimét).
+\end{enumerate}
+}
+{
+\begin{tikzpicture}[scale=0.11, font=\scriptsize, line join=round]
+	\fill[brown!40] (0,0) circle (16);
+	\fill[cyan!20] (0,0) circle (10);
+	\draw (0,0) circle (16);
+	\draw (0,0) circle (10);
+	\draw (0,0)--(16,0);
+	\node[above] at (8,0) {$16$};
+	\draw (0,0)--(125:10);
+	\node[above right] at (145:5) {$10$};
+	\fill (0,0) circle (2pt) node[below right] {$O$};
+\end{tikzpicture}
+}
 \loigiai{
-$x$ (triệu đồng) là số tiền ban đầu người đó gửi vào ngân hàng
+\begin{enumerate}
+\item Phần gỗ còn nhìn thấy là hình vành khuyên có bán kính ngoài $R=16$ cm và bán kính trong $r=10$ cm. Diện tích phần này là
+\begin{align*}
+S&=\pi R^2-\pi r^2\\
+&=\pi\left(16^2-10^2\right)\\
+&=3{,}14(256-100)\\
+&=3{,}14\cdot 156\\
+&=489{,}84\ \text{(cm}^2\text{)}.
+\end{align*}
+Làm tròn đến hàng phần mười: $S\approx 489{,}8$ cm$^2$.
 
-$0,5\%\left(1+0,5\%\right)\ge 0,5$
+Vậy diện tích phần gỗ còn nhìn thấy khoảng $489{,}8$ cm$^2$.
 
-Người đó cần gửi số tiền ban đầu ít nhất là 100 triệu đồng. 
+\item Đường kim tuyến là chu vi đường tròn mép ngoài, bán kính $16$ cm:
+\begin{align*}
+C&=2\pi R\\
+&=2\cdot 3{,}14\cdot 16\\
+&=100{,}48\ \text{(cm)}.
+\end{align*}
+Làm tròn đến hàng phần mười: $C\approx 100{,}5$ cm.
+
+Vậy độ dài đường kim tuyến khoảng $100{,}5$ cm.
+\end{enumerate}
 }
 \end{bt}
 
