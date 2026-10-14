@@ -1,0 +1,151 @@
+%DS0
+
+
+
+\section{ĐỀ SỐ \thesection }
+\setcounter{bt}{0}
+
+%%Câu 1.2
+\begin{bt} Sắp xếp các số sau đây theo thứ tự tăng dần: $2;\ 10;\ -15 ;\ 0 ;\ -22$.
+	
+	\loigiai{Sắp xếp theo thứ tự tăng dần là: $-22;\ -15;\  0;\  2;\  10$.}
+\end{bt}
+
+%%Câu 2.
+\begin{bt} Thực hiện các phép tính
+	\begin{listEX}[2]
+		\item $268+(-150)+(-168)+250$;
+		\item $5^{1023} \cdot 5^{1000}: 5^{2020}-\left\{2 \cdot\left[152-\left(14-2^{2} \cdot 3\right)\right]\right\}$.
+	\end{listEX}
+	
+	\loigiai{
+		\begin{listEX}[2]
+			\item $268+(-150)+(-168)+250\\=268+(-168)+250+(-150)\\=100+100=200$
+			\item $5^{1023} \cdot 5^{1000}: 5^{2020}-\left\{2 \cdot\left[152-\left(14-2^{2} \cdot 3\right)\right]\right\}\\=5^{3}-{2.(152-2)}\\=125-2.150=125-300=-175$
+			\end{listEX}
+	}
+\end{bt}
+
+%%Câu 3.
+\begin{bt} Tìm số tự nhiên $x$ biết:
+	\begin{listEX}[2]
+		\item $18+5 \cdot x=93$;
+		\item $156-(x+15)=-30$.
+	\end{listEX}
+	
+	\loigiai{	\begin{listEX}[2]
+		\item $18+5\cdot x =93$\\
+			\hspace*{1 cm}$\begin{aligned}
+				5\cdot x&=93-18\\
+				5\cdot x&=75 \\
+				x&=15 
+			\end{aligned}$
+		\item $x+15 =156-(-30)$\\
+			 $\begin{aligned}
+				 x+15&=186\\ x&=186-15 \\ x&=171\end{aligned}$
+			 \end{listEX}
+		 }
+\end{bt}
+
+
+%%Câu 4.
+\begin{bt} Tích của hai số là $1476$. Nếu bớt $16$ đơn vị vào số thứ hai thì tích hai số đó là $820$. Tìm hai số đó?
+	
+	
+	\loigiai{Gọi hai số cần tìm là $a, b$ ta có tích hai số đó là: $S_1=a \cdot b$.\\
+		Nếu bớt $16$ đơn vị vào số thứ hai thì tích hai số đó là: $S_2=a \cdot(b-16)=a b-16\cdot a$.\\
+		Tích mới giảm là: $1476-820=656$\\
+		Ta có: $S_1-S_2=16\cdot a=656 \Rightarrow a=656: 16=41$\\
+		$b=1476: 41=36$\\
+		Vậy số cần tìm thứ nhất là $41$, số thứ hai là $36$.}
+\end{bt}
+
+%%Câu 5. 
+\begin{bt} Năm học mới, một trường THCS nhập học cho các bạn học sinh khối lớp 6. Biết rằng với số học sinh vừa nhập học nếu xếp hàng $18$, hàng $27$, hàng $30$ đều vừa đủ. Tính số học sinh khối lớp $6$ mà trường mới nhận vào, biết số học sinh trong khoảng từ $500$ đến $600$ học sinh.
+	
+	\loigiai{Gọi $x$ (học sinh) là học sinh khối 6 ($x\in \mathbb{N}$) và $500 < x < 600$)\\
+		Theo đề ta có: $x \, \vdots\, 18$; $x\,  \vdots\,  27$; $x\, \vdots\,  30$\\
+		Suy ra $x \in BC(18;27;30)$\\
+		Phân tích mỗi số ra thừa số nguyên tố 
+		$18 = 3^2\cdot 2; \quad
+		27 = 3^3; \quad
+		30 = 3\cdot 2\cdot 5$\\
+		BCNN$(18;27;30)=3^3.2.5=270$\\
+		BC$(18;27;30)=\{0;270;540;810;...\}$\\
+		Mà $500  < x < 600$ nên $x=540$\\
+		Vậy khối 6 có $540$ học sinh.}
+\end{bt}
+
+%%Câu 6.
+\begin{bt} 
+	\immini{
+		Để chuẩn bị cho Tết nguyên đán 2024, bác An chia khu vườn của mình thành ba phần để trồng hoa theo hình vẽ bên:\\
+		Trong đó:\\
+		- Phần đất hình chữ nhật trồng hoa mẫu đơn.\\
+		- Phần đất hình vuông trồng hoa cúc. \\
+		- Phần đất hình tam giác trồng hoa hồng.
+	}{
+		\begin{tikzpicture}[scale=0.9,line width=0.8pt,line join=round,>=stealth]
+			\def\a{8}
+			\fill[pattern=north east lines,pattern color=orange] (0,0) rectangle (-25/\a,-15/\a);
+			\fill[pattern=dots,pattern color=orange] (0,0) rectangle (15/\a,-15/\a);
+			\fill[pattern=crosshatch,pattern color=orange] (0,0) -- (15/\a,0)--(15/\a,20/\a) --cycle;
+			\draw (0,0)--++(180:25/\a)node[midway,above]{25 m}
+			--++(-90:15/\a)node[midway,left]{15 m}
+			--++(0:25/\a)--++(90:15/\a)--++(0:15/\a)node[midway,below]{15 m}
+			--++(-90:15/\a)--++(180:15/\a)--++(0:15/\a)--++(90:15/\a)--++(90:20/\a)node[midway,right]{20 m}
+			--cycle
+			;
+		\end{tikzpicture}
+	}
+	
+	\begin{listEX}
+		\item Em hãy tính diện tích phần đất trồng hoa mẫu đơn.
+		\item Biết chi phí để trồng một mét vuông hoa mẫu đơn là $220\,000$ đồng / $1$ m$^{2}$, hoa cúc $90\,000$ đồng / $1$ m$^{2}$ và hoa hồng là $160\,000$ đồng /$ 1$ m$^{2}$. Tính số tiền bác An phải bỏ ra để trồng hoa?
+	\end{listEX} 	
+	\loigiai{a) Diện tích đất trồng hoa mẫu đơn là $25\cdot 15=375$ (m$^2$) \\
+		
+		b) Số tiền bác An bỏ ra để trồng hoa là \\
+		$375\cdot 220\,000 + 15\cdot 15\cdot 90\,000+\frac{15\cdot 20}{2}\cdot 160\,000=126\,750\,000$ (đồng)}
+		\end{bt}
+
+%%Câu 7.
+\begin{bt} Cho bảng số liệu ban đầu về điểm kiểm tra môn Toán của học sinh lớp 6A như sau:
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+			\hline
+			6 & 9 & 9 & 7 & 10 & 9 & 10 & 10 & 7 & 8 \\
+			\hline
+			9 & 10 & 9 & 10 & 6 & 7 & 10 & 9 & 10 & 10 \\
+			\hline
+			6 & 7 & 8 & 9 & 10 & 6 & 10 & 9 & 10 & 10\\
+			\hline
+		\end{tabular}
+	\end{center}
+	\begin{listEX}
+		\item Em hãy lập bảng thống kê theo mẫu sau: (học sinh vẽ bảng này vào bài làm)
+		\begin{center}
+			\begin{tabular}{|l|l|l|l|l|l|}
+				\hline
+				Điểm số & 6 & 7 & 8 & 9 & 10 \\
+				\hline
+				Số học sinh đạt được &  &  &  &  &  \\
+				\hline
+			\end{tabular}
+		\end{center}
+		\item Lớp 6A có bao nhiêu học sinh? Cho biết số học sinh đạt điểm Giỏi (từ điểm 8 trở lên) có bao nhiêu học sinh?
+	\end{listEX} 
+	
+	
+	\loigiai{
+		a) \begin{center}
+			\begin{tabular}{|l|l|l|l|l|l|}
+				\hline
+				Điểm số & 6 & 7 & 8 & 9 & 10 \\
+				\hline
+				Số học sinh đạt được & 4 & 4 & 2 & 8 & 12 \\
+				\hline
+			\end{tabular}
+		\end{center}
+		b) Lớp 6A có 30 học sinh, số học sinh đạt điểm giỏi có $2+8+12=22$ học sinh}
+		\end{bt}

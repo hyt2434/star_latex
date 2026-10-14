@@ -1,0 +1,84 @@
+\section{ĐỀ SỐ \thesection }%ĐỀ 7
+\setcounter{bt}{0}
+
+%%Câu 1.
+\begin{bt}\textbf{ }
+	\begin{listEX}
+		\item Liệt kê các số nguyên tố có 2 chữ số nhỏ hơn $20$.
+		\item Sắp xếp các số nguyên sau theo thứ tự tăng dần: $34 ;\ -32 ;\ 43 ;\ -23$.
+		\item Viết tập hợp $A$ gồm các ước tự nhiên của $27$.
+	\end{listEX}
+	\loigiai{a) $11; 13; 17; 19$ \hfill b) $-32;-23; 34; 43 $ \hfill c) $A = \{1, 3, 9, 27\}$}
+\end{bt}
+
+
+
+%%Câu 2.
+\begin{bt} Thực hiện các phép tính:
+	\begin{listEX}[2]
+		\item $7^{25}: 7^{23}-2^{3} \cdot6+231^{0}$;
+		\item $211:\left\{-200+\left[(-5 \cdot 14+65) \cdot 3+2^{2}\right]\right\}$.
+	\end{listEX}
+	\loigiai{a) 2 \hfill b) -1}
+\end{bt}
+
+%%Câu 3.
+\begin{bt} \textbf{ }
+	\begin{listEX}
+		\item Tìm $x$, biết: $x+12=8 \cdot (-5)$.
+		\item Tìm số nguyên $x$, biết: $128-3\cdot (x+4) = 23$.
+		\item Một trường THCS tổ chức cho học sinh khối 6 đăng ký tham gia tiết học ngoài nhà trường tại bảo tàng Hồ Chí Minh. Trong ngày đi, nhà trường sắp xếp $30$ em hay $36$ em hay $40$ em lên một xe thì đều vừa đủ không thừa học sinh nào. Tính số học sinh khối 6 của trường đăng ký tham gia tiết học biết rằng số học sinh này khoảng $300$ đến $400$ học sinh.
+	\end{listEX}
+	\loigiai{a) -52 \hfill  b) 31 \hfill c) 360 học sinh}
+\end{bt}
+
+
+%%Câu 4.
+\begin{bt} Một mảnh vườn hình chữ nhật có độ dài hai cạnh là $8$ m và $12$ m.
+	\begin{listEX}
+		\item Em hãy tính diện tích của mảnh vườn đó.
+		\item Dọc theo các cạnh của mảnh vườn, người ta trồng các khóm hoa, cứ $2$ m trồng một khóm hoa. Tính số khóm hoa cần trồng.
+	\end{listEX}
+	\loigiai{a) 96 m$^2$ \hfill b) 20 khóm.}
+\end{bt}
+
+%%Câu 5.
+\begin{bt} 
+	\immini[thm]{
+		Cho biểu đồ cột kép biểu diễn số học sinh giỏi của lớp 6A1. Từ biểu đồ bên, em hãy cho biết:
+		\begin{listEX}
+			\item Trong học kì 1, tổ nào có số học sinh giỏi nhiều nhất?
+			\item Tính tổng số học sinh giỏi của cả lớp trong học kỳ 2?
+		\end{listEX}
+	}{
+		\begin{tikzpicture}[scale=0.8,font=\small,line join=round,>=stealth]
+			\def\hoanh{8} \def\tung{4} \def\sc{2.2}
+			\node[above] at (\hoanh/2,\tung+1){\normalsize \bfseries Tình hình số học sinh giỏi của các tổ lớp 6A1};
+			\def\mau{mauChuDao};
+			\draw[->] (0,0)node[left]{0}--(\hoanh,0);
+			\draw[->] (0,0)--(0,\tung+1);
+			\foreach \y in {1,2,...,9}{\draw (-0.1,\y/\sc)node[left]{$\y$}--++(0:0.2);
+				\draw[dashed,gray] (0,\y/\sc)--(\hoanh-0.2,\y/\sc);}
+			\foreach \x/\n/\p in{1/3/5,3/2/4,5/6/6,7/1/8}{
+				\draw[line width=5mm,\mau] (\x-0.3,0)--++(0,\n/\sc)node[black,shift={(90:0.2)},font=\footnotesize]{\n};
+				\draw[line width=5mm,cyan] (\x+0.3,0)--++(0,\p/\sc)node[black,shift={(90:0.2)},font=\footnotesize]{\p};}
+			\foreach \x/\p in {1/Tổ 1,3/Tổ 2,5/Tổ 3,7/Tổ 4}{\node at (\x,-0.4){\footnotesize \p};}        
+			\fill[\mau] (1.5,\tung+0.8) rectangle (1.8,\tung +0.5) node [black,shift={(10:0.9)}]{Học kỳ 1};
+			\fill[cyan] (4.5,\tung+0.8) rectangle (4.8,\tung +0.5) node [black,shift={(10:0.9)}]{Học kỳ 2};
+		\end{tikzpicture}
+	}
+	\loigiai{a) Tổ 3 \hfill b) 23 học sinh}
+\end{bt}
+
+
+
+%%Câu 6.
+\begin{bt} Bạn Lan đi nhà sách mua $12$ cây viết, $20$ quyển tập, $12$ cây thước. Biết $1$ cây viết có giá là $7\,000$ đồng, một quyển tập có giá là $12\,000$ đồng và giá một cây thước là $5\,000$ đồng. Hỏi:
+	\begin{listEX}
+		\item Bạn Lan đã mua hết tổng cộng bao nhiêu tiền?
+		\item Với số tiền mang theo là $700\,000$ đồng thì bạn Lan có đủ để thanh toán số hàng trên hay không? Vì sao?
+		\item Nhà sách đang có chương trình khuyến mãi: Mua $5$ cây viết tặng $1$ cây thước, mua $5$ quyển tập tặng $1$ cây viết, mua $10$ cây thước thì chỉ tính tiền $9$ cây. Khi áp dụng chương trình khuyến mãi ở trên, hỏi bạn Lan phải mua như thế nào để tổng số viết, tập, thước Lan mua và số viết, thước được tặng vẫn phải đủ $16$ cây viết, $20$ quyển tập, $12$ cây thước, giải thích cách mua và số tiền Lan phải trả khi áp dụng chương trình khuyến mãi là bao nhiêu?
+	\end{listEX}
+	\loigiai{a. 384 000 đồng \hfill b. Đủ tiền (vì $700>384)$ \hfill
+		c. Mua 20 tập, 12 viết, 10  thước là $369\,000$.}
+\end{bt}

@@ -1,0 +1,96 @@
+\section{ĐỀ SỐ \thesection}%ĐỀ 1 
+\setcounter{bt}{0}
+%%Câu 1.
+\begin{bt} Thực hiện các phép tính:
+	\begin{listEX}[2]
+		\item $-2-(-12)+(-18)$;
+		\item $126^{15}: 126^{14}-26 \cdot(40-38)^{2}$.
+	\end{listEX}
+	\loigiai{a) $-8$ \hfill b) $22$.
+	}
+\end{bt}
+
+%%Câu 2.
+\begin{bt} Nhiệt độ ban đầu trong một kho lạnh là $-20^{\circ} \mathrm{C}$. Do yêu cầu bảo quản hàng hóa, người quản lý kho tiếp tục giảm $3^{\circ} \mathrm{C}$. Sau đó, do hàng hóa được lấy bớt nên quản lý kho tăng nhiệt độ thêm $5^{\circ} \mathrm{C}$. Hỏi sau khi tăng, nhiệt độ hiện tại của kho lạnh là bao nhiêu?
+	
+	\loigiai{$-18^\circ$C.}
+\end{bt}
+
+
+%%Câu 3.
+\begin{bt}  Một đội nghi thức của một trường Trung học cơ sở A có khoảng $100$ đến $150$ đội viên đã tham gia hội thi "Nghi thức Đội". Khi tham gia biểu diễn, đội xếp đội hình $10$ hàng, $12$ hàng, $15$ hàng đều vừa đủ. Hỏi đội nghi thức của trường Trung học cơ sở A có bao nhiêu đội viên tham gia hội thi?
+	\loigiai{$120$ đội viên.}
+\end{bt}
+
+
+%%Câu 4.
+\begin{bt} \textbf{ }\\
+	\begin{minipage}[h]{0.5\linewidth}
+		Biểu đồ tranh ở hình bên cho ta thông tin về loại nhạc cụ yêu thích của các bạn học sinh khối lớp 6 của trường Trung học cơ sở A. Biết rằng không có học sinh không thích nhạc cụ.
+		\begin{listEX}
+			\item Số lượng học sinh yêu thích nhạc cụ Organ nhiều hơn số học sinh yêu thích nhạc cụ trống là bao nhiêu?
+			\item Tính tổng số học sinh của trường Trung học cơ sở A.
+		\end{listEX}
+	\end{minipage}
+	\begin{minipage}{0.5\linewidth}
+		\begin{center}
+			\def\icon{\huge \quarterNote}
+			\def\hicon{\huge \eighthNote}
+			\def\vetranh#1{\foreach \dem in{1,...,#1}{\icon \ }}{
+				\begin{tabular}{|c|p{4cm}<{}|}\hline 
+					\bf Loại nhạc cụ&\multicolumn{1}{c|}{\bf Số học sinh yêu thích}\\ \hline 
+					Organ &\vetranh{4}\ \hicon \\ \hline 
+					Ghi ta &\vetranh{5}\ \hicon  \\ \hline 
+					Kèn &\vetranh{2}\ \hicon \\ \hline 
+					Trống &\vetranh{4} \\ \hline 
+					Sáo &\vetranh{2}\ \hicon \\ \hline 
+				\end{tabular}\\
+				(\icon \normalsize = 10 học sinh;        \hicon \normalsize = 5 học sinh)}	
+		\end{center}
+		
+	\end{minipage}
+	\loigiai{a) $5$ học sinh \hfill b) $190$ học sinh.
+	}
+\end{bt}
+
+
+%%Câu 5.
+\begin{bt} 
+	\immini[thm]{
+		Một bồn hoa hình chữ nhật (như hình vẽ), có \\
+		$AB = HF = 4$ m, $BC = EG = 3$ m. Người ta trồng hoa hồng bên trong phần đất hình thoi $HEFG$, phần đất còn lại trồng hoa mười giờ.
+		\begin{listEX}
+			\item Tính diện tích đất trồng hoa hồng?
+			\item Tính diện tích đất trồng hoa mười giờ?
+		\end{listEX}
+	}{
+		\begin{tikzpicture}[scale=1,line width=0.8pt,line join=round,>=stealth]
+			\def\a{4} \def\b{3} 
+			\path (0,0) coordinate (D)
+			(0,\b) coordinate (A)
+			(\a,\b) coordinate (B)
+			(\a,0) coordinate (C)
+			($(A)!0.5!(B)$) coordinate (E)
+			($(B)!0.5!(C)$) coordinate (F)
+			($(C)!0.5!(D)$) coordinate (G)
+			($(A)!0.5!(D)$) coordinate (H)
+			;
+			\draw (A)--(B)--(C)--(D)--(A)
+			(E)--(F)--(G)--(H)--(E)
+			;
+			\draw[<->] (A)++(90:0.6)--++(0:\a)node[midway,above]{4 m};
+			\draw[<->] (B)++(0:0.6)--++(-90:\b)node[midway,right]{3 m};
+			\foreach \x/ \goc in {A/135,B/45,C/-45,D/-135,E/90,F/0,G/-90,H/180}  \fill (\x) circle (0pt)        
+			($(\x)+(\goc:3.5mm)$) node {$\x$};
+		\end{tikzpicture}
+	}
+	\loigiai{a) $6$ m$^2$ \hfill b) $6$ m$^2$.}
+\end{bt}
+
+
+%%Câu 6. 
+\begin{bt} Chứng minh: $\left(7+7^{2}+7^{3}+7^{4}+\ldots+7^{48}+7^{49}+7^{50}+7^{51}\right)$ chia hết cho $399$.
+	
+	\loigiai{HD: Nhận thấy $(7+7^{2}+7^{3})$ $\vdots$ $399$\\
+		Dùng phương pháp kết hợp và tính chất phân phối của phép nhân đối với phép cộng.}
+\end{bt}

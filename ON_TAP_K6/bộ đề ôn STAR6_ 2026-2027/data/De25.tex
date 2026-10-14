@@ -1,0 +1,147 @@
+\section{ĐỀ SỐ \thesection} %star10
+\setcounter{bt}{0}
+
+%%%%%%%%%%%%%%% CÂU 1
+\begin{bt}  Tính hợp lý (nếu có thể)
+	\begin{listEX}[2]
+		\item  $(-67)+125+(-33)+75$;
+		\item $600- \dfrac{36+4^3}{5^2} $;
+		\item $(-3023)-\left(765-3023\right)$;
+		\item $798-\dfrac{298}{\,19-2\cdot\left(5^2-22^2\right)}\cdot 1^{2024}$.
+	\end{listEX}
+	\loigiai{a) $100$ \hfill b) $596$ \hfill c) $-765$ \hfill d) $\dfrac{747428}{937}\approx 797{,}682$
+	}
+\end{bt}
+
+%%%%%%%%%%%%%%% BÀI 2
+\begin{bt}  Tìm $x\in \mathbb{Z}$
+	\begin{listEX}[2]
+		\item  $71-\left(24-3\cdot x\right)=23$;
+		\item $3^{x-1}+5\cdot 3^x=432$;
+		\item $2x+(-2)\cdot\left|5-x\right|-|-4|=-18+2x$;
+		\item $\left(x^2+9\right)\cdot\left(x-2\right)=0$.
+	\end{listEX}
+	\loigiai{ a)$x=-8$ \hspace{1cm}
+			b) $x=4$\hspace{1cm}
+			c) $x=12$ hoặc $x=-2$\hspace{1cm}
+			d) $x=2$ 	}
+\end{bt}
+
+%%%%%%%%%%%%%%% BÀI 3
+\begin{bt} 
+	Star Education tổ chức cho các bạn học sinh đạt thành tích cao trong bài kiểm tra cuối khóa đi tham quan bằng ô tô. Khi xếp lên các xe $36$ chỗ ngồi, xe $40$ chỗ ngồi hay xe $45$ chỗ ngồi thì các xe đều vừa đủ chỗ. Tính số học sinh đi tham quan của trung tâm? Biết rằng số học sinh đó khoảng $1000$ đến $1100$ học sinh. Nếu cả trung tâm cùng đi xe $45$ chỗ ngồi thì cần bao nhiêu xe để xếp đủ học sinh?
+	\loigiai{
+		Số xe $45$ chỗ cần dùng là $24$ xe
+	}
+\end{bt}
+
+%%%%%%%%%%%%%%% BÀI 4
+\begin{bt} 
+	Một người đi xe đạp từ $B$ đến $C$ với vận tốc $15$ km/giờ, cùng lúc đó một người đi xe máy từ $A$ cách $B$ $50$ km với vận tốc $40$ km/giờ và đuổi theo người đi xe đạp. Kể từ lúc bắt đầu sau mấy giờ xe máy đuổi kịp xe đạp?
+	\loigiai{$2$ giờ.
+	}
+\end{bt}
+
+%%%%%%%%%%%%%%% BÀI 5
+\begin{bt} 
+	Một mảnh đất hình chữ nhật có chiều dài $40$ m, chiều rộng $25$ m.
+	Người ta làm một sân khấu hình thang cân có kích thước như hình bên dưới.
+	
+	\immini{\begin{listEX}
+		\item Tính diện tích mảnh đất và sân khấu.
+		\item Trang trí sân khấu người ta phải trả cho mỗi mét vuông sân khấu là $500\,000$ đồng/m$^2$. Hỏi người ta phải chi hết bao nhiêu tiền để trang trí sân khấu?
+	\end{listEX}}{ 
+	\begin{tikzpicture}[scale=0.14,line width=0.8pt,line join=round,>=stealth]
+		
+		\def\a{6}  
+		\def\b{5} 
+		\def\c{4} 
+		
+		\path 
+		(0,0) coordinate (B)
+		(0:8*\b) coordinate (C)
+		(90:5*\b)coordinate(A)
+		(A)++(0:8*\b) coordinate (D) 
+		(A)++(0:2*\b) coordinate (E) 
+		(E)++(0:4*\b) coordinate (F)
+		(E)++(0: \c) coordinate (G) 
+		(F)++(0: -\c) coordinate (H)
+		(G)++(90: -\a) coordinate (G') 
+		(H)++(90: -\a) coordinate (H')
+		
+		(E)++(90:0.5*\c) coordinate (E') 
+		(F)++(90:0.5*\c) coordinate (F')
+		;
+		
+		
+		\draw (A)--(B)--(C)--(D)--cycle
+		(E)--(G')--(H')node[midway,below]{12 m}--(F) (H')--(H)node[midway,left]{6 m}
+		
+		(E')--(F')node[midway,above]{20 cm}
+		;
+		\draw[dashed](E)--(E') (F)--(F')
+		;
+		
+		%%%% Hiển thị tên điểm
+		%	\foreach \x/\g in {A/90,B/-90, C/-90,D/90,E'/9,F'/9 ,E/90,F/90,G/9,H/9,G'/9,H'/9
+			%	}\draw[fill=white](\x)circle(1.5pt)+(\g:.3)node{$\x$};
+		
+		\draw pic[draw, angle radius=2.5mm]{right angle=E--H--H'};
+	\end{tikzpicture}
+ }
+	
+	
+	
+	
+	\loigiai{a) $1\,000$ m$^2$, $96$ m$^2$ \hfill b) $48\,000\,000$ đồng.
+	}
+\end{bt}
+
+%%%%%%%%%%%%%%% BÀI 6
+\begin{bt} 
+	Kết quả điều tra về loại quả ưa thích nhất đối với một số bạn trong lớp, mỗi bạn trả lời một lần, được ghi lại trong bảng sau:
+	$$
+	\begin{array}{|c|c|c|c|c|}
+		\hline
+		\text{Cam} & \text{Ổi} & \text{Chuối} & \text{Xoài} & \text{Cam} \\ \hline
+		\text{Khế} & \text{Cam} & \text{Ổi} & \text{Khế} & \text{Xoài} \\ \hline
+		\text{Xoài} & \text{Ổi} & \text{Chuối} & \text{Xoài} & \text{Khế} \\ \hline
+		\text{Xoài} & \text{Cam} & \text{Khế} & \text{Cam} & \text{Xoài} \\ \hline
+		\text{Ổi} & \text{Khế} & \text{Xoài} & \text{Chuối} & \text{Cam} \\ \hline
+	\end{array}
+	$$
+	\begin{listEX}
+		\item Có bao nhiêu bạn tham gia trả lời?
+		\item Hãy lập bảng thống kê và cho biết loại quả nào được các bạn yêu thích nhất.  
+	\end{listEX}
+	\loigiai{
+		\begin{listEX}
+			\item Có $25$ bạn tham gia trả lời.
+			\item Bảng thống kê:
+		\end{listEX}
+		$$
+		\begin{array}{|c|c|c|c|c|c|}
+			\hline
+			\textbf{Quả yêu thích} & \text{Cam} & \text{Ổi} & \text{Chuối} & \text{Khế} & \text{Xoài} \\ \hline
+			\textbf{Số bạn chọn} & 6 & 4 & 3 & 5 & 7 \\ \hline
+		\end{array}
+		$$
+		Vậy Xoài được các bạn yêu thích nhất.
+	}
+\end{bt}
+
+%%%%%%%%%%%%%%% BÀI 7
+\begin{bt} 
+	Hãy tính
+	$$
+	A=2+2^2+2^3+2^4+\ldots+2^{100}.
+	$$
+	\loigiai{
+		\begin{align*}
+			A&=2+2^2+2^3+\ldots+2^{100}\\
+			2A&=2\cdot 2+2^2\cdot 2+\ldots+2^{100}\cdot 2=2^2+2^3+\ldots+2^{101}\\
+			2A-A&=\left(2^2+2^3+\ldots+2^{101}\right)-\left(2+2^2+\ldots+2^{100}\right)\\
+			\text{Vậy} A&=2^{101}-2.
+		\end{align*}
+	}
+\end{bt}

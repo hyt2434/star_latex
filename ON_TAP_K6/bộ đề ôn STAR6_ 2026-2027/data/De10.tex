@@ -1,0 +1,92 @@
+%DS0
+
+
+
+\section{ĐỀ SỐ \thesection }
+\setcounter{bt}{0}
+%%Câu 1.NSL
+\begin{bt} Thực hiện phép tính:
+	\begin{listEX}[2]
+		\item $28\cdot 69 + 28\cdot 31 + (-100)$;
+		\item $75:\left[ (153 - 6\cdot 5^2)\cdot 8 + 2011^0\right] $.
+		\item $(-33) + 45 + (-67)$;
+	\end{listEX}
+	
+\loigiai{a) $2700$ \hfill b) $3$ \hfill c) $-55$}
+
+\end{bt}
+
+
+%%Câu 2.
+\begin{bt} Tìm số nguyên $x$, biết:
+	\
+	\begin{listEX}[3]
+		\item $6x + 15 = 75$;
+		\item $x - 12 = -27$;
+		\item $(x+3)^2+2^4.11=2^2.3^2.5$.
+	\end{listEX}
+	
+	\loigiai{
+		a) $x=10$ \hfill b) $x=-15$ \hfill c) $x=-1, x=-5$
+		 }
+\end{bt}
+
+
+
+%%Câu 3.
+\begin{bt} Học sinh khối $6$ có $150$ bạn nữ và $170$ bạn nam tham gia văn nghệ. Cô phụ trách muốn chia ra thành các nhóm sao cho số nam và nữ mỗi nhóm đều bằng nhau. Hỏi có thể chia nhiều nhất bao nhiêu nhóm? Mỗi nhóm có bao nhiêu nam, bao nhiêu nữ?
+	
+	\loigiai{Có thể chia thành tối đa 	$10$	nhóm, trong mỗi nhóm có $15$ bạn nữ và $17$ bạn nam.}
+\end{bt}
+
+
+%%Câu 4.
+\begin{bt} Một mảnh đất hình chữ nhật có diện tích $1500$ m$^2$, chiều rộng là $30$ m.
+	\immini{
+		\begin{enumerate}
+			\item Tính chiều dài mảnh đất.
+			\item Người ta chia mảnh đất làm bốn phần: phần dùng làm nhà ở có dạng hình chữ nhật chiều rộng $15$ m; chỗ để xe có dạng hình vuông cạnh $8$ m; phần dùng làm vườn hoa có dạng hình chữ nhật và phần còn lại dùng làm lối đi. Tính diện tích chỗ để xe, diện tích vườn hoa và diện tích lối đi.
+		\end{enumerate}
+}{
+\begin{tikzpicture}[scale=1,line width=0.8pt,line join=round,>=stealth]
+	\def\s{8}
+	\path (0,0) coordinate (A)
+	(8/\s,0) coordinate (B)
+	(8/\s,8/\s) coordinate (M)
+	(20/\s,0) coordinate (C)
+	(50/\s,10/\s) coordinate (D)
+	(50/\s,15/\s) coordinate (E)
+	(50/\s,30/\s) coordinate (F)
+	;
+	\draw (A) rectangle (M) 
+	(C) rectangle (D)
+	(A) rectangle (E)
+	(A) rectangle (F)
+	(4/\s,5/\s)node{\tiny Chỗ}
+	(4/\s,3/\s)node{\tiny để xe}
+	(12/\s,12/\s)node{Lối đi}
+	(35/\s,5/\s)node{Vườn hoa}
+	(25/\s,22/\s)node{Nhà ở}
+	;
+	\draw[<->] (A)++(-90:0.3)--++(0:8/\s)node[midway,below]{8 m}; 
+	\draw[<->] (B)++(-90:0.3)--++(0:12/\s)node[midway,below]{12 m};
+	\draw[<->] (F)++(0:0.3)--++(-90:15/\s)node[midway,sloped,above]{15 m};  
+	\draw[<->] (F)++(0:1)--++(-90:30/\s)node[midway,right]{30 m};  
+	\draw[<->] (E)++(0:0.3)--++(-90:5/\s)node[midway,sloped,above]{5 m}; 		
+\end{tikzpicture}
+}
+	\loigiai{	a) $50$ m \hfill b) $64$ m$^2$, $300$ m$^2$, $386$ m$^2$}
+\end{bt}
+
+
+%%Câu 5.
+\begin{bt} Tìm số tự nhiên $n$ có bốn chữ số sao cho chia $n$ cho $131$ thì dư $112$, chia $n$ cho $132$ thì dư $98$.
+	\loigiai{1946.}
+\end{bt}
+
+
+%%Câu 6.v
+\begin{bt} Hãy so sánh $2^{900}$ và $3^{600}$.
+	\loigiai{ $2^{900}$ < $3^{600}$.}
+\end{bt}
+
