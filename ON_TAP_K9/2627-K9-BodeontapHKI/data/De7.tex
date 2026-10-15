@@ -275,60 +275,36 @@ Vậy một cây bút giá $8\,000$ đồng và một quyển vở giá $10\,000
 
 %Bài 4
 \begin{bt}[1,0 điểm]
-\immini[thm]
-{Một khung ảnh hình chữ nhật có chiều dài $18$ cm và chiều rộng $12$ cm. Phần viền xung quanh có bề rộng đều là $x$ cm ($0<x<6$), như hình vẽ.
-\begin{enumerate}
-\item Viết biểu thức diện tích hình chữ nhật lớn, diện tích phần đặt ảnh và diện tích phần viền theo $x$.
-\item Biết diện tích phần viền là $104$ cm$^2$. Tìm $x$.
-\end{enumerate}
-}
-{
-\begin{tikzpicture}[scale=0.22, font=\footnotesize, line join=round]
-	\draw[fill=gray!30] (0,0) rectangle (18,12);
-	\draw[fill=white] (2.4,2.4) rectangle (15.6,9.6);
-	\draw[<->] (0,-1.6)--(18,-1.6);
-	\node[below] at (9,-1.6) {$18$ cm};
-	\draw[<->] (-1.8,0)--(-1.8,12);
-	\node[left] at (-1.8,6) {$12$ cm};
-	\draw[<->] (15.6,6)--(18,6);
-	\node[above] at (16.8,6) {$x$};
-\end{tikzpicture}
-}
+Một đội tuyển xe đạp cần ít nhất $24$ bạn và không quá $40$ bạn để tham gia giải. Mỗi bạn được phát một áo đấu giá $65\,000$ đồng. Kinh phí mua áo không vượt quá $2\,000\,000$ đồng. Hỏi đội có thể cử bao nhiêu bạn tham gia?
 \loigiai{
-\begin{enumerate}
-\item Diện tích hình chữ nhật lớn là
+Gọi $x$ là số bạn được cử tham gia. Theo giả thiết, $x$ là số nguyên và
 \[
-S_{\text{lớn}}=18\cdot 12=216\ \text{(cm}^2\text{)}.
+24\le x\le 40. \tag{1}
 \]
-Mỗi chiều của phần đặt ảnh ngắn hơn khung ngoài $2x$ cm, nên phần đặt ảnh có chiều dài $18-2x$ (cm) và chiều rộng $12-2x$ (cm). Diện tích phần đặt ảnh là
+Tiền mua áo là $65\,000x$ đồng. Vì kinh phí không vượt quá $2\,000\,000$ đồng nên
 \begin{align*}
-S_{\text{ảnh}}
-&=(18-2x)(12-2x)\\
-&=216-36x-24x+4x^2\\
-&=4x^2-60x+216\ \text{(cm}^2\text{)}.
+65\,000x&\le 2\,000\,000\\
+x&\le\dfrac{2\,000\,000}{65\,000}\\
+x&\le\dfrac{400}{13}\\
+x&\le 30+\dfrac{10}{13}.
 \end{align*}
-Diện tích phần viền là
-\begin{align*}
-S_{\text{viền}}
-&=S_{\text{lớn}}-S_{\text{ảnh}}\\
-&=216-(4x^2-60x+216)\\
-&=60x-4x^2\\
-&=4x(15-x)\ \text{(cm}^2\text{)}.
-\end{align*}
+Do $x$ nguyên nên
+\[
+x\le 30. \tag{2}
+\]
 
-\item Ta có $4x(15-x)=104$. Vì $x\neq 0$ và $4\neq 0$, chia hai vế cho $4$:
-\begin{align*}
-x(15-x)&=26\\
-15x-x^2&=26\\
-x^2-15x+26&=0\\
-(x-2)(x-13)&=0.
-\end{align*}
-Suy ra $x=2$ hoặc $x=13$.
+Kết hợp $(1)$ và $(2)$, ta được
+\[
+24\le x\le 30.
+\]
 
-Do $0<x<6$ nên $x=13$ bị loại. Vậy $x=2$ cm.
+\emph{Kiểm tra.} Với $30$ bạn, tiền mua áo là
+\[
+65\,000\cdot 30=1\,950\,000
+\]
+(đồng), không vượt $2\,000\,000$ đồng. Với $31$ bạn, tiền mua áo là $2\,015\,000$ đồng, vượt kinh phí.
 
-\emph{Kiểm tra.} Phần đặt ảnh có kích thước $14$ cm và $8$ cm, diện tích $112$ cm$^2$. Phần viền có diện tích $216-112=104$ cm$^2$, đúng với giả thiết.
-\end{enumerate}
+Vậy đội có thể cử từ $24$ đến $30$ bạn tham gia.
 }
 \end{bt}
 

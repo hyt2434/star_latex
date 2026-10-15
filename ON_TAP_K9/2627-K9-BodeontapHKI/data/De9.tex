@@ -331,42 +331,17 @@ Vậy $x=6$ cm.
 
 %Bài 5
 \begin{bt}[1,0 điểm]
-Bạn Minh đứng cách một tòa nhà. Mắt bạn cách mặt đất $1{,}5$ m. Trên nóc nhà có một cột ăng-ten thẳng đứng cao $6$ m. Tia nhìn từ mắt đến chân cột tạo với phương nằm ngang một góc $30^\circ$, tia nhìn từ mắt đến đỉnh cột tạo với phương nằm ngang một góc $45^\circ$ (hình vẽ).
-\begin{center}
-\begin{tikzpicture}[x=0.4cm, y=0.4cm, font=\small, line cap=round, line join=round, >=stealth]
-	\pgfmathsetmacro{\d}{9+3*sqrt(3)}
-	\pgfmathsetmacro{\yC}{1.5+\d*tan(30)}
-	\pgfmathsetmacro{\yB}{1.5+\d}
-	\coordinate (G) at (-2.2,0);
-	\coordinate (M) at (0,1.5);
-	\coordinate (P) at (0,0);
-	\coordinate (A) at (\d,0);
-	\coordinate (H) at (\d,1.5);
-	\coordinate (C) at (\d,\yC);
-	\coordinate (B) at (\d,\yB);
-	\draw[thick] (G)--(A)--(B);
-	\draw[thick] (P)--(M);
-	\draw[dashed] (M)--(H);
-	\draw (M)--(C);
-	\draw (M)--(B);
-	\draw ($(H)+(-1.05,0)$)--++(0,1.05)--++(1.05,0);
-	\pic[draw, angle radius=1.15cm, angle eccentricity=1.15] {angle = H--M--C};
-	\pic[draw, angle radius=1.85cm, angle eccentricity=1.12] {angle = H--M--B};
-	\node at ($(M)+(15:3.5)$) {$30^\circ$};
-	\node at ($(M)+(24:5.6)$) {$45^\circ$};
-	\draw[<->] (-1.55,0)--(-1.55,1.5) node[midway,left] {$1{,}5$ m};
-	\draw (-1.55,0)--(P) (-1.55,1.5)--(M);
-	\draw[<->] ($(C)+(1.7,0)$)--($(B)+(1.7,0)$) node[midway,right] {$6$ m};
-	\draw ($(C)+(1.7,0)$)--(C) ($(B)+(1.7,0)$)--(B);
-	\foreach \p/\pos in {M/left,H/right,C/right,B/above right,A/below right}
-		\fill (\p) circle (1.15pt) node[\pos] {$\p$};
-\end{tikzpicture}
-\end{center}
+\immini[thm]
+{Bạn Minh đứng cách một tòa nhà. Mắt bạn cách mặt đất $1{,}5$ m. Trên nóc nhà có một cột ăng-ten thẳng đứng cao $6$ m. Tia nhìn từ mắt đến chân cột tạo với phương nằm ngang một góc $30^\circ$, tia nhìn từ mắt đến đỉnh cột tạo với phương nằm ngang một góc $45^\circ$ (hình vẽ).
 \begin{enumerate}
 \item Tính khoảng cách từ Minh đến mặt tường tòa nhà.
 \item Tính chiều cao của nóc nhà so với mặt đất.
 \end{enumerate}
 \textit{(Kết quả viết dưới dạng số chính xác.)}
+}
+{
+\includegraphics[height=4.4cm]{hinh/De9-cau5.png}
+}
 \loigiai{
 \begin{enumerate}
 \item Gọi $M$ là vị trí mắt, $C$ là chân cột ăng-ten, $B$ là đỉnh cột và $A$ là chân tường. Kẻ $MH$ vuông góc với $AB$ tại $H$. Khi đó $MH$ song song với mặt đất, $AH=1{,}5$ m và $BC=6$ m.
