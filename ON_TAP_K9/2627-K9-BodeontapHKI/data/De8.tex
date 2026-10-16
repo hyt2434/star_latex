@@ -395,13 +395,268 @@ Vậy cung nhỏ $AB$ dài $\dfrac{10\pi}{3}$ m và phần đường chạy tron
 
 %Câu 6
 
-\begin{bt}
-	Cho nửa đường tròn $(O;R)$ có đường kính $MN$. Kẻ hai tiếp tuyến $Mx$ và $Ny$ của nửa đường tròn $(O)$ ($Mx$, $Ny$ và nửa đường tròn $(O)$ thuộc cùng một phía của đường thẳng $MN$). Lấy điểm $A$ bất kỳ thuộc nửa đường tròn $(O)$ ($AM<AN$). Qua $A$, kẻ tiếp tuyến với nửa đường tròn $(O)$ cắt $Mx$ và $Ny$ lần lượt tại $E$ và $F$.
+\begin{bt}[3,0 điểm]
+	Cho $(O;R)$ và điểm $A$ nằm ngoài đường tròn. Vẽ các tiếp tuyến $AB$, $AC$ với $(O)$ ($B$, $C$ là hai tiếp điểm).
+	\begin{enumerate}
+	\item Chứng minh rằng $OA\perp BC$.
+	\item Gọi $H$ là giao điểm của $OA$ và $BC$. Chứng minh rằng
+	\[
+	4OH\cdot HA=BC^2.
+	\]
+	\item Gọi $M$ và $N$ lần lượt là trung điểm của $AB$, $AC$. Trên cung nhỏ $BC$ lấy điểm $D$ sao cho tiếp tuyến tại $D$ của $(O)$ cắt tia $MN$ tại $I$. Gọi $T$ là hình chiếu của $D$ trên $OI$. Chứng minh rằng
+	\[
+	OH\cdot OA=OT\cdot OI
+	\quad \text{và} \quad
+	IA=ID.
+	\]
+	\end{enumerate}
 	
-	\begin{listEX}[1]
-	\item Chứng minh $4$ điểm $M,E,A,O$ cùng thuộc một đường tròn.
-	\item Chứng minh $ME+NF=EF$ và $AE\cdot AF=R^2$.
-	\item Gọi $H$ là giao điểm của $MF$ và $NE$, $AH$ cắt $MN$ tại $K$. Chứng minh $AK\perp MN$ và $H$ là trung điểm của $AK$.
-	\end{listEX}
+	\loigiai{
+	\begin{center}
+	\begin{tikzpicture}[scale=1.1, font=\footnotesize, line join=round, line cap=round]
+		% Các điểm
+		\coordinate (O) at (0,0);
+		\coordinate (A) at (0,4);
+		\coordinate (B) at (-1.732,1);
+		\coordinate (C) at (1.732,1);
+		\coordinate (H) at (0,1);
+		\coordinate (M) at (-0.866,2.5);
+		\coordinate (N) at (0.866,2.5);
+		\coordinate (D) at (-0.684,1.879);
+		\coordinate (I) at (1.020,2.5);
+		\coordinate (T) at (0.560,1.372);
+	
+		% Đường tròn
+		\draw[thick] (O) circle (2);
+	
+		% Các đoạn chính
+		\draw[thick] (A)--(B) (A)--(C);
+		\draw[thick] (B)--(C);
+		\draw[thick] (O)--(A);
+		\draw[thick] (M)--(I);
+		\draw[thick] (D)--(I);
+	
+		% Các đoạn phụ
+		\draw[dashed] (O)--(B) (O)--(C) (O)--(D) (O)--(I) (D)--(T);
+	
+		% Dấu vuông góc
+		\draw ($(T)+(0.08,0.03)$)--++(-0.09,0.12)--++(-0.12,-0.09);
+		\draw ($(H)+(-0.08,0)$)--++(0,0.08)--++(0.08,0);
+	
+		% Điểm và nhãn
+		\fill (A) circle (1.2pt) node[above] {$A$};
+		\fill (O) circle (1.2pt) node[left] {$O$};
+		\fill (B) circle (1.2pt) node[left] {$B$};
+		\fill (C) circle (1.2pt) node[right] {$C$};
+		\fill (H) circle (1.2pt) node[right] {$H$};
+		\fill (M) circle (1.2pt) node[left] {$M$};
+		\fill (N) circle (1.2pt) node[above] {$N$};
+		\fill (D) circle (1.2pt) node[above left] {$D$};
+		\fill (I) circle (1.2pt) node[right] {$I$};
+		\fill (T) circle (1.2pt) node[right] {$T$};
+	\end{tikzpicture}
+	\end{center}
+	
+	\begin{enumerate}
+	\item Vì $AB$, $AC$ là hai tiếp tuyến kẻ từ $A$ đến đường tròn $(O)$ nên
+	\[
+	AB=AC.
+	\]
+	Mặt khác,
+	\[
+	OB=OC
+	\]
+	(vì cùng bằng bán kính của đường tròn $(O)$).
+	
+	Vậy $A$ và $O$ đều cách đều hai điểm $B$, $C$, suy ra đường thẳng $AO$ là đường trung trực của đoạn thẳng $BC$.
+	
+	Do đó
+	\[
+	OA\perp BC.
+	\]
+	
+	\item Từ câu a), ta có $OA\perp BC$. Lại do $AO$ là đường trung trực của $BC$ nên
+	\[
+	HB=HC=\dfrac{BC}{2}. \tag{1}
+	\]
+	
+	Xét hai tam giác vuông $\triangle AHB$ và $\triangle AOB$, ta có:
+	\begin{itemize}
+	\item $\widehat{AHB}=90^\circ$;
+	\item $\widehat{ABO}=90^\circ$ (bán kính vuông góc với tiếp tuyến);
+	\item $\widehat{BAH}=\widehat{BAO}$.
+	\end{itemize}
+	Suy ra
+	\[
+	\triangle AHB \sim \triangle AOB.
+	\]
+	
+	Do đó
+	\[
+	\dfrac{AH}{AB}=\dfrac{AB}{AO}
+	\Rightarrow AH\cdot AO=AB^2. \tag{2}
+	\]
+	
+	Mà trong tam giác vuông $AOB$, ta có
+	\[
+	AB^2=AO^2-OB^2=AO^2-R^2.
+	\]
+	Thay vào (2), được
+	\[
+	AH\cdot AO=AO^2-R^2.
+	\]
+	Suy ra
+	\[
+	AO(AO-AH)=R^2.
+	\]
+	Vì $O,H,A$ thẳng hàng và $H$ nằm giữa $O,A$ nên
+	\[
+	AO-AH=OH.
+	\]
+	Do đó
+	\[
+	OA\cdot OH=R^2. \tag{3}
+	\]
+	
+	Xét tam giác vuông $OHB$, ta có
+	\[
+	HB^2=OB^2-OH^2=R^2-OH^2.
+	\]
+	Theo (3), $R^2=OA\cdot OH$, nên
+	\[
+	HB^2=OA\cdot OH-OH^2=OH(OA-OH).
+	\]
+	Mà $OA-OH=HA$, suy ra
+	\[
+	HB^2=OH\cdot HA.
+	\]
+	Nhân hai vế với $4$, ta được
+	\[
+	4HB^2=4OH\cdot HA.
+	\]
+	Theo (1),
+	\[
+	BC=2HB \Rightarrow BC^2=4HB^2.
+	\]
+	Vậy
+	\[
+	4OH\cdot HA=BC^2.
+	\]
+	
+	\item Gọi $K=OA\cap MN$.
+	
+	Vì $M$, $N$ lần lượt là trung điểm của $AB$, $AC$ nên trong tam giác $ABC$ ta có
+	\[
+	MN\parallel BC.
+	\]
+	Suy ra
+	\[
+	OA\perp MN \tag{4}
+	\]
+	(do $OA\perp BC$ theo câu a)).
+	
+	Lại vì $MN\parallel BC$, nên $\triangle AMN \sim \triangle ABC$ với tỉ số đồng dạng
+	\[
+	\dfrac{AM}{AB}=\dfrac12.
+	\]
+	Do đó
+	\[
+	\dfrac{AK}{AH}=\dfrac12
+	\Rightarrow AK=\dfrac{AH}{2}.
+	\]
+	Suy ra $K$ là trung điểm của $AH$, nên
+	\[
+	AK=KH=\dfrac{AH}{2}. \tag{5}
+	\]
+	
+	\medskip
+	\textbf{Chứng minh $OH\cdot OA=OT\cdot OI$.}
+	
+	Vì $ID$ là tiếp tuyến của $(O)$ tại $D$ nên
+	\[
+	OD\perp ID.
+	\]
+	Suy ra tam giác $ODI$ vuông tại $D$.
+	
+	Lại có $T$ là hình chiếu của $D$ trên $OI$, nên
+	\[
+	DT\perp OI.
+	\]
+	Vậy $DT$ là đường cao ứng với cạnh huyền $OI$ của tam giác vuông $ODI$.
+	
+	Theo hệ thức lượng trong tam giác vuông, ta có
+	\[
+	OD^2=OT\cdot OI.
+	\]
+	Mà $OD=R$, nên
+	\[
+	R^2=OT\cdot OI. \tag{6}
+	\]
+	
+	Mặt khác, theo (3),
+	\[
+	OH\cdot OA=R^2. \tag{7}
+	\]
+	
+	Từ (6) và (7), suy ra
+	\[
+	OH\cdot OA=OT\cdot OI.
+	\]
+	
+	\medskip
+	\textbf{Chứng minh $IA=ID$.}
+	
+	Do $I\in MN$ và $K\in MN$, từ (4) suy ra hai tam giác $AKI$ và $OKI$ đều vuông tại $K$.
+	
+	Áp dụng định lý Py-ta-go, ta có
+	\[
+	IA^2=IK^2+AK^2, \tag{8}
+	\]
+	\[
+	OI^2=IK^2+OK^2. \tag{9}
+	\]
+	
+	Lấy (9) trừ (8), được
+	\[
+	OI^2-IA^2=OK^2-AK^2=(OK-AK)(OK+AK). \tag{10}
+	\]
+	
+	Từ (5), vì $K$ là trung điểm của $AH$ và các điểm $O,H,K,A$ thẳng hàng theo thứ tự đó, nên
+	\[
+	OK-AK=OH,
+	\qquad
+	OK+AK=OA.
+	\]
+	Thay vào (10), ta được
+	\[
+	OI^2-IA^2=OH\cdot OA=R^2. \tag{11}
+	\]
+	
+	Mặt khác, trong tam giác vuông $ODI$, ta có
+	\[
+	ID^2=OI^2-OD^2=OI^2-R^2. \tag{12}
+	\]
+	
+	Từ (11), suy ra
+	\[
+	IA^2=OI^2-R^2.
+	\]
+	Kết hợp với (12), ta được
+	\[
+	IA^2=ID^2.
+	\]
+	Suy ra
+	\[
+	IA=ID.
+	\]
+	
+	Vậy ta đã chứng minh được
+	\[
+	OH\cdot OA=OT\cdot OI
+	\quad \text{và} \quad
+	IA=ID.
+	\]
+	\end{enumerate}
+	}
 \end{bt}
 \Closesolutionfile{ansbook}

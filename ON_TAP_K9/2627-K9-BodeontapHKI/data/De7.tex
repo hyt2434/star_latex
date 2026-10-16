@@ -385,7 +385,7 @@ Cho nửa đường tròn $(O)$, đường kính $AB=2R$. Trên nửa đường 
 \end{enumerate}
 \loigiai{
 \begin{center}
-\begin{tikzpicture}[scale=1.02, font=\footnotesize, line join=round, line cap=round]
+\begin{tikzpicture}[scale=1.25, font=\footnotesize, line join=round, line cap=round]
 	\def\r{2}
 	\def\ang{50}
 	\pgfmathsetmacro{\hx}{-\r*sin(\ang/2)*sin(\ang/2)}
@@ -415,7 +415,7 @@ Cho nửa đường tròn $(O)$, đường kính $AB=2R$. Trên nửa đường 
 		\fill (\p) circle (1.15pt) node[\pos] {$\p$};
 	\fill (D) circle (1.15pt) node[left=2pt] {$D$};
 	\fill (H) circle (1.15pt) node[below left=1pt, fill=white, inner sep=1.1pt] {$H$};
-	\fill (I) circle (1.15pt) node[right=2pt, fill=white, inner sep=1.1pt] {$I$};
+	\fill (I) circle (1.15pt) node[right=2pt, inner sep=1.1pt] {$I$};
 \end{tikzpicture}
 \end{center}
 \begin{enumerate}
@@ -423,11 +423,17 @@ Cho nửa đường tròn $(O)$, đường kính $AB=2R$. Trên nửa đường 
 \item Vì tiếp tuyến tại $A$ vuông góc với bán kính qua tiếp điểm nên $OA\perp MA$, tức là $\widehat{OAM}=90^\circ$.
 Vì tiếp tuyến tại $C$ vuông góc với bán kính qua tiếp điểm nên $OC\perp MC$, tức là $\widehat{OCM}=90^\circ$.
 
-Tam giác $OAM$ vuông tại $A$ và có cạnh huyền $OM$, nên $A$ thuộc đường tròn đường kính $OM$.
-Tam giác $OCM$ vuông tại $C$ và có cạnh huyền $OM$, nên $C$ thuộc đường tròn đường kính $OM$.
-Hai điểm $O$ và $M$ cũng thuộc đường tròn đường kính $OM$.
+Gọi $N$ là trung điểm của $OM$. Lấy điểm $A'$ sao cho $N$ là trung điểm của $AA'$. Hai đường chéo $OM$ và $AA'$ của tứ giác $OAMA'$ cắt nhau tại trung điểm của mỗi đường, nên $OAMA'$ là hình bình hành.
 
-Vậy bốn điểm $O$, $M$, $A$, $C$ cùng thuộc một đường tròn, đó là đường tròn đường kính $OM$.
+Hình bình hành này có $\widehat{OAM}=90^\circ$, nên $OAMA'$ là hình chữ nhật. Hai đường chéo của hình chữ nhật bằng nhau, do đó
+\[
+AA'=OM\Rightarrow AN=\dfrac{OM}{2}.
+\]
+Mà $ON=\dfrac{OM}{2}$, nên $AN=ON$. Vậy $A$ thuộc đường tròn tâm $N$, bán kính $ON$. Đây chính là đường tròn đường kính $OM$.
+
+Chứng minh tương tự, vì tam giác $OCM$ vuông tại $C$ và có cạnh huyền $OM$, điểm $C$ cũng thuộc đường tròn đường kính $OM$.
+
+Hai điểm $O$ và $M$ thuộc đường tròn đó. Vậy bốn điểm $O$, $M$, $A$, $C$ cùng thuộc một đường tròn.
 
 \item Hai tiếp tuyến xuất phát từ $M$ thì bằng nhau, nên $MA=MC$.
 
@@ -435,7 +441,7 @@ Xét $\triangle OAM$ và $\triangle OCM$:
 \[
 OA=OC,\qquad MA=MC,\qquad OM\text{ chung}.
 \]
-Suy ra $\triangle OAM\cong\triangle OCM$ (c.c.c), nên $\widehat{AMO}=\widehat{CMO}$.
+Suy ra $\triangle OAM\backsim\triangle OCM$ (c.c.c), nên $\widehat{AMO}=\widehat{CMO}$.
 
 Hai tam giác này nằm hai bên đường thẳng $OM$, nên tia phân giác của $\widehat{AMC}$ xuất phát từ $M$, đi trên đường thẳng $OM$ và cắt $AC$ tại $H$. Do đó $\widehat{AMH}=\widehat{CMH}$.
 
@@ -443,7 +449,7 @@ Xét $\triangle AMH$ và $\triangle CMH$:
 \[
 MA=MC,\qquad \widehat{AMH}=\widehat{CMH},\qquad MH\text{ chung}.
 \]
-Suy ra $\triangle AMH\cong\triangle CMH$ (c.g.c), nên $\widehat{AHM}=\widehat{CHM}$ và $AH=CH$.
+Suy ra $\triangle AMH\backsim\triangle CMH$ (c.g.c), nên $\widehat{AHM}=\widehat{CHM}$ và $AH=CH$.
 
 Hai góc $\widehat{AHM}$ và $\widehat{CHM}$ kề nhau và có tổng bằng $180^\circ$ vì $A$, $H$, $C$ thẳng hàng. Hai góc bằng nhau nên
 \[
@@ -478,83 +484,84 @@ Xét $\triangle ODM$ và $\triangle OHD$: góc ở $O$ chung, hai cạnh kề g�
 
 Chứng minh $I$ là trung điểm của $MH$.
 
-Vì $AB$ là đường kính và $D$ thuộc nửa đường tròn nên $\widehat{ADB}=90^\circ$. Do đó $AD\perp BD$. Mà $H$ nằm trên $BD$, nên đường thẳng $AD$ vuông góc với đường thẳng $BH$.
-
-Chọn hệ trục tọa độ có gốc tại $H$, tia hoành dương hướng từ $H$ đến $M$ và tia tung dương hướng từ $H$ đến $A$. Hệ trục này vuông góc vì $AC\perp OM$.
-
-Đặt $OH=h$, $HM=m$ và $AH=a$, với $h,m,a>0$. Khi đó
+Nối $OD$. Ta có $OA=OD=OB=R$, nên tam giác $OAD$ cân tại $O$ và tam giác $OBD$ cân tại $O$. Do đó
 \[
-H=(0;0),\qquad M=(m;0),\qquad A=(0;a).
+\widehat{OAD}=\widehat{ODA},\qquad \widehat{OBD}=\widehat{ODB}.
 \]
-Vì $H$ nằm giữa $O$ và $M$ nên $O=(-h;0)$.
+Vì $A$, $O$, $B$ thẳng hàng nên $\widehat{AOD}+\widehat{BOD}=180^\circ$.
 
-Trong tam giác vuông $OAM$, đường cao $AH$ cho hệ thức $AH^2=OH\cdot HM$, nên $a^2=hm$.
-Lại có $OA^2=OH^2+AH^2$, nên
-\[
-R^2=h^2+a^2.
-\]
-
-Vì $O$ là trung điểm của $AB$ nên tọa độ $O$ là trung bình cộng tọa độ của $A$ và $B$. Gọi $B=(x_B;y_B)$, ta có
-\[
-\dfrac{0+x_B}{2}=-h,\qquad \dfrac{a+y_B}{2}=0.
-\]
-Suy ra $B=(-2h;-a)$.
-
-Đường thẳng $BH$ đi qua $H=(0;0)$ và $B=(-2h;-a)$, nên có phương trình tham số
-\[
-\begin{cases}
-x=-2hs,\\
-y=-as,
-\end{cases}
-\quad s\in\mathbb{R}.
-\]
-Điểm $B$ ứng với $s=1$. Tia $BH$ đi từ $B$ qua $H$ rồi cắt đường tròn lần nữa tại $D$, nên $D$ ứng với giá trị $s<0$.
-
-Vì $D$ thuộc đường tròn tâm $O=(-h;0)$, bán kính $R$, nên
+Trong hai tam giác $OAD$ và $OBD$,
 \begin{align*}
-(-2hs+h)^2+(-as)^2&=R^2\\
-h^2(1-2s)^2+a^2s^2&=h^2+a^2\\
-h^2(1-4s+4s^2)+a^2s^2&=h^2+a^2\\
-(4h^2+a^2)s^2-4h^2s-a^2&=0.
+\widehat{OAD}+\widehat{ODA}+\widehat{AOD}&=180^\circ,\\
+\widehat{OBD}+\widehat{ODB}+\widehat{BOD}&=180^\circ.
 \end{align*}
-Thay $s=1$ thỏa mãn phương trình, nên $s-1$ là một nhân tử. Phân tích, ta được
+Cộng vế theo vế, rồi thay $\widehat{AOD}+\widehat{BOD}=180^\circ$, ta được
 \[
-(s-1)\bigl[(4h^2+a^2)s+a^2\bigr]=0.
+\widehat{OAD}+\widehat{OBD}+\widehat{ODA}+\widehat{ODB}=180^\circ.
 \]
-Suy ra $s=1$ hoặc
+Mặt khác $\widehat{ADB}=\widehat{ODA}+\widehat{ODB}$. Kết hợp với hai tam giác cân ở trên,
 \[
-s=-\dfrac{a^2}{4h^2+a^2}.
+\widehat{ODA}+\widehat{ODB}+\widehat{ADB}=180^\circ,
 \]
-Giá trị $s=1$ cho điểm $B$. Điểm $D$ ứng với
-\[
-s=-\dfrac{a^2}{4h^2+a^2}=-\dfrac{hm}{4h^2+hm}=-\dfrac{m}{4h+m}.
-\]
-Do đó
-\begin{align*}
-x_D&=-2h\left(-\dfrac{m}{4h+m}\right)=\dfrac{2hm}{4h+m},\\
-y_D&=-a\left(-\dfrac{m}{4h+m}\right)=\dfrac{am}{4h+m}.
-\end{align*}
+nên $2\widehat{ADB}=180^\circ$. Vậy $\widehat{ADB}=90^\circ$, tức là $AD\perp BD$.
 
-Đường thẳng $AD$ đi qua $A=(0;a)$ và $D$. Một điểm trên $AD$ có dạng
+Vì $H$ nằm trên $BD$ nên $AD\perp BH$.
+
+Gọi $I'$ là trung điểm của $MH$. Ta chứng minh đường thẳng $AI'$ cũng vuông góc với $BH$. Khi đó $AI'$ trùng với $AD$, nên $I'$ chính là $I$.
+
+Theo câu b), $AH$ là đường cao kẻ từ $A$ của tam giác vuông $OAM$, nên
 \[
-(1-u)A+uD
-=\left(
-\dfrac{2hmu}{4h+m};\;
-(1-u)a+\dfrac{amu}{4h+m}
-\right),\quad u\in\mathbb{R}.
+AH^2=OH\cdot HM.
 \]
-Điểm $I=AD\cap MH$ nằm trên trục hoành, nên tung độ bằng $0$:
-\begin{align*}
-(1-u)a+\dfrac{amu}{4h+m}&=0\\
-1-u+\dfrac{mu}{4h+m}&=0\\
-1&=u\left(1-\dfrac{m}{4h+m}\right)
-=u\cdot\dfrac{4h}{4h+m}.
-\end{align*}
-Suy ra $u=\dfrac{4h+m}{4h}$. Hoành độ của $I$ là
+Đặt $OH=h$, $HM=m$ và $AH=a$, với $h,m,a>0$. Suy ra $a^2=hm$. Điểm $H$ nằm giữa $O$ và $M$.
+
+Gọi $K$ là điểm trên đường thẳng $OM$ sao cho $O$ là trung điểm của $HK$. Khi đó $K$ và $H$ nằm hai phía đối với $O$, $OK=OH=h$ và $KH=2h$.
+
+Hai đường thẳng $AB$ và $OM$ cắt nhau tại $O$. Tia đối của tia $OA$ là tia $OB$, tia đối của tia $OH$ là tia $OK$, nên $\widehat{AOH}$ và $\widehat{BOK}$ là hai góc đối đỉnh.
+
+Xét $\triangle AOH$ và $\triangle BOK$:
 \[
-x_I=\dfrac{4h+m}{4h}\cdot\dfrac{2hm}{4h+m}=\dfrac{m}{2}.
+OA=OB,\qquad \widehat{AOH}=\widehat{BOK},\qquad OH=OK.
 \]
-Vậy $I=\left(\dfrac{m}{2};0\right)$, tức là trung điểm của đoạn thẳng $MH$.
+Suy ra $\triangle AOH\cong\triangle BOK$ (c.g.c). Do đó $BK=AH=a$ và $\widehat{BKO}=\widehat{AHO}=90^\circ$, nên $BK\perp OM$.
+
+Tam giác $BKH$ vuông tại $K$, nên
+\[
+\tan\widehat{BHK}=\dfrac{BK}{KH}=\dfrac{a}{2h}.
+\]
+
+Vì $I'$ là trung điểm của $MH$ nên $HI'=\dfrac{m}{2}$. Tam giác $AI'H$ vuông tại $H$, nên
+\[
+\tan\widehat{AI'H}=\dfrac{AH}{HI'}=\dfrac{a}{\dfrac{m}{2}}=\dfrac{2a}{m}.
+\]
+Từ đó
+\[
+\tan\widehat{AI'H}\cdot\tan\widehat{BHK}
+=\dfrac{2a}{m}\cdot\dfrac{a}{2h}
+=\dfrac{a^2}{mh}
+=\dfrac{hm}{mh}
+=1.
+\]
+Suy ra
+\[
+\tan\widehat{AI'H}=\cot\widehat{BHK}=\tan\left(90^\circ-\widehat{BHK}\right).
+\]
+Hai góc này đều nhọn, nên $\widehat{AI'H}=90^\circ-\widehat{BHK}$, tức là
+\[
+\widehat{AI'H}+\widehat{BHK}=90^\circ.
+\]
+
+Đường thẳng $AI'$ tạo với $OM$ góc $\widehat{AI'H}$ và nằm về phía điểm $A$. Đường thẳng $BH$ tạo với $OM$ góc $\widehat{BHK}$ và nằm về phía điểm $B$. Vì $O$ nằm giữa $A$ và $B$ nên $A$, $B$ nằm hai phía khác nhau của đường thẳng $OM$. Do đó góc giữa hai đường thẳng $AI'$ và $BH$ bằng
+\[
+\widehat{AI'H}+\widehat{BHK}=90^\circ.
+\]
+Vậy $AI'\perp BH$.
+
+Qua $A$ chỉ có một đường thẳng vuông góc với $BH$. Đường thẳng $AD$ cũng vuông góc với $BH$, nên $AI'$ trùng với $AD$.
+
+Điểm $I'$ nằm trên cả $AD$ và $MH$. Mà $I$ là giao điểm của $AD$ và $MH$, nên $I$ trùng với $I'$.
+
+Vậy $I$ là trung điểm của $MH$.
 \end{enumerate}
 }
 \end{bt}
