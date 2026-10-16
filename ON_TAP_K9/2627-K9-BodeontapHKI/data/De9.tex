@@ -274,60 +274,80 @@ Vậy lớp có $12$ học sinh nam và $24$ học sinh nữ.
 \end{bt}
 
 %Bài 4
+
+
 \begin{bt}[1,0 điểm]
-\immini[thm]
-{Một biển báo gồm một hình chữ nhật và một nửa hình tròn gắn phía trên. Chiều rộng hình chữ nhật bằng đường kính nửa hình tròn và bằng $x$ cm ($x>0$); chiều cao hình chữ nhật là $(x+2)$ cm (hình vẽ).
-\begin{enumerate}
-\item Viết biểu thức diện tích hình chữ nhật, diện tích nửa hình tròn và diện tích toàn biển báo theo $x$.
-\item Biết diện tích toàn biển báo là $48+\dfrac{9\pi}{2}$ (cm$^2$). Tìm $x$.
-\end{enumerate}
-}
-{
-\begin{tikzpicture}[scale=0.55, font=\scriptsize, line join=round]
-	\fill[gray!25] (0,0) rectangle (3,4);
-	\fill[gray!25] (0,4) arc (180:0:1.5) -- cycle;
-	\draw (0,0)--(3,0)--(3,4) arc (0:180:1.5) -- cycle;
-	\draw[dashed] (0,4)--(3,4);
-	\node[below] at (1.5,0) {$x$ cm};
-	\node[left] at (0,2) {$(x+2)$ cm};
-\end{tikzpicture}
-}
+	\immini[thm]
+	{
+	Trái bóng (hình cầu) Telstar xuất hiện lần đầu tiên ở World Cup 1970 tại Mexico do Adidas sản xuất, có đường kính $22{,}3$ cm. Trái bóng được may từ $32$ múi da đen và trắng. Các múi da màu đen hình ngũ giác đều, các múi da màu trắng hình lục giác đều trên bề mặt trái bóng. Mỗi múi da màu đen có diện tích $37$ cm$^2$, mỗi múi trắng có diện tích $55{,}9$ cm$^2$.
+	\begin{listEX}[1]
+	\item Tính diện tích bề mặt của quả bóng Telstar (làm tròn đến đơn vị cm$^2$).
+	\item Hãy tính trên trái bóng có bao nhiêu múi da màu đen và màu trắng.
+	\end{listEX}
+	}
+	{
+	\includegraphics[width=3.5cm]{hinh/De9-bai4.png}
+	}
+	
 \loigiai{
-\begin{enumerate}
-\item Diện tích hình chữ nhật là
-\[
-S_{\text{cn}}=x(x+2)=x^2+2x\ \text{(cm}^2\text{)}.
-\]
-Nửa hình tròn có đường kính $x$ cm nên bán kính $\dfrac{x}{2}$ cm. Diện tích nửa hình tròn là
-\[
-S_{\text{nửa}}=\dfrac{1}{2}\pi\left(\dfrac{x}{2}\right)^2=\dfrac{\pi x^2}{8}\ \text{(cm}^2\text{)}.
-\]
-Diện tích toàn biển báo là
-\[
-S=S_{\text{cn}}+S_{\text{nửa}}=x^2+2x+\dfrac{\pi x^2}{8}\ \text{(cm}^2\text{)}.
-\]
-
-\item Ta có
-\[
-x^2+2x+\dfrac{\pi x^2}{8}=48+\dfrac{9\pi}{2},
-\]
-nên
-\[
-\left(x^2+2x-48\right)+\pi\left(\dfrac{x^2}{8}-\dfrac{9}{2}\right)=0.
-\]
-Phần không chứa $\pi$ và hệ số của $\pi$ đều bằng $0$:
-\begin{align*}
-\dfrac{x^2}{8}&=\dfrac{9}{2}\\
-x^2&=36.
-\end{align*}
-Vì $x>0$ nên $x=6$.
-
-\emph{Kiểm tra.} $x^2+2x=36+12=48$, đúng với phần không chứa $\pi$.
-
-Vậy $x=6$ cm.
-\end{enumerate}
-}
+	\textbf{a)} Bán kính của trái bóng là:
+	\[
+	22{,}3:2=11{,}15\text{ (cm)}.
+	\]
+	
+	Diện tích bề mặt của quả bóng là:
+	\[
+	S=4\pi\cdot 11{,}15^2
+	\approx 1562\text{ (cm}^2\text{)}.
+	\]
+	
+	\textbf{b)} Gọi $x$, $y$ (múi) lần lượt là số múi da màu đen và màu trắng của trái bóng ($x,y\in\mathbb{N}^{*}$).
+	
+	Vì trái bóng được may từ $32$ múi da đen và trắng nên ta có phương trình:
+	\[
+	x+y=32. \qquad (1)
+	\]
+	
+	Vì mỗi múi da màu đen có diện tích $37$ cm$^2$ và mỗi múi da màu trắng có diện tích $55{,}9$ cm$^2$ nên theo diện tích bề mặt đã làm tròn ở câu a), ta có phương trình:
+	\[
+	37x+55{,}9y=1562. \qquad (2)
+	\]
+	
+	Từ (1) và (2), ta có hệ phương trình:
+	\[
+	\begin{cases}
+	x+y=32\\
+	37x+55{,}9y=1562
+	\end{cases}
+	\]
+	
+	\[
+	\Leftrightarrow
+	\begin{cases}
+	x=32-y\\
+	37(32-y)+55{,}9y=1562
+	\end{cases}
+	\]
+	
+	\[
+	\Leftrightarrow
+	\begin{cases}
+	x=32-y\\
+	18{,}9y=378
+	\end{cases}
+	\Leftrightarrow
+	\begin{cases}
+	x=12\\
+	y=20
+	\end{cases}
+	\quad\text{(thỏa mãn).}
+	\]
+	
+	Vậy trên trái bóng có $12$ múi da màu đen và $20$ múi da màu trắng.
+	}
 \end{bt}
+	
+	
 
 %Bài 5
 \begin{bt}[1,0 điểm]

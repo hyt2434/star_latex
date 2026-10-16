@@ -394,59 +394,198 @@ Vậy học sinh phải đứng cách gốc cột đèn $4\sqrt{3}$ m.
 
 %%Bài 6:
 \begin{bt}[3,0 điểm]
-Cho đường tròn $(O;R)$ đường kính $AB$. Kẻ tiếp tuyến $Ax$, lấy $P$ trên $Ax$ ($AP>R$). Từ $P$ kẻ tiếp tuyến $PM$ với $(O)$ ($M$ là tiếp điểm). 
+Cho nửa đường tròn $(O)$ đường kính $AB$. Từ $A$ và $B$ kẻ hai tiếp tuyến $Ax$, $By$. Qua điểm $M$ thuộc nửa đường tròn, kẻ tiếp tuyến thứ ba cắt các tiếp tuyến $Ax$, $By$ lần lượt tại $C$ và $D$. Các đường thẳng $AD$ và $BC$ cắt nhau tại $N$ (hình vẽ).
 \begin{enumerate}
-    \item Chứng minh rằng bốn điểm $A, P, M, O$ cùng thuộc một đường tròn và $BM \parallel OP$.
-    \item Đường thẳng vuông góc với $AB$ tại $O$ cắt tia $BM$ tại $N$. Chứng minh tứ giác $OBNP$ là hình bình hành.
-    \item Giả sử $AN$ cắt $OP$ tại $K$; $PM$ cắt $ON$ tại $I$; $PN$ cắt $OM$ tại $J$. Chứng minh $I, J, K$ thẳng hàng.
+\item Chứng minh rằng $\widehat{COD}=90^\circ$ và $AC\cdot BD=\dfrac{AB^2}{4}$.
+\item Chứng minh rằng $MN\perp AB$.
+\item Cho $OD=2OM$. Tính diện tích hình quạt giới hạn bởi các bán kính $OM$, $OA$ và cung nhỏ $MA$.
 \end{enumerate}
-\loigiai{ 
-\immini{
+
+\loigiai{
+\begin{center}
+\begin{tikzpicture}[scale=1.5, font=\footnotesize, line join=round, line cap=round]
+	\def\r{2}
+	\def\ang{75}
+	\pgfmathsetmacro{\cy}{\r*cot(\ang/2)}
+	\pgfmathsetmacro{\dy}{\r*tan(\ang/2)}
+	\pgfmathsetmacro{\mx}{\r*cos(\ang)}
+	\pgfmathsetmacro{\my}{\r*sin(\ang)}
+	\coordinate (O) at (0,0);
+	\coordinate (A) at (-\r,0);
+	\coordinate (B) at (\r,0);
+	\coordinate (M) at (\mx,\my);
+	\coordinate (C) at (-\r,\cy);
+	\coordinate (D) at (\r,\dy);
+	\coordinate (N) at (\mx,\my/2);
+	\coordinate (H) at (\mx,0);
+	\coordinate (Px) at (-\r,\cy+0.42);
+	\coordinate (Py) at (\r,\cy+0.42);
+	\fill[mauChuDao!8] (A) arc (180:0:\r) -- cycle;
+	\draw[thick] (A) arc (180:0:\r);
+	\draw[thick] (A)--(B);
+	\draw[thick] (A)--(Px) (B)--(Py);
+	\draw[thick] (C)--(D);
+	\draw (A)--(D) (B)--(C);
+	\draw (O)--(M);
+	\draw[dashed] (O)--(C) (O)--(D) (M)--(H);
+	\draw ($(H)+(-0.16,0)$)--++(0,0.16)--++(0.16,0);
+	\foreach \p/\pos in {A/below left, B/below right, C/left, D/right}
+		\fill (\p) circle (1.15pt) node[\pos] {$\p$};
+	\fill (O) circle (1.15pt) node[below left=1pt] {$O$};
+	\fill (H) circle (1.15pt) node[below right=1pt] {$H$};
+	\fill (M) circle (1.15pt) node[above=2pt] {$M$};
+	\fill (N) circle (1.15pt) node[right=5pt, inner sep=1.2pt] {$N$};
+	\node[above left] at (Px) {$x$};
+	\node[above right] at (Py) {$y$};
+\end{tikzpicture}
+\end{center}
 \begin{enumerate}
-    \item $A,P,O,M$ cùng nằm trên đường tròn đường kính $OP$
-    
-    Ta có $OP\perp AM, BM\perp AM$ suy ra $OP\parallel BM$.
-    \item $\triangle AOP = \triangle OBN \Rightarrow OP = BN$
-    
-    Ta lại có $BN \parallel OP$ nên $OBNP$ là hình bình hành.
+\setlength{\itemsep}{0.85em}
+\item Gọi $R$ là bán kính nửa đường tròn. Khi đó $OA=OB=OM=R$ và $AB=2R$.
 
-    \item Chứng minh  $I$ là trực tâm $\triangle POJ$ suy ra $IJ \perp OP$ (1)
+Vì $Ax$ là tiếp tuyến tại $A$ nên $OA\perp Ax$. Vì $By$ là tiếp tuyến tại $B$ nên $OB\perp By$. Vì tiếp tuyến tại $M$ tiếp xúc với nửa đường tròn tại $M$ nên $OM\perp CD$.
 
-    Chứng minh $K$ là trung điểm $OP$.
+Hai tiếp tuyến xuất phát từ cùng một điểm thì bằng nhau, nên $CA=CM$ và $DB=DM$.
 
-    Lại có: $\widehat{APO} = \widehat{OPI} = \widehat{IOP}$
-    
-    Suy ra $\triangle IPO$ cân tại $I$ suy ra $IK \perp OP$ (2)
+Xét $\triangle OAC$ và $\triangle OMC$:
+\[
+OA=OM,\qquad CA=CM,\qquad OC\text{ chung}.
+\]
+Suy ra $\triangle OAC\backsim\triangle OMC$ (c.c.c), nên $\widehat{AOC}=\widehat{COM}$.
 
-    Từ (1) và (2) suy ra $I, J, K$ thẳng hàng.
+Hai góc này kề nhau và $\widehat{AOC}+\widehat{COM}=\widehat{AOM}$, nên $OC$ là tia phân giác của $\widehat{AOM}$.
+
+Tương tự, $\triangle OBD\backsim\triangle OMD$ (c.c.c), nên $OD$ là tia phân giác của $\widehat{BOM}$.
+
+Vì $A$, $O$, $B$ thẳng hàng nên $\widehat{AOM}+\widehat{BOM}=180^\circ$. Do đó
+\[
+\widehat{COD}
+=\widehat{COM}+\widehat{MOD}
+=\dfrac12\widehat{AOM}+\dfrac12\widehat{BOM}
+=\dfrac12\cdot 180^\circ
+=90^\circ.
+\]
+
+Đặt $\widehat{AOC}=\widehat{COM}=\alpha$ và $\widehat{BOD}=\widehat{DOM}=\beta$. Khi đó $2\alpha+2\beta=180^\circ$, nên $\alpha+\beta=90^\circ$ và $\beta=90^\circ-\alpha$.
+
+Tam giác $OAC$ vuông tại $A$, nên
+\[
+\tan\alpha=\dfrac{AC}{OA}=\dfrac{AC}{R}\Rightarrow AC=R\tan\alpha.
+\]
+Tam giác $OBD$ vuông tại $B$, nên
+\[
+\tan\beta=\dfrac{BD}{OB}=\dfrac{BD}{R}.
+\]
+Vì $\tan(90^\circ-\alpha)=\cot\alpha$ nên $BD=R\cot\alpha$.
+
+Do đó
+\[
+AC\cdot BD=R\tan\alpha\cdot R\cot\alpha=R^2.
+\]
+Mặt khác
+\[
+\dfrac{AB^2}{4}=\dfrac{(2R)^2}{4}=R^2.
+\]
+Vậy $\widehat{COD}=90^\circ$ và $AC\cdot BD=\dfrac{AB^2}{4}$.
+
+\item Kẻ $MH\perp AB$ tại $H$. Ta chứng minh $N$ nằm trên $MH$.
+
+Vì $AB$ là đường kính nên $\widehat{AMB}=90^\circ$. Trong tam giác vuông $AMB$, đường cao $MH$ ứng với cạnh huyền $AB$ nên
+\[
+AM^2=AH\cdot AB,\qquad BM^2=BH\cdot AB.
+\]
+Suy ra $\dfrac{AH}{BH}=\dfrac{AM^2}{BM^2}$.
+
+Theo câu a), $\widehat{AOM}=2\alpha$ và $\widehat{BOM}=2\beta$ với $\beta=90^\circ-\alpha$.
+
+Tam giác $OAM$ cân tại $O$. Đường phân giác của $\widehat{AOM}$ cắt $AM$ tại trung điểm $F$ của $AM$ và vuông góc với $AM$. Tam giác $OAF$ vuông tại $F$, có góc ở $O$ bằng $\alpha$ và cạnh huyền $OA=R$, nên
+\[
+\sin\alpha=\dfrac{AF}{R}=\dfrac{AM}{2R}.
+\]
+Suy ra $AM=2R\sin\alpha$.
+
+Chứng minh tương tự, $BM=2R\sin\beta$. Vì $\beta=90^\circ-\alpha$ nên $\sin\beta=\cos\alpha$, do đó $BM=2R\cos\alpha$.
+
+Từ đó
+\[
+\dfrac{AH}{BH}
+=\dfrac{AM^2}{BM^2}
+=\dfrac{(2R\sin\alpha)^2}{(2R\cos\alpha)^2}
+=\tan^2\alpha.
+\]
+
+Theo câu a), $AC=R\tan\alpha$ và $BD=R\cot\alpha$, nên
+\[
+\dfrac{AC}{BD}
+=\dfrac{R\tan\alpha}{R\cot\alpha}
+=\tan^2\alpha.
+\]
+Vậy
+\[
+\dfrac{AH}{BH}=\dfrac{AC}{BD}. \tag{1}
+\]
+
+Vì $OA\perp Ax$, $OB\perp By$ và $A$, $O$, $B$ thẳng hàng nên $Ax\parallel By$. Do đó $AC\parallel BD$.
+
+Xét $\triangle ACN$ và $\triangle DBN$:
+\begin{itemize}
+\item $\widehat{CAN}=\widehat{BDN}$ (so le trong, $AC\parallel BD$, cát tuyến $AD$);
+\item $\widehat{ACN}=\widehat{DBN}$ (so le trong, $AC\parallel BD$, cát tuyến $BC$).
+\end{itemize}
+Suy ra $\triangle ACN\backsim\triangle DBN$ (g.g). Do đó
+\[
+\dfrac{AN}{DN}=\dfrac{AC}{BD}.
+\]
+Kết hợp với $(1)$, ta được
+\[
+\dfrac{AN}{DN}=\dfrac{AH}{BH}.
+\]
+Suy ra
+\begin{align*}
+\dfrac{AN}{AD}
+&=\dfrac{AN}{AN+DN}
+=\dfrac{1}{1+\dfrac{DN}{AN}}
+=\dfrac{1}{1+\dfrac{BH}{AH}}\\
+&=\dfrac{AH}{AH+BH}
+=\dfrac{AH}{AB}. \tag{2}
+\end{align*}
+
+Gọi $\ell$ là đường thẳng đi qua $N$ và vuông góc với $AB$, cắt $AB$ tại $P$. Ba đường thẳng $Ax$, $\ell$ và $By$ cùng vuông góc với $AB$ nên song song với nhau. Cát tuyến $AD$ cắt ba đường thẳng này lần lượt tại $A$, $N$, $D$; cát tuyến $AB$ cắt chúng lần lượt tại $A$, $P$, $B$.
+
+Theo định lý Thalès,
+\[
+\dfrac{AN}{AD}=\dfrac{AP}{AB}.
+\]
+Kết hợp với $(2)$ suy ra $AP=AH$. Vì $P$ và $H$ cùng nằm trên đoạn thẳng $AB$ nên $P$ trùng $H$.
+
+Vậy $\ell$ chính là đường thẳng $MH$, nên $N$ nằm trên $MH$. Do đó $MN\perp AB$.
+
+\item Theo câu a), tam giác $OBD$ vuông tại $B$ và $OD$ là phân giác của $\widehat{BOM}$.
+
+Vì $OD=2OM=2R$ và $OB=R$ nên
+\[
+\cos\widehat{BOD}=\dfrac{OB}{OD}=\dfrac{R}{2R}=\dfrac12.
+\]
+Góc $\widehat{BOD}$ là góc nhọn, nên $\widehat{BOD}=60^\circ$.
+
+Suy ra
+\[
+\widehat{BOM}=2\widehat{BOD}=120^\circ.
+\]
+Vì $A$, $O$, $B$ thẳng hàng nên
+\[
+\widehat{AOM}=180^\circ-\widehat{BOM}=60^\circ.
+\]
+
+Do $60^\circ<180^\circ$, cung nhỏ $MA$ là cung chắn góc ở tâm $\widehat{AOM}=60^\circ$. Hình quạt giới hạn bởi hai bán kính $OA$, $OM$ và cung nhỏ $MA$ có bán kính $R$ và góc ở tâm $60^\circ$. Diện tích hình quạt là
+\begin{align*}
+S
+&=\dfrac{\pi R^2\cdot 60}{360}
+=\dfrac{\pi R^2}{6}
+=\dfrac{\pi\cdot OM^2}{6}.
+\end{align*}
+Vậy diện tích hình quạt cần tính là $\dfrac{\pi\cdot OM^2}{6}$.
 \end{enumerate}
-}
-{
-	\begin{tikzpicture}[scale=1, font=\footnotesize, line join =round, line cap=round, >=stealth]
-		\def\r{1.8}
-		\path 
-		(0,0) coordinate (O)
-		(180:\r) coordinate (A)
-		(0:\r) coordinate (B)
-		(-\r,2.5*\r) coordinate (x)node[left]{$x$}
-		($(A)!4/5!(x)$) coordinate (P)
-		($(O)!(A)!(P)$) coordinate (H)
-		($(A)!2!(H)$) coordinate (M)
-		($(O)!1cm!-90:(A)$) coordinate (n')
-		(intersection of B--M and O--n') coordinate (N)
-		(intersection of A--N and O--P) coordinate (K)
-		(intersection of O--N and M--P) coordinate (I)
-		(intersection of O--M and N--P) coordinate (J)
-		;
-		\draw 
-		(O) circle (\r) 
-		(x)--(A)--(B)--(N)--(A)--(M)--(P)--(O)--(N) (P)--(J)--(O)
-		;
-		\draw[dashed] (K)--(J);
-		\foreach \x/\g in{O/-90,A/180,B/0,P/180,K/160,M/0,N/90,I/120,J/40}
-		\draw[fill=white] (\x) circle (1.5pt) +(\g:.3) node{$\x$};
-	\end{tikzpicture}
-}
 }
 \end{bt}
 \Closesolutionfile{ansbook}
